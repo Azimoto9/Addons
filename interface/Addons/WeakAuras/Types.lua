@@ -236,13 +236,6 @@ WeakAuras.inverse_point_types = {
   CENTER = "CENTER"
 };
 
-WeakAuras.anchor_frame_types = {
-  SCREEN = L["Screen/Parent Group"],
-  PRD = L["Personal Ressource Display"],
-  MOUSE = L["Mouse Cursor"],
-  SELECTFRAME = L["Select Frame"]
-}
-
 WeakAuras.spark_rotation_types = {
     AUTO = L["Automatic Rotation"],
     MANUAL = L["Manual Rotation"]
@@ -1009,8 +1002,7 @@ WeakAuras.grow_types = {
   ["DOWN"] = L["Down"],
   ["HORIZONTAL"] = L["Centered Horizontal"],
   ["VERTICAL"] = L["Centered Vertical"],
-  ["CIRCLE"] = L["Counter Clockwise"],
-  ["COUNTERCIRCLE"] =L["Clockwise"]
+  ["CIRCLE"] = L["Circular"]
 };
 
 WeakAuras.text_rotate_types = {
@@ -1238,8 +1230,8 @@ WeakAuras.sound_types = {
   ["Interface\\AddOns\\WeakAuras\\Media\\Sounds\\Torch.ogg"] = "Torch",
   ["Interface\\AddOns\\WeakAuras\\Media\\Sounds\\WarningSiren.ogg"] = "Warning Siren",
   ["Sound\\Creature\\LichKing\\IC_Lich King_Special01.ogg"] = "Lich King Apocalypse",
-  [" custom"] = " " .. L["Custom"],
-  [" KitID"] = " " .. L["Sound by Kit ID"],
+  [" custom"] = "Custom",
+  [" KitID"] = "Sound by Kit ID",
 };
 
 if(WeakAuras.PowerAurasSoundPath ~= "") then
@@ -1339,16 +1331,4 @@ WeakAuras.item_slot_types = {
   [14] = L["Trinket 2"],
   [15] = L["Back"],
   [19] = L["Tabard"]
-}
-
-WeakAuras.charges_change_type = {
-  GAINED = L["Gained"],
-  LOST = L["Lost"],
-  CHANGED = L["Changed"]
-}
-
-WeakAuras.combat_event_type =
-{
-  PLAYER_REGEN_ENABLED = L["Leaving"],
-  PLAYER_REGEN_DISABLED = L["Entering"]
 }

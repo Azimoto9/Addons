@@ -55,7 +55,6 @@ local default = {
   borderBackdrop = "Blizzard Tooltip",
   selfPoint = "CENTER",
   anchorPoint = "CENTER",
-  anchorFrameType = "SCREEN",
   xOffset = 0,
   yOffset = 0,
   stickyDuration = false,
@@ -415,9 +414,6 @@ local function create(parent)
       bar:SetFrameLevel(frameLevel);
       border:SetFrameLevel(frameLevel + 1);
     end
-    if (self.__WAGlowFrame) then
-      self.__WAGlowFrame:SetFrameLevel(frameLevel + 1);
-    end
   end
 
 -- Return new display/region
@@ -446,6 +442,7 @@ local function animRotate(object, degrees, anchor)
         group:Pause();
     end
 end
+WeakAuras.animRotate = animRotate;
 
 -- Calculate offset after rotation
 local function getRotateOffset(object, degrees, point)
@@ -844,22 +841,20 @@ local function modify(parent, region, data)
 
   region.useAuto = data.auto and WeakAuras.CanHaveAuto(data);
 
+  -- Adjust framestrata
+    if data.frameStrata == 1 then
+        region:SetFrameStrata(region:GetParent():GetFrameStrata());
+    else
+        region:SetFrameStrata(WeakAuras.frame_strata_types[data.frameStrata]);
+    end
+
   -- Adjust region size
     region:SetWidth(data.width);
     region:SetHeight(data.height);
 
   -- Reset anchors
-  region:ClearAllPoints();
-  local anchorFrame = WeakAuras.GetAnchorFrame(data.id, data.anchorFrameType, parent, data.anchorFrameFrame);
-  region:SetParent(anchorFrame);
-  region:SetPoint(data.selfPoint, anchorFrame, data.anchorPoint, data.xOffset, data.yOffset);
-  -- Adjust framestrata
-  if data.frameStrata == 1 then
-      region:SetFrameStrata(region:GetParent():GetFrameStrata());
-  else
-      region:SetFrameStrata(WeakAuras.frame_strata_types[data.frameStrata]);
-  end
-
+    region:ClearAllPoints();
+    region:SetPoint(data.selfPoint, parent, data.anchorPoint, data.xOffset, data.yOffset);
 
   -- Set overall alpha
     region:SetAlpha(data.alpha);

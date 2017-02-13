@@ -1,0 +1,9 @@
+
+BagnonGlobalSettings = {
+	["colorBagSlots"] = false,
+	["showEmptyItemSlotTexture"] = false,
+	["highlightItemsByQuality"] = false,
+	["version"] = "4.3.0",
+	["highlightOpacity"] = 0.1,
+	["lockFramePositions"] = true,
+}

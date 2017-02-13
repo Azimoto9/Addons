@@ -1,0 +1,12 @@
+## Interface: 60000
+## Author: Suicidal Katt
+## Version: 3.7
+## Title: !Simple|cff5CB3FFPowerBar|r
+## Notes: A smart and simple blizzard power bar alt.
+## SavedVariables: SimpPB_DB
+
+Libs\Libs.xml
+
+Media.lua
+Core.lua
+Options.lua

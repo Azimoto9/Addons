@@ -1,8 +1,0 @@
-## Interface: 70000
-## Title: Move unit frames
-## Notes: Move unit frames to a more sane position
-## X-Curse-Packaged-Version: v0.2
-## X-Curse-Project-Name: Move Unit Frames
-## X-Curse-Project-ID: moveunitframes
-## X-Curse-Repository-ID: wow/moveunitframes/mainline
-MoveUnitFrames.lua

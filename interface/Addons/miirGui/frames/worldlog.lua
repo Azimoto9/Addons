@@ -1,0 +1,150 @@
+	local f = CreateFrame("Frame");
+	f:RegisterEvent("PLAYER_ENTERING_WORLD");
+	f:SetScript("OnEvent", function()
+
+		WorldMapFrameTutorialButton:Hide()
+		WorldMapFramePortrait:SetWidth(66)
+		WorldMapFramePortrait:SetHeight(66)
+		WorldMapFramePortrait:SetPoint("TopLeft",-9,9)
+		WorldMapFramePortrait:SetTexture("Interface\\Addons\\miirgui\\gfx\\quest.blp")
+		QuestFrameGreetingPanelBg:Hide()
+		QuestNPCModelTopBorder:Hide()
+		QuestNPCModelLeftBorder:Hide()
+		QuestNPCModelRightBorder:Hide()
+		QuestNPCModelBottomBorder:Hide()
+		QuestNPCModelBotLeftCorner:Hide()
+		QuestNPCModelBotRightCorner:Hide()
+		QuestNPCModelTextBottomBorder:Hide()
+		QuestNPCModelTextLeftBorder:Hide()
+		QuestNPCModelTextRightBorder:Hide()
+		QuestNPCModelTextBotRightCorner:Hide()
+		QuestNPCModelTextBotLeftCorner:Hide()
+		QuestMapDetailsScrollFrameScrollBarTrack:Hide()
+
+		QuestLogPopupDetailFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		QuestLogPopupDetailFramePortraitb= select(18,QuestLogPopupDetailFrame:GetRegions())
+		QuestLogPopupDetailFramePortraitb:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		QuestLogPopupDetailFramePortraitb:SetPoint("TopLeft",-8,8)
+		QuestTextBG= select(3,GossipTitleButton6:GetRegions())
+		QuestTextBG:SetTextColor(1, 1, 1,1)
+		QuestmapBG= select(1,QuestScrollFrame:GetRegions())
+		QuestmapBG:Hide()
+		QuestFrameRewardPanelBg:Hide()
+		QuestTextBG= select(1,QuestMapFrame.DetailsFrame:GetRegions())
+		QuestTextBG:Hide()
+		BG1=select(2,QuestMapFrame.DetailsFrame:GetRegions())
+		BG1:Hide()
+		BG2=select(1,QuestMapFrame.DetailsFrame.RewardsFrame:GetRegions())
+		BG2:Hide()
+		BG3=select(2,QuestMapFrame.DetailsFrame.RewardsFrame:GetRegions())
+		BG3:Hide()
+		Rewards= select(3,QuestMapFrame.DetailsFrame.RewardsFrame:GetRegions())
+		Rewards:SetTextColor(unpack(miirgui.Color))
+		Rewards:SetFont(unpack(miirgui.huge))
+		Rewards:SetShadowColor(0,0,0,0)
+		receive=select(2,MapQuestInfoRewardsFrame:GetRegions())
+		receive:SetTextColor(1,1,1,1)
+		receive:SetFont(unpack(miirgui.medium))
+		receive:SetShadowColor(0,0,0,0)
+		receive2= select(1,MapQuestInfoRewardsFrame:GetRegions())
+		receive2:SetTextColor(1,1,1,1)
+		receive2:SetFont(unpack(miirgui.small))
+		receive2:SetShadowColor(0,0,0,0)
+		QuestFrameDetailPanelBg:Hide()
+		QuestLogPopupDetailFramePageBg:Hide()
+		QuestFrameProgressPanelBg:Hide()
+		QuestFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		m_border(QuestNPCModel,202,336,"Center",1,-34,14,"MEDIUM")
+		m_border(QuestFrame,330,412,"Center",0,-18,14,"MEDIUM")
+		m_border(QuestLogPopupDetailFrame,330,412,"Center",0,-18,14,"MEDIUM")
+
+		local QuestNPCModelBG= CreateFrame("Frame","QuestNPCModel",QuestNPCModel)
+		QuestNPCModelBG:SetFrameStrata("BACKGROUND")
+		QuestNPCModelBG:SetWidth(202) 
+		QuestNPCModelBG:SetHeight(336)
+		local QuestNPCModelBGtexture = QuestNPCModelBG:CreateTexture(nil,"BACKGROUND")
+		QuestNPCModelBGtexture:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock.blp")
+		QuestNPCModelBGtexture:SetAllPoints(QuestNPCModelBG)
+		QuestNPCModelBG.texture = QuestNPCModelBGtexture
+		QuestNPCModelBG:SetPoint("Center",0,-34)
+		QuestNPCModelBG:Show()
+		
+		for i=1, 32 do
+			local button = _G["GossipTitleButton"..i]
+			QuestTextBG= select(3,button:GetRegions())
+			QuestTextBG:SetTextColor(1, 1, 1,1)
+			QuestTextBG:SetFont(unpack(miirgui.medium))
+			QuestTextBG:SetShadowColor(0,0,0,0)
+		end
+			
+		border=select(1,QuestInfoRewardsFrame.FollowerFrame:GetRegions())
+		border:Hide()
+
+		icon=select(2,QuestInfoRewardsFrame.FollowerFrame:GetRegions())
+		icon:Hide()
+		border=select(1,QuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		border:Hide()
+		portrait=select(2,QuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		portrait:SetTexCoord(0.15, 0.85, 0.15, 0.85)
+
+		quality=select(3,QuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		quality:SetTexture("Interface\\Containerframe\\quality.blp")
+		quality:SetHeight(50)
+		quality:SetWidth(50)
+
+		levelborder=select(4,QuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		levelborder:Hide()
+
+		levelborder=select(4,QuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		levelborder:Hide()
+
+		leveltext=select(5,QuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		leveltext:SetTextColor(1, 1, 1,1)
+		leveltext:SetFont(unpack(miirgui.small))
+		leveltext:SetShadowColor(0,0,0,0)
+
+		border=select(2,QuestInfoRewardsFrame.FollowerFrame:GetRegions())
+		border:Hide()
+
+		--Worldlog Quest RewardFrame Follower
+
+		border=select(1,MapQuestInfoRewardsFrame.FollowerFrame:GetRegions())
+		border:Hide()
+		
+		icon=select(2,MapQuestInfoRewardsFrame.FollowerFrame:GetRegions())
+		icon:Hide()
+		border=select(1,MapQuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		border:Hide()
+		portrait=select(2,MapQuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		portrait:SetTexCoord(0.15, 0.85, 0.15, 0.85)
+
+		quality=select(3,MapQuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		quality:SetTexture("Interface\\Containerframe\\quality.blp")
+		quality:SetHeight(50)
+		quality:SetWidth(50)
+
+		levelborder=select(4,MapQuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		levelborder:Hide()
+
+		levelborder=select(4,MapQuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		levelborder:Hide()
+
+		leveltext=select(5,MapQuestInfoRewardsFrame.FollowerFrame.PortraitFrame:GetRegions())
+		leveltext:SetTextColor(1, 1, 1,1)
+		leveltext:SetFont(unpack(miirgui.small))
+		leveltext:SetShadowColor(0,0,0,0)
+
+		border=select(2,MapQuestInfoRewardsFrame.FollowerFrame:GetRegions())
+		border:Hide()
+		
+		hooksecurefunc("WorldStateScoreFrame_Update",function()
+			WorldStateScoreWinnerFrameLeft:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock.blp")
+			WorldStateScoreWinnerFrameLeft:SetVertexColor(1,1,1,1)
+			WorldStateScoreWinnerFrameRight:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock.blp")
+			WorldStateScoreWinnerFrameRight:SetVertexColor(1,1,1,1)
+		end)
+
+		m_border(QuestInfoRewardsFrame.FollowerFrame.PortraitFrame,140,50,"Center",100,5,14,"MEDIUM")
+		m_border(MapQuestInfoRewardsFrame.FollowerFrame.PortraitFrame,140,50,"Center",100,5,14,"MEDIUM")
+		
+	end)

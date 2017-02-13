@@ -128,7 +128,7 @@ local function getOptions()
 	if not options then
 		options = {
 			type = "group",
-			name = "SorhaQuestLog ".. "v1.5.0.6",
+			name = "SorhaQuestLog ".. "v1.5.0.3",
 			handler = SorhaQuestLog,
 			args = {
 				General = {

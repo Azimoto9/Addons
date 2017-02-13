@@ -1,0 +1,21 @@
+
+SimpPB_DB = {
+	["profileKeys"] = {
+		["Berta - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["y"] = 6.46137191230759,
+			["x"] = -335.8633929330405,
+			["frameStrata"] = "HIGH",
+			["locked"] = true,
+			["LabelText"] = {
+				["size"] = 16,
+			},
+			["width"] = 272,
+			["StatusBarText"] = {
+				["size"] = 16,
+			},
+		},
+	},
+}

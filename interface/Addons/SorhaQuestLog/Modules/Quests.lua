@@ -2090,7 +2090,7 @@ function SQLObjective:Update()
 	local text, objectiveType, finished, have, need = GetQuestObjectiveInfo(self.QuestID, self.Index, false);
 	
 
-	
+	self.Text = text;
 	self.Type = objectiveType;	
 
 	if (finished == true) then
@@ -2105,8 +2105,7 @@ function SQLObjective:Update()
 		self.IsComplete = false;
 	end
 
-	if (text ~= nil) then
-		self.Text = text;
+	if (self.Text ~= nil) then
 		local completionLevel = 0;
 		local intGot = 0;
 		local intNeed = 1;
@@ -2285,7 +2284,6 @@ function SQLItem:new(questIndex)
 	self.Item = nil;
 	self.Charges = 0;
 	self.ItemID = nil;
-	self.ShowWhenComplete = false;
 	self.Changed = false;
 	self.Valid = false;
 	self.StillValid = true;
@@ -2321,7 +2319,6 @@ function SQLItem:Update(newIndex)
 			self.Changed = true;
 		end
 
-		self.ShowWhenComplete = showItemWhenComplete;
 		self.Link = link;
 		self.Item = icon
 		self.Valid = true;
@@ -2419,16 +2416,16 @@ function SQLQuest:Update(newIndex)
 		end
 		self.TagName = tagName;		
 		self.Index = GetQuestLogIndexByID(self.ID);
-		
-		self.Title = taskName;
-		if (self.Title == nil) then
-			self.Title = UNKNOWN
-		end
 
 		if (self._FirstUpdate) then
 			self.RequiredMoney = 0;
 			self.ObjectiveDescription = "";
 			
+			self.Title = taskName;
+			if (self.Title == nil) then
+				self.Title = UNKNOWN
+			end
+
 			self.Level = 110;
 			self.SuggestedGroup = 0;
 			self.Frequency = frequency;
@@ -2490,7 +2487,7 @@ function SQLQuest:Update(newIndex)
 
 		self.HasProgressBar = false;
 		local tmpObjectives = {}
-		if (numObjectives and (self.ObjectiveCount == 0 or numObjectives ~= self.ObjectiveCount)) then
+		if (self.ObjectiveCount == 0 or numObjectives ~= self.ObjectiveCount) then
 			for objectiveIndex = 1, numObjectives, 1 do
 				local objective = SQLObjective:new(objectiveIndex, self.Index, self.ID);
 				if (objective) then
@@ -2506,8 +2503,6 @@ function SQLQuest:Update(newIndex)
 				if (objective.Type == "progressbar") then
 					self.HasProgressBar = true;
 				end
-				self.Changed = true;
-				self.DataChanged = true;
 			end
 		else		
 			for i, objective in ipairs(self.ObjectiveList) do
@@ -2554,12 +2549,7 @@ function SQLQuest:Update(newIndex)
 		local title, level, suggestedGroup, isHeader, _, isComplete, frequency, questID, startEvent, displayQuestID, isOnMap, hasLocalPOI, isTask, isStory = GetQuestLogTitle(self.Index);	
 		local tagID, tagName, worldQuestType, rarity, isElite, tradeskillLineIndex = GetQuestTagInfo(questID);
 		self.TagID = tagID;
-		self.TagName = tagName;		
-		
-		self.Title = title;
-		if (self.Title == nil) then
-			self.Title = UNKNOWN
-		end
+		self.TagName = tagName;
 
 		if (self._FirstUpdate) then
 			SelectQuestLogEntry(self.Index);			
@@ -2568,7 +2558,10 @@ function SQLQuest:Update(newIndex)
 
 			self.ObjectiveDescription = questObjectives;
 			
-
+			self.Title = title;
+			if (self.Title == nil) then
+				self.Title = UNKNOWN
+			end
 
 			self.Level = level;
 			self.SuggestedGroup = suggestedGroup;
@@ -3206,7 +3199,7 @@ function SQLQuestLogData:Update()
 		end
 	end
 
-	local numEntries, numQuests = GetNumQuestLogEntries();
+	numEntries, numQuests = GetNumQuestLogEntries();
 	local zoneID = nil;
 	for i = 1, numEntries, 1 do
 		local title, _, _, isHeader, _, _, _, questID = GetQuestLogTitle(i);		
@@ -3329,9 +3322,8 @@ function SQLQuestLogData:Update()
     	end
 	end
 
-	if (self.QuestCount > 0) then
-		dbChar.ZoneIsCollapsed = {};
-	end
+
+	dbChar.ZoneIsCollapsed = {};
 	self.CollapsedZoneCount = 0;
 	for zoneKey, zone in pairs(self.ZoneList) do
 		if (zone.QuestCount > 0 or zone.IsFakeZone == true) then
@@ -3395,9 +3387,6 @@ function SQLQuestLogData:CompleteCheck()
 					else
 						if (db.Notifications.LibSinkObjectiveNotifications == true) then
 							if (db.Notifications.DisplayQuestOnObjectiveNotifications == true) then
-								if (quest.Title == nil or objective.Text == nil or objective.Have == nil or objective.Need == nil) then
-									print(quest.Title);print(objective.Text);print(objective.Have);print(objective.Need);
-								end
 								strMessage = format("(%s) %s : %s / %s", quest.Title, objective.Text, objective.Have, objective.Need);
 							else
 								strMessage = format("%s : %s / %s", objective.Text, objective.Have, objective.Need);
@@ -3889,10 +3878,6 @@ function QuestTracker:GetMinionQuestButton(questInstance)
 						end
 					end
 				end
-				local timeLeftMinutes = C_TaskQuest.GetQuestTimeLeftMinutes(questInstance.ID);
-				if (timeLeftMinutes and timeLeftMinutes > 0) then
-					GameTooltip:AddLine(BONUS_OBJECTIVE_TIME_LEFT:format(SecondsToTime(timeLeftMinutes * 60)), 1, 1, 1, 1);
-				end
 					
 				if (needsSpacer) then
 					GameTooltip:AddLine(" ");
@@ -4176,7 +4161,7 @@ function QuestTracker:SetupItemButton(objButton)
 	objButton:SetParent(fraMinionAnchor);
 	objButton:Show();
 	QuestObjectiveItem_UpdateCooldown(objButton)
-	objButton.Cooldown:SetFrameStrata("DIALOG")
+	
 	if (db.MoveTooltipsRight == true) then
 		objButton:SetPoint("TOPLEFT", fraMinionAnchor, "TOPRIGHT", (8 * (1 / objButton:GetScale())), objButton.yOffset * (1 / objButton:GetScale()))
 	else
@@ -4536,7 +4521,7 @@ function QuestTracker:UpdateMinion()
 							local blnHasShownButton = false
 							local intThisQuestsOffset = intQuestOffset
 							if (db.ShowItemButtons == true and QuestInstance.QuestItem) then -- Item Buttons on and has a button
-								if (db.HideItemButtonsForCompletedQuests == false or (db.HideItemButtonsForCompletedQuests and QuestInstance.IsComplete == false and QuestInstance.IsFailed == false) or (QuestInstance.QuestItem.ShowWhenComplete and QuestInstance.IsComplete)) then -- Button not hidden because of completion
+								if (db.HideItemButtonsForCompletedQuests == false or (db.HideItemButtonsForCompletedQuests == true and QuestInstance.IsComplete == false and QuestInstance.IsFailed == false)) then -- Button not hidden because of completion
 									blnHasShownButton = true
 		
 									if (db.IndentItemButtons == true and db.MoveTooltipsRight == false) then
@@ -5118,9 +5103,6 @@ end
 
 function QuestTracker:OpenFullQuestLog(questInstance)
 	if (questInstance.IsWorldQuest) then
-		if IsAddOnLoaded("WorldQuestGroupFinder") then 
-			WorldQuestGroupFinder.HandleBlockClick(questInstance.ID) 
-		end;
 		return
 	end
 	if (QuestLogFrame and QuestLog_SetSelection) then --Legacy quest support
@@ -5200,7 +5182,7 @@ function QuestTracker:LinkQuest(questInstance)
 			rewardText = rewardText .. rewards[i];
 		end
 		
-		local link = GetQuestLink(questInstance.ID) .. " - " .. zone .. " - " .. REWARDS .. ": " .. rewardText
+		local link = "[" .. questInstance.Title .. "] - " .. zone .. " - " .. REWARDS .. ": " .. rewardText
 		
 	
 		
@@ -5208,7 +5190,7 @@ function QuestTracker:LinkQuest(questInstance)
 		return
 	end
 	if ChatEdit_GetActiveWindow() then -- Link in chat
-		ChatEdit_InsertLink(GetQuestLink(questInstance.ID))
+		ChatEdit_InsertLink(GetQuestLink(questInstance.Index))
 	else -- Track/untrack quest
 		if (db.ZonesAndQuests.AllowHiddenQuests == true) then
 			if (IsQuestWatched(questInstance.Index) == nil) then

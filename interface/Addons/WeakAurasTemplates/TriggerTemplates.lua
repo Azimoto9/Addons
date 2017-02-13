@@ -33,7 +33,6 @@ function WeakAuras.CreateTemplateView(frame)
 
   local newViewScroll = AceGUI:Create("ScrollFrame");
   newViewScroll:SetLayout("flow");
-  newViewScroll.frame:SetClipsChildren(true);
   newView:AddChild(newViewScroll);
 
   local function createNewId(prefix)

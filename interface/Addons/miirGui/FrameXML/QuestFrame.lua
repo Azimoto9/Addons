@@ -1,17 +1,19 @@
 local f = CreateFrame("Frame")
-f:RegisterEvent("PLAYER_LOGIN")
+f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:SetScript("OnEvent", function()
-
 	QuestFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
-	QuestFramePortrait:SetSize(66,66)
-	QuestFramePortrait:SetPoint("TOPLEFT",-9,10)
-	
-	m_SetTexture(WorldMapFramePortrait,"Interface\\Addons\\miirgui\\gfx\\quest.blp")
+	QuestFrameGreetingPanelBg:SetAlpha(0)
 	WorldMapFrameTutorialButton.Ring:SetAlpha(0)
-	WorldMapFramePortrait:SetSize(66,66)
+	WorldMapFramePortrait:SetWidth(66)
+	WorldMapFramePortrait:SetHeight(66)
 	WorldMapFramePortrait:SetPoint("TOPLEFT",-9,9)
-
+	WorldMapFramePortrait:SetTexture("Interface\\Addons\\miirgui\\gfx\\quest.blp")
+	local GossipFrameBackground = select(19,GossipFrame:GetRegions())
+	GossipFrameBackground:SetAlpha(0)
+	QuestFrameDetailPanelBg:SetAlpha(0)
+	QuestFrameRewardPanelBg:SetAlpha(0)
 	QuestMapDetailsScrollFrameScrollBarTrack:SetAlpha(0)
+	QuestFrameProgressPanelBg:SetAlpha(0)
 	QuestNPCModelTopBorder:SetAlpha(0)
 	QuestNPCModelLeftBorder:SetAlpha(0)
 	QuestNPCModelRightBorder:SetAlpha(0)
@@ -29,32 +31,17 @@ f:SetScript("OnEvent", function()
 	QuestNPCModelBg:ClearAllPoints()
 	QuestNPCModelBg:SetPoint("TOPLEFT","QuestNPCModel",0,16)
 	QuestNPCModelBg:SetPoint("BOTTOMRIGHT","QuestNPCModel",0,-86)
-	
 	m_fontify(QuestNPCModelText,"white")
 	m_border(QuestNPCModel,202,336,"CENTER",1,-34,14,"MEDIUM")
 	m_border(QuestFrame,330,412,"CENTER",-1,-17,14,"MEDIUM")
 	m_border(QuestLogPopupDetailFrame,330,412,"CENTER",-1,-17,14,"MEDIUM")
 	m_border(GossipFrame,330,412,"CENTER",-1,-17,14,"MEDIUM")
 	
-	m_fontify(QuestNPCModelNameText,"color")
-	m_fontify(QuestInfoSkillPointFrame.ValueText,"white")
-	m_fontify(QuestInfoMoneyFrameGoldButtonText,"white")
-	m_fontify(QuestInfoMoneyFrameSilverButtonText,"white")
-	m_fontify(QuestInfoMoneyFrameCopperButtonText,"white")
-	m_fontify(QuestInfoXPFrame.ValueText,"white")
-	m_fontify(QuestFont,"white")
-	
-	local _,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,QuestLogPopupDetailFramePortrait =QuestLogPopupDetailFrame:GetRegions()
-	QuestLogPopupDetailFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
-	QuestLogPopupDetailFramePortrait:SetPoint("TOPLEFT",-9,9)
-	
-	local _,_,QuestMapFrameDetailsFrameRewardsFrameHeader= QuestMapFrame.DetailsFrame.RewardsFrame:GetRegions()
-	m_fontify(QuestMapFrameDetailsFrameRewardsFrameHeader,"color")	
-	
 	local function miirgui_GossipFrameUpdate()
 		GossipFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
-		GossipFramePortrait:SetSize(66,66)
-		GossipFramePortrait:SetPoint("TOPLEFT",-9,10)	
+		GossipFramePortrait:SetWidth(66)
+		GossipFramePortrait:SetHeight(66)
+		GossipFramePortrait:SetPoint("TOPLEFT",-9,10)
 		m_fontify(GossipGreetingText,"white")
 		for i=1, 32 do
 			local button = _G["GossipTitleButton"..i]
@@ -62,6 +49,7 @@ f:SetScript("OnEvent", function()
 				m_fontify(button:GetFontString(),"white")
 				if button:GetFontString():GetText() and button:GetFontString():GetText():find("|cff000000") then
 					button:GetFontString():SetText(string.gsub(button:GetFontString():GetText(), "|cff000000", "|cffffffff"))
+					m_fontify(button:GetFontString(),"same")
 				end
 			end		
 		end
@@ -70,10 +58,10 @@ f:SetScript("OnEvent", function()
 	hooksecurefunc("GossipFrameUpdate",miirgui_GossipFrameUpdate)
 	
 	local function miirgui_WorldMapFrame()
+		local BountyBg=select(1,WorldMapFrame.UIElementsFrame.BountyBoard.TutorialBox:GetRegions())
+		BountyBg:SetGradientAlpha("HORIZONTAL", 1, 1, 1, 1, 1, 1, 1, 1)
+		BountyBg:SetColorTexture(0.078,0.078,0.078,1)	
 		if not m_helpplate then
-			local BountyBg=WorldMapFrame.UIElementsFrame.BountyBoard.TutorialBox:GetRegions()
-			BountyBg:SetGradientAlpha("HORIZONTAL", 1, 1, 1, 1, 1, 1, 1, 1)
-			BountyBg:SetColorTexture(0.078,0.078,0.078,1)	
 			local Border = CreateFrame("Frame", "m_helpplate", WorldMapFrame.UIElementsFrame.BountyBoard.TutorialBox)
 			Border:SetSize(226,90)
 			Border:SetPoint("TOPLEFT",WorldMapFrame.UIElementsFrame.BountyBoard.TutorialBox,-3,2.5)
@@ -83,85 +71,77 @@ f:SetScript("OnEvent", function()
 			edgeSize = 14})
 			Border:SetBackdropBorderColor(1, 1, 1)
 			Border:SetFrameStrata("DIALOG")
-			m_fontify(WorldMapFrame.UIElementsFrame.BountyBoard.TutorialBox.Text,"white")
 		end
+		m_fontify(WorldMapFrame.UIElementsFrame.BountyBoard.TutorialBox.Text,"white")
 	end
 	
 	WorldMapFrame:HookScript("OnShow",miirgui_WorldMapFrame)
 
-	local function miirgui_QuestInfo_ShowObjectives()	
-		local _, _, finished;
-		local numObjectives = GetNumQuestLeaderBoards();
-		local objectivesTable = QuestInfoObjectivesFrame.Objectives;
-		local numVisibleObjectives = 0;
-		for i = 1,numObjectives do
-			_, _, finished = GetQuestLogLeaderBoard(i);
-			numVisibleObjectives = numVisibleObjectives+1;
-			local objective = objectivesTable[numVisibleObjectives];
-			if objective then
-				if ( finished )  then
-					m_fontify(objective,"green")
-				else		
-					m_fontify(objective,"grey")
-				end
-			end	
-		end
-	end
-	
-	hooksecurefunc("QuestInfo_Display",miirgui_QuestInfo_ShowObjectives)
-		
-	local function miirgui_q_fonts()
+	local function miirgui_QuestInfo_Display(_, parentFrame)
+		local questFrame = parentFrame:GetParent():GetParent()
+		local sealMaterialBG = questFrame.SealMaterialBG
+		if sealMaterialBG then	
+			sealMaterialBG:SetAlpha(0)
+		end	
+		QuestInfoRewardsFrame.ArtifactXPFrame.Overlay:SetAlpha(0)
+		local QuestLogPopupDetailFrameBackground= select(18,QuestLogPopupDetailFrame:GetRegions())
+		QuestLogPopupDetailFrameBackground:SetAlpha(0)
+		local QuestLogPopupDetailFramePortrait= select(24,QuestLogPopupDetailFrame:GetRegions())
+		QuestLogPopupDetailFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		QuestLogPopupDetailFramePortrait:SetPoint("TOPLEFT",-9,9)
+		QuestFramePortrait:SetSize(66,66)
+		QuestFramePortrait:SetPoint("TOPLEFT",-9,10)
+		m_fontify(QuestNPCModelNameText,"color")
 		m_fontify(QuestInfoTitleHeader,"color")
 		m_fontify(QuestInfoDescriptionHeader,"color")
 		m_fontify(QuestInfoObjectivesHeader,"color")
+		m_fontify(QuestInfoRewardsFrame.Header,"color")
 		m_fontify(QuestInfoDescriptionText,"white")
 		m_fontify(QuestInfoObjectivesText,"white")
 		m_fontify(QuestInfoGroupSize,"white")
 		m_fontify(QuestInfoRewardText,"white")
-		m_fontify(QuestInfoRewardsFrame.Header,"color")
+		m_fontify(QuestInfoSkillPointFrame.ValueText,"white")
+		m_fontify(QuestInfoRewardsFrame.ItemChooseText,"white")
 		m_fontify(QuestInfoRewardsFrame.ItemReceiveText,"white")
-	end	
-	
-	QuestFrame:HookScript("OnShow",miirgui_q_fonts)	
-	QuestMapFrame.DetailsFrame:HookScript("OnShow",miirgui_q_fonts)	
-	QuestLogPopupDetailFrame:HookScript("OnShow",miirgui_q_fonts)
-	QuestFrameRewardPanel:HookScript("OnShow",miirgui_q_fonts)
-	QuestFrameDetailPanel:HookScript("OnShow",miirgui_q_fonts)	
-	
-	MapQuestInfoRewardsFrame:HookScript("OnShow",function(self)
-		local _,_,_,willlearn=self:GetRegions() -- You will learn the following
-			if willlearn then
-			m_fontify(willlearn,"white")
-		end
-		m_fontify(self.ItemReceiveText,"white")
+		m_fontify(QuestInfoMoneyFrameGoldButtonText,"white")
+		m_fontify(QuestInfoMoneyFrameSilverButtonText,"white")
+		m_fontify(QuestInfoMoneyFrameCopperButtonText,"white")
+		m_fontify(QuestInfoXPFrame.ValueText,"white")
+		m_fontify(QuestInfoRewardsFrame.PlayerTitleText,"white")
+		m_fontify(QuestInfoRewardsFrame.XPFrame.ReceiveText,"white")
 		m_fontify(MapQuestInfoRewardsFramePoints,"white")
+		m_fontify(MapQuestInfoRewardsFrame.ItemReceiveText,"white")
 		m_fontify(MapQuestInfoRewardsFrameQuestInfoItem1.Name,"white")
-		m_fontify(self.SkillPointFrame.Name,"white")
-		m_fontify(self.XPFrame.Name,"white")
-		m_fontify(self.MoneyFrame.Name,"white")
-		m_fontify(self.ItemChooseText,"white")	
-	end)
-	
-	QuestInfoRewardsFrame:HookScript("OnShow",function(self)
-		m_fontify(self.Header,"color")
-		m_fontify(self.PlayerTitleText,"white")
-		m_fontify(self.XPFrame.ReceiveText,"white")
-		m_fontify(self.ItemReceiveText,"white")
-		m_fontify(self.ItemChooseText,"white")	
-		local _,_,_,_,QuestInfoRewardsFramewilllearn = self:GetRegions()
+		m_fontify(MapQuestInfoRewardsFrame.SkillPointFrame.Name,"white")
+		m_fontify(MapQuestInfoRewardsFrame.XPFrame.Name,"white")
+		m_fontify(MapQuestInfoRewardsFrame.MoneyFrame.Name,"white")
+		m_fontify(QuestFont,"white")
+		m_fontify(MapQuestInfoRewardsFrame.ItemChooseText,"white")
+		local QuestMapFrameDetailsFrameRewardsFrameHeader= select(3,QuestMapFrame.DetailsFrame.RewardsFrame:GetRegions())
+		m_fontify(QuestMapFrameDetailsFrameRewardsFrameHeader,"color")
+		m_fontify(QuestInfoSealFrame.Text,"same")
+		
+		local QuestInfoRewardsFramewilllearn = select(5,QuestInfoRewardsFrame:GetRegions())
 		if QuestInfoRewardsFramewilllearn ~= nil then
 			m_fontify(QuestInfoRewardsFramewilllearn,"white")
 		end
-		self.ArtifactXPFrame.Overlay:SetAlpha(0)
-		end)
-	
-	QuestFrame:HookScript("OnEvent",function(_,event)
-		if event == "QUEST_LOG_UPDATE" and QuestInfoRewardsFrame:IsVisible() and not WorldMapFrame:IsVisible() then
-			QuestInfoRewardsFrame.spellHeaderPool.textR, QuestInfoRewardsFrame.spellHeaderPool.textG, QuestInfoRewardsFrame.spellHeaderPool.textB = 1,1,1
-		elseif event == "QUEST_COMPLETE" and QuestInfoRewardsFrame:IsVisible() and not WorldMapFrame:IsVisible() then
-			QuestInfoRewardsFrame.spellHeaderPool.textR, QuestInfoRewardsFrame.spellHeaderPool.textG, QuestInfoRewardsFrame.spellHeaderPool.textB = 1,1,1
+		
+		local numObjectives = GetNumQuestLeaderBoards();
+		local objectivesTable = QuestInfoObjectivesFrame.Objectives;
+		local numVisibleObjectives = 0;	
+		for i = 1,numObjectives do
+			local _, _, finished = GetQuestLogLeaderBoard(i);
+			numVisibleObjectives = numVisibleObjectives+1;
+			local objective = objectivesTable[numVisibleObjectives];
+			if ( finished ) and objective then
+				m_fontify(objective,"green")
+			elseif objective then
+				m_fontify(objective,"grey")
+			end
 		end
-	end)
+	end
+
+	hooksecurefunc("QuestInfo_Display", miirgui_QuestInfo_Display)
 	
 	local function miirgui_QuestFrameProgressItems_Update()
 		m_fontify(QuestProgressTitleText,"color")
@@ -172,6 +152,17 @@ f:SetScript("OnEvent", function()
 
 	hooksecurefunc("QuestFrameProgressItems_Update", miirgui_QuestFrameProgressItems_Update)
 
+	local function miirgui_QuestMapFrame_ShowQuestDetails()
+		for i =1,4 do
+			local test=select(i,MapQuestInfoRewardsFrame:GetRegions())
+			if test then
+				m_fontify(test,"white")
+			end
+		end
+	end
+	
+	hooksecurefunc("QuestMapFrame_ShowQuestDetails",miirgui_QuestMapFrame_ShowQuestDetails)
+
 	local function miirgui_greetings_panel()
 		m_fontify(GreetingText,"white")
 		m_fontify(CurrentQuestsText,"color")
@@ -181,13 +172,37 @@ f:SetScript("OnEvent", function()
 			if button:GetFontString() then
 				if button:GetFontString():GetText() and button:GetFontString():GetText():find("|cff000000") then
 				button:GetFontString():SetText(string.gsub(button:GetFontString():GetText(), "|cff000000", "|cffffffff"))
+				m_fontify(button:GetFontString(),"same")
 				end
 			end
 		end	
 	end
 	
-	QuestFrameGreetingPanel:HookScript("OnShow", miirgui_greetings_panel)	
+	QuestFrameGreetingPanel:HookScript("OnShow", miirgui_greetings_panel)
+	
 	hooksecurefunc("QuestFrameGreetingPanel_OnShow",miirgui_greetings_panel)
+	
+	local function miirgui_QuestMapFrame()
+			for key in pairs(MapQuestInfoRewardsFrame["followerRewardPool"]) do
+			local followerFrame = MapQuestInfoRewardsFrame.followerRewardPool:Acquire();	
+			followerFrame.Class:SetAlpha(0)
+			followerFrame.BG:ClearAllPoints()
+			followerFrame.BG:SetSize(136,32)
+			followerFrame.BG:SetPoint("RIGHT",followerFrame,40.5,2)
+			followerFrame.BG:SetTexture("Interface\\AuctionFrame\\UI-AuctionItemNameFrame.blp")
+			followerFrame.PortraitFrame.PortraitRing:SetAlpha(0)
+			followerFrame.PortraitFrame.LevelBorder:SetAlpha(0)
+			followerFrame.PortraitFrame.Portrait:SetTexCoord(0.15, 0.85, 0.15, 0.85)
+			followerFrame.PortraitFrame.PortraitRingQuality:SetTexture("Interface\\Buttons\\UI-Quickslot.blp")
+			followerFrame.PortraitFrame.PortraitRingQuality:SetSize(84,84)
+			followerFrame.PortraitFrame.PortraitRingQuality:ClearAllPoints()
+			followerFrame.PortraitFrame.PortraitRingQuality:SetPoint("LEFT",followerFrame.PortraitFrame,-16,2)
+			m_fontify(followerFrame.Name,"white")
+			m_fontify(followerFrame.PortraitFrame.Level,"white")
+		end
+	end
+	
+	QuestMapFrame:HookScript("OnEvent",miirgui_QuestMapFrame)
 	
 	local function miirgui_QuestFrame()
 		local numchildren = QuestInfoRewardsFrame:GetNumChildren()
@@ -198,11 +213,11 @@ f:SetScript("OnEvent", function()
 				followerFrame.BG:ClearAllPoints()
 				followerFrame.BG:SetSize(140,39)
 				followerFrame.BG:SetPoint("RIGHT",followerFrame,40,3)
-				m_SetTexture(followerFrame.BG,"Interface\\AuctionFrame\\UI-AuctionItemNameFrame.blp")
+				followerFrame.BG:SetTexture("Interface\\AuctionFrame\\UI-AuctionItemNameFrame.blp")
 				followerFrame.PortraitFrame.PortraitRing:SetAlpha(0)
 				followerFrame.PortraitFrame.LevelBorder:SetAlpha(0)
 				followerFrame.PortraitFrame.Portrait:SetTexCoord(0.15, 0.85, 0.15, 0.85)
-				m_SetTexture(followerFrame.PortraitFrame.PortraitRingQuality,"Interface\\Buttons\\UI-Quickslot.blp")
+				followerFrame.PortraitFrame.PortraitRingQuality:SetTexture("Interface\\Buttons\\UI-Quickslot.blp")
 				followerFrame.PortraitFrame.PortraitRingQuality:SetSize(84,84)
 				followerFrame.PortraitFrame.PortraitRingQuality:ClearAllPoints()
 				followerFrame.PortraitFrame.PortraitRingQuality:SetPoint("LEFT",followerFrame.PortraitFrame,-16,2)
@@ -216,31 +231,7 @@ f:SetScript("OnEvent", function()
 	end
 	
 	QuestFrame:HookScript("OnShow",miirgui_QuestFrame)
+	
 	QuestLogPopupDetailFrame:HookScript("OnShow",miirgui_QuestFrame)
-	
-	WorldMapFrame.UIElementsFrame.BountyBoard:HookScript("OnShow",function()
-if not InCombatLockdown() then
-	local numChildren = WorldMapFrame.UIElementsFrame.BountyBoard:GetNumChildren()
-	for i=1,numChildren do
-		local frame = select(i,WorldMapFrame.UIElementsFrame.BountyBoard:GetChildren())	
-		if frame:GetHeight() > 44 and frame:GetHeight() < 45 then			
-			local _,emptyicon = frame:GetRegions()
-			emptyicon:ClearAllPoints()
-			emptyicon:SetPoint("CENTER",frame,0,1.5)	
-			
-			local _,_,selected = frame:GetRegions()
-			selected:ClearAllPoints()
-			selected:SetPoint("CENTER",frame,0,0.5)
-			selected:SetSize(44,44)	
-			
-			local icon = frame:GetRegions()
-			icon:ClearAllPoints()
-			icon:SetPoint("CENTER",frame,0,1)
-			icon:SetMask("")
-		end			
-	end
-end
-end)
-	
-	
+
 end)

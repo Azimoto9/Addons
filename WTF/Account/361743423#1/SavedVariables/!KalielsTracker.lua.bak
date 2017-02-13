@@ -1,0 +1,57 @@
+
+KalielsTrackerDB = {
+	["profileKeys"] = {
+		["Birge - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["xOffset"] = 17,
+			["yOffset"] = -20,
+			["anchorPoint"] = "TOPLEFT",
+			["hdrTxtColor"] = {
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["bgr"] = "None",
+			["hdrBtnColor"] = {
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["hideEmptyTracker"] = true,
+			["font"] = "Imagine",
+			["hdrBgr"] = 1,
+			["filterAuto"] = {
+				"Zone", -- [1]
+			},
+			["tooltipShowID"] = false,
+			["fontSize"] = 9,
+			["filterAchievCat"] = {
+				[168] = false,
+				[92] = false,
+				[169] = false,
+				[15246] = false,
+				[155] = false,
+				[97] = false,
+				[15237] = false,
+				[15275] = false,
+				[15117] = false,
+				[15165] = false,
+				[95] = false,
+				[201] = false,
+				[96] = false,
+			},
+			["hdrAchievsTitleAppend"] = false,
+			["fontShadow"] = 0,
+			["hdrQuestsTitleAppend"] = false,
+			["hdrBgrColor"] = {
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["hdrOtherButtons"] = false,
+			["fontFlag"] = "OUTLINE",
+			["textWordWrap"] = true,
+			["helpTutorial"] = 9,
+			["hdrCollapsedTxt"] = 2,
+		},
+	},
+}

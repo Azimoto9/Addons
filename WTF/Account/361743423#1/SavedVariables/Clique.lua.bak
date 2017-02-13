@@ -1,0 +1,35 @@
+
+CliqueDB = nil
+CliqueDB3 = {
+	["char"] = {
+		["Pytte - Outland"] = {
+			["alerthidden"] = true,
+		},
+	},
+	["profileKeys"] = {
+		["Pytte - Outland"] = "Pytte - Outland",
+	},
+	["profiles"] = {
+		["Pytte - Outland"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["spell"] = "Greater Healing Wave",
+					["key"] = "4",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Spell_Nature_HealingWaveLesser",
+					["type"] = "spell",
+				}, -- [2]
+			},
+		},
+	},
+}

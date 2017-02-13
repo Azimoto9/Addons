@@ -1,4 +1,7 @@
-local function skin_Blizzard_ArchaeologyUI()
+local frame = CreateFrame("FRAME")
+frame:RegisterEvent("ADDON_LOADED")
+function frame:OnEvent(event, arg1)
+if event == "ADDON_LOADED" and arg1 == "Blizzard_ArchaeologyUI" then
 	local f= CreateFrame("Frame",nil)
 	f:SetFrameStrata("MEDIUM")
 	f:SetWidth(256) 
@@ -12,7 +15,7 @@ local function skin_Blizzard_ArchaeologyUI()
 		m_fontify(ArcheologyDigsiteProgressBar.BarTitle,"white")
 		ArcheologyDigsiteProgressBar.BarBorderAndOverlay:Hide()
 		ArcheologyDigsiteProgressBar.Shadow:Hide()
-		m_SetTexture(ArcheologyDigsiteProgressBar.BarBackground,"Interface\\FrameGeneral\\UI-Background-Rock.blp")
+		ArcheologyDigsiteProgressBar.BarBackground:SetTexture("Interface\\FrameGeneral\\UI-Background-Rock.blp")
 		f:SetParent(ArcheologyDigsiteProgressBar)
 		f:SetPoint("CENTER",0,0)
 		f:Show()
@@ -27,12 +30,12 @@ local function skin_Blizzard_ArchaeologyUI()
 	m_fontify(ArchaeologyFrameSummaryPageTitle,"color")
 	m_fontify(ArchaeologyFrameCompletedPageTitle,"color")
 	m_fontify(ArchaeologyFrameCompletedPageTitleMid,"color")
-	local nothingcompleted =ArchaeologyFrameCompletedPage:GetRegions()
+	local nothingcompleted=select(1,ArchaeologyFrameCompletedPage:GetRegions())
 	m_fontify(nothingcompleted,"white")
 
 	for i= 1, 12 do
 		local DiggingRace= _G["ArchaeologyFrameSummaryPageRace"..i]
-		local DiggingRaceProgress = DiggingRace:GetRegions()
+		local DiggingRaceProgress = select(1,DiggingRace:GetRegions())
 		m_fontify(DiggingRaceProgress,"white")
 	end
 	m_fontify(ArchaeologyFrameArtifactPageHistoryTitle,"color")
@@ -41,14 +44,15 @@ local function skin_Blizzard_ArchaeologyUI()
 			
 	for i= 1,12 do
 		local ArtifactNumber = _G["ArchaeologyFrameCompletedPageArtifact"..i]
-		local _,ArtifactBg,_,ArtifactName,ArtifactSubText = ArtifactNumber:GetRegions()
+		local ArtifactBg = select(2,ArtifactNumber:GetRegions())
 		ArtifactBg:Hide()
+		local ArtifactName=select(4,ArtifactNumber:GetRegions())
 		m_fontify(ArtifactName,"white")
+		local ArtifactSubText=select(5,ArtifactNumber:GetRegions())
 		m_fontify(ArtifactSubText,"white")
 	end
 	m_fontify(ArchaeologyFrameCompletedPagePageText,"white")
-	ArchaeologyFrameRankBarBar:SetVertexColor(miirguiDB.color.r,miirguiDB.color.g,miirguiDB.color.b,1)
-	ArchaeologyFrameRankBarBackground:Hide()
+	ArchaeologyFrameRankBarBar:SetVertexColor(unpack(miirgui.Color))
 	m_fontify(ArchaeologyFrameArtifactPageArtifactName,"color")
 	m_fontify(ArchaeologyFrameArtifactPageArtifactSubText,"white")
 	m_fontify(ArchaeologyFrameSummaryPagePageText,"white")
@@ -60,29 +64,6 @@ local function skin_Blizzard_ArchaeologyUI()
 	
 	hooksecurefunc("ArchaeologyFrame_CurrentArtifactUpdate",miirgui_ArchaeologyFrame_CurrentArtifactUpdate)		
 end
-
-local catchaddon = CreateFrame("FRAME")
-catchaddon:RegisterEvent("ADDON_LOADED")
-
---function to catch loading addons
-local function skinnedOnLoad(_, _, addon)
-	if addon == "Blizzard_ArchaeologyUI" then
-		skin_Blizzard_ArchaeologyUI()
-	end	
 end
 
---this function decides whether the addon is already loaded or if we need to look out for it!
-
-local function skinnedOnLogin()
-	if IsAddOnLoaded("Blizzard_ArchaeologyUI") then
-		-- Addon is already loaded, procceed to skin!
-		skin_Blizzard_ArchaeologyUI()
-	else
-		-- Addon is not loaded yet, procceed to look out for it!
-		catchaddon:SetScript("OnEvent", skinnedOnLoad)
-	end
-end
-
-local HelloWorld = CreateFrame("FRAME")
-HelloWorld:RegisterEvent("PLAYER_ENTERING_WORLD")
-HelloWorld:SetScript("OnEvent", skinnedOnLogin)
+frame:SetScript("OnEvent", frame.OnEvent);

@@ -1,0 +1,10 @@
+
+EPGPLootMaster = {
+	["profileKeys"] = {
+		["Birgs - Outland"] = "Birgs - Outland",
+	},
+	["profiles"] = {
+		["Birgs - Outland"] = {
+		},
+	},
+}

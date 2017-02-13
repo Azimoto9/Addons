@@ -1,0 +1,235 @@
+
+DominosDB = {
+	["profileKeys"] = {
+		["Pytte - Outland"] = "Shaman",
+	},
+	["profiles"] = {
+		["Shaman"] = {
+			["frames"] = {
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 0,
+					["pages"] = {
+						["SHAMAN"] = {
+							["page2"] = 1,
+							["page5"] = 4,
+							["page4"] = 3,
+							["page3"] = 2,
+							["page6"] = 5,
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [1]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 40,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [2]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 80,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [3]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 120,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [4]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 160,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [5]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 200,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [6]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 240,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [7]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 280,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [8]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 320,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [9]
+				{
+					["point"] = "BOTTOM",
+					["hidden"] = true,
+					["padW"] = 2,
+					["x"] = 0,
+					["spacing"] = 4,
+					["padH"] = 2,
+					["y"] = 360,
+					["pages"] = {
+						["SHAMAN"] = {
+						},
+					},
+					["numButtons"] = 12,
+				}, -- [10]
+				["totem1"] = {
+					["y"] = -485.2478047867103,
+					["x"] = 844.2648366970851,
+					["point"] = "TOPLEFT",
+					["spacing"] = 2,
+					["showTotems"] = true,
+					["showRecall"] = true,
+					["hidden"] = true,
+				},
+				["extra"] = {
+					["y"] = 0,
+					["x"] = -244,
+					["point"] = "CENTER",
+				},
+				["bags"] = {
+					["numButtons"] = 5,
+					["point"] = "BOTTOMRIGHT",
+					["spacing"] = 2,
+				},
+				["pet"] = {
+					["y"] = 524.0767706943719,
+					["x"] = -848.0942770070271,
+					["point"] = "BOTTOMRIGHT",
+					["spacing"] = 6,
+				},
+				["cast"] = {
+					["y"] = 30,
+					["x"] = 0,
+					["showText"] = true,
+					["point"] = "CENTER",
+				},
+				["menu"] = {
+					["y"] = 0,
+					["x"] = -244,
+					["disabled"] = {
+					},
+					["point"] = "BOTTOMRIGHT",
+				},
+				["roll"] = {
+					["point"] = "LEFT",
+					["spacing"] = 2,
+					["numButtons"] = 4,
+					["columns"] = 1,
+				},
+				["xp"] = {
+					["y"] = -32,
+					["x"] = 0,
+					["point"] = "TOP",
+					["height"] = 14,
+					["texture"] = "blizzard",
+					["alwaysShowText"] = true,
+					["width"] = 0.75,
+				},
+				["vehicle"] = {
+					["y"] = 0,
+					["x"] = -244,
+					["point"] = "CENTER",
+					["numButtons"] = 3,
+				},
+				["totem3"] = {
+					["y"] = -461.1794881228805,
+					["x"] = 912.0940537910774,
+					["point"] = "TOPLEFT",
+					["spacing"] = 2,
+					["showTotems"] = true,
+					["hidden"] = true,
+					["showRecall"] = true,
+				},
+				["totem2"] = {
+					["y"] = -466.6494868802844,
+					["x"] = -916.469996774174,
+					["point"] = "TOPRIGHT",
+					["spacing"] = 2,
+					["showTotems"] = true,
+					["hidden"] = true,
+					["showRecall"] = true,
+				},
+			},
+		},
+	},
+}
+DominosVersion = "4.3.4"

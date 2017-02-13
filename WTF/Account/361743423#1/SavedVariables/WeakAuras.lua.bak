@@ -1,10 +1,5541 @@
 
 WeakAurasSaved = {
-	["dynamicIconCache"] = {
-	},
 	["displays"] = {
+		["supernova timer 2 2 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = -60,
+			["displayText"] = "%s",
+			["yOffset"] = -238,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["selfPoint"] = "RIGHT",
+			["barColor"] = {
+				0.313725490196078, -- [1]
+				0.650980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["font"] = "Imagine",
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+						[15] = true,
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["ROGUE"] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_realm"] = false,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "text",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 5,
+			["auto"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["borderInset"] = 4,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["outline"] = true,
+			["borderBackdrop"] = "Solid",
+			["disjunctive"] = "any",
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["ownOnly"] = true,
+				["unit"] = "target",
+				["powertype"] = 2,
+				["use_powertype"] = true,
+				["debuffType"] = "HARMFUL",
+				["subeventPrefix"] = "SPELL",
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
+				["use_showOn"] = true,
+				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_percentpower"] = true,
+				["spellName"] = 157980,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["names"] = {
+					"Frost Bomb", -- [1]
+					"Living Bomb", -- [2]
+					"Nether Tempest", -- [3]
+				},
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["percentpower"] = "100",
+				["percentpower_operator"] = "<=",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["height"] = 16.9999961853027,
+			["timerFlags"] = "None",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontSize"] = 17,
+			["border"] = true,
+			["borderEdge"] = "None",
+			["borderSize"] = 16,
+			["parent"] = "Hunter Frames Group 2",
+			["icon_side"] = "LEFT",
+			["displayTextRight"] = " ",
+			["stacksFlags"] = "None",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["untrigger"] = {
+				["unit"] = "player",
+				["spellName"] = 157980,
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 12,
+			["textSize"] = 12,
+			["additional_triggers"] = {
+			},
+			["stacksFont"] = "Friz Quadrata TT",
+			["frameStrata"] = 3,
+			["width"] = 13.0000314712524,
+			["id"] = "supernova timer 2 2 2",
+			["timer"] = true,
+			["numTriggers"] = 1,
+			["inverse"] = false,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["backgroundColor"] = {
+				1, -- [1]
+				0.294117647058823, -- [2]
+				0.329411764705882, -- [3]
+				0, -- [4]
+			},
+			["justify"] = "RIGHT",
+		},
+		["supernovatrack 2 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = -1,
+			["stacksFlags"] = "None",
+			["yOffset"] = -242,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+						[15] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_realm"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["ROGUE"] = true,
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["sparkTexture"] = "Interface\\AddOns\\BirgMedia\\triangle",
+			["spark"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["borderInset"] = 4,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkOffsetX"] = -4,
+			["disjunctive"] = "any",
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["ownOnly"] = true,
+				["use_unit"] = true,
+				["powertype"] = 2,
+				["use_powertype"] = true,
+				["debuffType"] = "HARMFUL",
+				["subeventPrefix"] = "SPELL",
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
+				["use_showOn"] = true,
+				["unit"] = "target",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_percentpower"] = true,
+				["spellName"] = 157980,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["names"] = {
+					"Nether Tempest", -- [1]
+				},
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["percentpower"] = "100",
+				["percentpower_operator"] = "<=",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group 2",
+			["height"] = 2,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "BLEND",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["icon"] = false,
+			["timer"] = true,
+			["inverse"] = false,
+			["borderOffset"] = 5,
+			["timerSize"] = 12,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["sparkHidden"] = "NEVER",
+			["borderSize"] = 16,
+			["zoom"] = 0,
+			["icon_side"] = "LEFT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["sparkWidth"] = 12,
+			["sparkHeight"] = 12,
+			["borderBackdrop"] = "Solid",
+			["textSize"] = 12,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["untrigger"] = {
+				["spellName"] = 157980,
+				["unit"] = "player",
+			},
+			["additional_triggers"] = {
+			},
+			["sparkRotation"] = 270,
+			["frameStrata"] = 3,
+			["width"] = 112,
+			["sparkRotationMode"] = "MANUAL",
+			["stacksFont"] = "Friz Quadrata TT",
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["sparkColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["id"] = "supernovatrack 2 2",
+		},
+		["New 44 8 2"] = {
+			["color"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "Hunter Frames Group",
+			["mirror"] = false,
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["regionType"] = "texture",
+			["blendMode"] = "ADD",
+			["discrete_rotation"] = 0,
+			["init_completed"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["texture"] = "Interface\\AddOns\\BirgMedia\\silver\\mpring03",
+			["desaturate"] = false,
+			["additional_triggers"] = {
+			},
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "rotateClockwise",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["id"] = "New 44 8 2",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 4,
+			["width"] = 305,
+			["rotation"] = 270,
+			["xOffset"] = -0.2,
+			["numTriggers"] = 1,
+			["yOffset"] = -9.15527343750e-005,
+			["height"] = 305,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["trigger"] = {
+				["ownOnly"] = true,
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["useCount"] = true,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Power",
+				["use_percentpower"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["spellIds"] = {
+				},
+				["countOperator"] = ">=",
+				["use_unit"] = true,
+				["debuffType"] = "HARMFUL",
+				["percentpower"] = "50",
+				["percentpower_operator"] = ">=",
+			},
+		},
+		["Hunter Frames Group"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"New 28 5", -- [1]
+				"New 44 4", -- [2]
+				"Mage A Health 1 4", -- [3]
+				"Mage A Health 2 4", -- [4]
+				"Mage A Power 1 4", -- [5]
+				"Mage A Power 2 4", -- [6]
+				"New 51 2", -- [7]
+				"New 51 3", -- [8]
+				"New 46 2", -- [9]
+				"New 55 5", -- [10]
+				"New 56 5", -- [11]
+				"New 44 7 5", -- [12]
+				"New 44 8 2", -- [13]
+				"New 44 8 3", -- [14]
+				"New 44 8 4", -- [15]
+				"Hunter Castbar 1 ", -- [16]
+				"Hunter Castbar 2", -- [17]
+				"pethealth", -- [18]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 0,
+			["border"] = false,
+			["yOffset"] = -176,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = true,
+			["borderOffset"] = 5,
+			["untrigger"] = {
+			},
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Hunter Frames Group",
+			["additional_triggers"] = {
+			},
+			["frameStrata"] = 1,
+			["borderEdge"] = "None",
+			["trigger"] = {
+				["subeventPrefix"] = "SPELL",
+				["type"] = "aura",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["anchorPoint"] = "CENTER",
+		},
+		["New 44 8 4"] = {
+			["xOffset"] = -0.2,
+			["mirror"] = false,
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["regionType"] = "texture",
+			["parent"] = "Hunter Frames Group",
+			["blendMode"] = "ADD",
+			["discrete_rotation"] = 0,
+			["init_completed"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["texture"] = "Interface\\AddOns\\BirgMedia\\silver\\mpring03",
+			["desaturate"] = false,
+			["trigger"] = {
+				["ownOnly"] = true,
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["useCount"] = true,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Power",
+				["use_percentpower"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HARMFUL",
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["countOperator"] = ">=",
+				["use_unit"] = true,
+				["percentpower"] = "50",
+				["percentpower_operator"] = "<",
+			},
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "rotateClockwise",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["id"] = "New 44 8 4",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 4,
+			["width"] = 305,
+			["rotation"] = 270,
+			["color"] = {
+				1, -- [1]
+				0.490196078431373, -- [2]
+				0.0392156862745098, -- [3]
+				1, -- [4]
+			},
+			["numTriggers"] = 1,
+			["yOffset"] = -9.15527343750e-005,
+			["height"] = 305,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["use_class"] = true,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["additional_triggers"] = {
+			},
+		},
+		["Mage missiles/pyro/icelance duration 3"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = -131,
+			["stacksFlags"] = "None",
+			["yOffset"] = -170,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.546440690755844, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_realm"] = false,
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 1,
+			["spark"] = false,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				0.956862745098039, -- [1]
+				0.364705882352941, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+			},
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["ownOnly"] = true,
+				["event"] = "Health",
+				["names"] = {
+					"Arcane Missiles!", -- [1]
+					"Pyroblast!", -- [2]
+					"Fingers of Frost", -- [3]
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["spellIds"] = {
+				},
+				["percenthealth"] = "100",
+				["use_unit"] = true,
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = "<",
+				["custom_hide"] = "timed",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group 2",
+			["height"] = 8,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["borderInset"] = 11,
+			["sparkTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura45",
+			["timer"] = true,
+			["timerSize"] = 12,
+			["sparkHidden"] = "NEVER",
+			["border"] = false,
+			["borderEdge"] = "Pixel",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["borderSize"] = 1,
+			["sparkRotation"] = 0,
+			["icon_side"] = "RIGHT",
+			["sparkRotationMode"] = "AUTO",
+			["sparkWidth"] = 20,
+			["sparkHeight"] = 20,
+			["sparkOffsetX"] = -6,
+			["zoom"] = 0,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["id"] = "Mage missiles/pyro/icelance duration 3",
+			["textSize"] = 12,
+			["frameStrata"] = 4,
+			["width"] = 150,
+			["icon"] = false,
+			["stacksFont"] = "Friz Quadrata TT",
+			["inverse"] = true,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["additional_triggers"] = {
+			},
+			["numTriggers"] = 1,
+		},
+		["NO INT BUFF 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 0,
+			["displayText"] = "%p",
+			["yOffset"] = 160,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["rotateText"] = "LEFT",
+			["backgroundColor"] = {
+				1, -- [1]
+				0.294117647058823, -- [2]
+				0.329411764705882, -- [3]
+				0, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.858823529411765, -- [1]
+				0.407843137254902, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+						[15] = true,
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["ROGUE"] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_realm"] = false,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "texture",
+			["stacks"] = true,
+			["blendMode"] = "ADD",
+			["init_completed"] = 1,
+			["texture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura44",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 5,
+			["spark"] = false,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksPoint"] = "CENTER",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["outline"] = true,
+			["sparkOffsetX"] = 0,
+			["color"] = {
+				0, -- [1]
+				0.556862745098039, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["barInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["parent"] = "Hunter Frames Group 2",
+			["displayTextLeft"] = " ",
+			["stacksFont"] = "Friz Quadrata TT",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["rotation"] = 0,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "grow",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "grow",
+				},
+			},
+			["trigger"] = {
+				["rem"] = "3",
+				["remaining_operator"] = "<",
+				["use_unit"] = true,
+				["remaining"] = "5",
+				["subeventPrefix"] = "SPELL",
+				["use_powertype"] = true,
+				["spellName"] = 157980,
+				["names"] = {
+				},
+				["use_remaining"] = true,
+				["debuffType"] = "HELPFUL",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_percentpower"] = true,
+				["type"] = "aura",
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["custom_hide"] = "timed",
+				["remOperator"] = "<",
+				["powertype"] = 2,
+				["percentpower"] = "100",
+				["percentpower_operator"] = "<=",
+			},
+			["text"] = true,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["discrete_rotation"] = 0,
+			["auto"] = true,
+			["sparkWidth"] = 10,
+			["zoom"] = 0,
+			["height"] = 190.820571899414,
+			["rotate"] = false,
+			["untrigger"] = {
+				["spellName"] = 157980,
+				["unit"] = "player",
+			},
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontSize"] = 12,
+			["displayStacks"] = " ",
+			["inverse"] = false,
+			["timer"] = true,
+			["icon"] = false,
+			["border"] = true,
+			["borderEdge"] = "None",
+			["timerFlags"] = "None",
+			["borderSize"] = 16,
+			["stacksFlags"] = "None",
+			["icon_side"] = "LEFT",
+			["customTextUpdate"] = "update",
+			["id"] = "NO INT BUFF 2",
+			["sparkHeight"] = 30,
+			["justify"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 12,
+			["borderBackdrop"] = "Solid",
+			["additional_triggers"] = {
+			},
+			["displayTextRight"] = " ",
+			["frameStrata"] = 2,
+			["width"] = 217.076751708984,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["textSize"] = 12,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL",
+			["cooldown"] = false,
+			["borderInset"] = 4,
+		},
+		["New 46 2"] = {
+			["modelIsUnit"] = false,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				0.898039215686275, -- [1]
+				0.450980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["yOffset"] = -15.1472778320313,
+			["anchorPoint"] = "CENTER",
+			["model_x"] = 0.0500000000000007,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["advance"] = true,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "wobble",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
+				["ownOnly"] = true,
+				["event"] = "Unit Characteristics",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["spellIds"] = {
+				},
+				["useCount"] = true,
+				["count"] = "4",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["use_unit"] = true,
+				["countOperator"] = "==",
+				["debuffType"] = "HARMFUL",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 270,
+			["height"] = 176.581298828125,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sequence"] = 1,
+			["scale"] = 1,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["regionType"] = "model",
+			["borderSize"] = 16,
+			["blendMode"] = "ADD",
+			["init_completed"] = 1,
+			["parent"] = "Hunter Frames Group",
+			["texture"] = "Spells\\AURARUNE_B",
+			["untrigger"] = {
+			},
+			["model_z"] = 0.200000000000003,
+			["mirror"] = false,
+			["borderOffset"] = 5,
+			["additional_triggers"] = {
+			},
+			["model_y"] = 14,
+			["frameStrata"] = 4,
+			["width"] = 212.683502197266,
+			["rotation"] = 0,
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["selfPoint"] = "CENTER",
+			["xOffset"] = 49.2301025390625,
+			["id"] = "New 46 2",
+			["model_path"] = "SPELLS/ArcaneForceShield_yellow.m2",
+		},
+		["target health mage 3"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["disjunctive"] = "any",
+			["yOffset"] = -176,
+			["foregroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				0, -- [4]
+			},
+			["endAngle"] = 360,
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
+				["ownOnly"] = true,
+				["event"] = "Power",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["spellIds"] = {
+				},
+				["useCount"] = true,
+				["count"] = "4",
+				["unit"] = "player",
+				["debuffType"] = "HARMFUL",
+				["countOperator"] = "<",
+				["use_unit"] = true,
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["height"] = 74,
+			["rotate"] = false,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_realm"] = false,
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[2] = true,
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["parent"] = "Hunter Frames Group 2",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["fontSize"] = 12,
+			["foregroundTexture"] = "Interface\\AddOns\\BirgMedia\\magiccircle",
+			["selfPoint"] = "CENTER",
+			["anchorPoint"] = "CENTER",
+			["mirror"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["regionType"] = "progresstexture",
+			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
+			["startAngle"] = 0,
+			["alpha"] = 0.49,
+			["init_completed"] = 1,
+			["crop_y"] = 0.41,
+			["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_Smooth_Border2",
+			["crop"] = 0.41,
+			["rotation"] = 0,
+			["stickyDuration"] = false,
+			["compress"] = false,
+			["id"] = "target health mage 3",
+			["inverse"] = true,
+			["frameStrata"] = 5,
+			["width"] = 73,
+			["xOffset"] = -0.5,
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["numTriggers"] = 1,
+			["color"] = {
+				1, -- [1]
+				0.36078431372549, -- [2]
+				0.0509803921568627, -- [3]
+				1, -- [4]
+			},
+			["orientation"] = "CLOCKWISE",
+			["crop_x"] = 0.41,
+			["additional_triggers"] = {
+			},
+			["backgroundOffset"] = 0,
+		},
+		["New 55 5"] = {
+			["modelIsUnit"] = false,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				0.898039215686275, -- [1]
+				0.450980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["yOffset"] = 7,
+			["anchorPoint"] = "CENTER",
+			["model_x"] = 1.45,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["advance"] = false,
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "rotateClockwise",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["ownOnly"] = true,
+				["countOperator"] = "==",
+				["names"] = {
+					"Arcane Missiles!", -- [1]
+				},
+				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["count"] = "4",
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["use_unit"] = true,
+				["event"] = "Unit Characteristics",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 270,
+			["height"] = 7.00881576538086,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sequence"] = 1,
+			["scale"] = 1,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["regionType"] = "model",
+			["borderSize"] = 16,
+			["blendMode"] = "ADD",
+			["parent"] = "Hunter Frames Group",
+			["untrigger"] = {
+			},
+			["texture"] = "Spells\\AURARUNE_B",
+			["disjunctive"] = "any",
+			["model_z"] = 3.35,
+			["xOffset"] = -602,
+			["rotation"] = 0,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["debuffType"] = "HELPFUL",
+						["type"] = "aura",
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["names"] = {
+						},
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["model_y"] = 1.45,
+			["frameStrata"] = 2,
+			["width"] = 1090.08483886719,
+			["borderOffset"] = 5,
+			["borderInset"] = 11,
+			["numTriggers"] = 2,
+			["selfPoint"] = "CENTER",
+			["mirror"] = false,
+			["id"] = "New 55 5",
+			["model_path"] = "SPELLS/cast_arcane_01.m2",
+		},
+		["New 40 3 2"] = {
+			["disjunctive"] = "any",
+			["parent"] = "Hunter Frames Group 2",
+			["mirror"] = false,
+			["yOffset"] = -176,
+			["regionType"] = "texture",
+			["untrigger"] = {
+			},
+			["blendMode"] = "BLEND",
+			["discrete_rotation"] = 0,
+			["init_completed"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_Smooth_Border2",
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.600000023841858, -- [4]
+			},
+			["desaturate"] = false,
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "shrink",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "shrink",
+				},
+			},
+			["id"] = "New 40 3 2",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 5,
+			["width"] = 75,
+			["rotation"] = 0,
+			["xOffset"] = -0.5,
+			["numTriggers"] = 1,
+			["additional_triggers"] = {
+			},
+			["height"] = 75,
+			["rotate"] = false,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						[3] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_realm"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["ownOnly"] = true,
+				["countOperator"] = "<",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["count"] = "4",
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["names"] = {
+					"Camouflage", -- [1]
+				},
+				["event"] = "Unit Characteristics",
+				["custom_hide"] = "timed",
+			},
+		},
+		["Mage A Health 1 4"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = -131,
+			["stacksFlags"] = "None",
+			["yOffset"] = 2,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["sparkDesaturate"] = false,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["sparkTexture"] = "Interface\\Addons\\BirgMedia\\softsquare",
+			["spark"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Solid",
+			["color"] = {
+			},
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["event"] = "Health",
+				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
+				["spellIds"] = {
+				},
+				["names"] = {
+				},
+				["debuffType"] = "HELPFUL",
+				["unevent"] = "auto",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+			},
+			["text"] = true,
+			["sparkMirror"] = false,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group",
+			["height"] = 3,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "BLEND",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["additional_triggers"] = {
+			},
+			["borderInset"] = 1,
+			["inverse"] = false,
+			["icon"] = false,
+			["timerSize"] = 12,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["sparkHidden"] = "NEVER",
+			["borderSize"] = 8,
+			["stacksFont"] = "Friz Quadrata TT",
+			["icon_side"] = "LEFT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["textSize"] = 12,
+			["sparkHeight"] = 7,
+			["sparkWidth"] = 20,
+			["sparkOffsetX"] = 4,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["sparkRotation"] = 270,
+			["id"] = "Mage A Health 1 4",
+			["sparkRotationMode"] = "MANUAL",
+			["frameStrata"] = 1,
+			["width"] = 150,
+			["timer"] = true,
+			["barInFront"] = true,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["zoom"] = 0,
+			["borderOffset"] = 2,
+		},
+		["Player Focus"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 0,
+			["displayText"] = "%p",
+			["yOffset"] = -176,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				1, -- [1]
+				0.294117647058823, -- [2]
+				0.329411764705882, -- [3]
+				0, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.313725490196078, -- [1]
+				0.650980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 1,
+			["font"] = "Imagine",
+			["load"] = {
+				["talent"] = {
+					["single"] = 13,
+					["multi"] = {
+						[13] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["ROGUE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_realm"] = false,
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "text",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 5,
+			["auto"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["borderInset"] = 4,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["outline"] = false,
+			["borderBackdrop"] = "Solid",
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.620000004768372, -- [4]
+			},
+			["customText"] = "function()\n    if UnitExists(\"target\") then\n        local name = UnitName(\"target\")\n        name = name:gsub('(%S+) ',function(t) return t:sub(1,1)..'.' end)\n        name = name:sub(1,4)\n        return format(name)\n    else\n        return \"\"\n    end\nend",
+			["untrigger"] = {
+				["unit"] = "player",
+				["spellName"] = 157980,
+			},
+			["customTextUpdate"] = "update",
+			["textSize"] = 12,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["rem"] = "12",
+				["ownOnly"] = true,
+				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["powertype"] = 2,
+				["names"] = {
+					"Living Bomb", -- [1]
+				},
+				["unit"] = "player",
+				["useRem"] = true,
+				["percenthealth_operator"] = "==",
+				["use_powertype"] = false,
+				["custom_hide"] = "timed",
+				["debuffType"] = "HARMFUL",
+				["type"] = "status",
+				["showOn"] = "showOnCooldown",
+				["unevent"] = "auto",
+				["use_showOn"] = true,
+				["percenthealth"] = "100",
+				["event"] = "Power",
+				["use_percentpower"] = true,
+				["use_name"] = false,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["spellName"] = 157980,
+				["remOperator"] = ">",
+				["use_percenthealth"] = true,
+				["percentpower"] = "100",
+				["percentpower_operator"] = "<",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["height"] = 25.9999961853027,
+			["timerFlags"] = "None",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontSize"] = 26,
+			["border"] = true,
+			["borderEdge"] = "None",
+			["borderSize"] = 16,
+			["parent"] = "Hunter Frames Group 2",
+			["icon_side"] = "LEFT",
+			["timer"] = true,
+			["disjunctive"] = "any",
+			["stacksFlags"] = "None",
+			["barInFront"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["timerSize"] = 12,
+			["additional_triggers"] = {
+			},
+			["icon"] = false,
+			["frameStrata"] = 3,
+			["width"] = 16.9999961853027,
+			["id"] = "Player Focus",
+			["justify"] = "CENTER",
+			["inverse"] = false,
+			["numTriggers"] = 1,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["stacksFont"] = "Friz Quadrata TT",
+			["displayTextLeft"] = " ",
+		},
+		["New 28 5"] = {
+			["color"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "Hunter Frames Group",
+			["mirror"] = false,
+			["yOffset"] = -0.5,
+			["regionType"] = "texture",
+			["untrigger"] = {
+			},
+			["blendMode"] = "ADD",
+			["discrete_rotation"] = 0,
+			["init_completed"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["texture"] = "Interface\\AddOns\\BirgMedia\\magiccircle",
+			["disjunctive"] = "any",
+			["desaturate"] = false,
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "shrink",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "shrink",
+				},
+			},
+			["id"] = "New 28 5",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 3,
+			["width"] = 72,
+			["rotation"] = 0,
+			["additional_triggers"] = {
+			},
+			["numTriggers"] = 1,
+			["xOffset"] = -0.5,
+			["height"] = 72,
+			["rotate"] = false,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
+				["ownOnly"] = true,
+				["countOperator"] = "<",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["spellIds"] = {
+				},
+				["useCount"] = true,
+				["count"] = "4",
+				["unit"] = "player",
+				["debuffType"] = "HARMFUL",
+				["use_unit"] = true,
+				["event"] = "Unit Characteristics",
+				["custom_hide"] = "timed",
+			},
+		},
+		["Mage A Health 2 4"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = -131,
+			["stacksFlags"] = "None",
+			["yOffset"] = 2,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_combat"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["sparkDesaturate"] = false,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 1,
+			["spark"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+			},
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["percenthealth"] = "100",
+				["event"] = "Health",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["debuffType"] = "HELPFUL",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = "<",
+				["custom_hide"] = "timed",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group",
+			["height"] = 3,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "BLEND",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["zoom"] = 0,
+			["borderInset"] = 11,
+			["inverse"] = false,
+			["icon"] = false,
+			["timerSize"] = 12,
+			["border"] = false,
+			["borderEdge"] = "Pixel",
+			["sparkHidden"] = "NEVER",
+			["borderSize"] = 1,
+			["stacksFont"] = "Friz Quadrata TT",
+			["icon_side"] = "LEFT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["textSize"] = 12,
+			["sparkHeight"] = 7,
+			["sparkWidth"] = 20,
+			["sparkOffsetX"] = 4,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["sparkRotation"] = 270,
+			["additional_triggers"] = {
+			},
+			["sparkRotationMode"] = "MANUAL",
+			["frameStrata"] = 1,
+			["width"] = 150,
+			["timer"] = true,
+			["barInFront"] = true,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["sparkTexture"] = "Interface\\Addons\\BirgMedia\\softsquare",
+			["id"] = "Mage A Health 2 4",
+		},
+		["supernova timer 3 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 60,
+			["displayText"] = "%p",
+			["yOffset"] = -238,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				1, -- [1]
+				0.294117647058823, -- [2]
+				0.329411764705882, -- [3]
+				0, -- [4]
+			},
+			["selfPoint"] = "LEFT",
+			["barColor"] = {
+				0.313725490196078, -- [1]
+				0.650980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["font"] = "Imagine",
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+						[15] = true,
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["ROGUE"] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_realm"] = false,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "text",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["stacksFont"] = "Friz Quadrata TT",
+			["auto"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["borderInset"] = 4,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["outline"] = true,
+			["borderBackdrop"] = "Solid",
+			["disjunctive"] = "any",
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["textSize"] = 12,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["ownOnly"] = true,
+				["names"] = {
+					"Frost Bomb", -- [1]
+					"Living Bomb", -- [2]
+					"Nether Tempest", -- [3]
+				},
+				["powertype"] = 2,
+				["use_powertype"] = true,
+				["debuffType"] = "HARMFUL",
+				["subeventPrefix"] = "SPELL",
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
+				["use_showOn"] = true,
+				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_percentpower"] = true,
+				["spellName"] = 157980,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "target",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["percentpower"] = "100",
+				["percentpower_operator"] = "<=",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["height"] = 16.9999961853027,
+			["timerFlags"] = "None",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontSize"] = 17,
+			["border"] = true,
+			["borderEdge"] = "None",
+			["borderSize"] = 16,
+			["parent"] = "Hunter Frames Group 2",
+			["icon_side"] = "LEFT",
+			["icon"] = false,
+			["stacksFlags"] = "None",
+			["justify"] = "LEFT",
+			["untrigger"] = {
+				["spellName"] = 157980,
+				["unit"] = "player",
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["id"] = "supernova timer 3 2",
+			["displayTextLeft"] = " ",
+			["frameStrata"] = 3,
+			["width"] = 9.00000190734863,
+			["timerSize"] = 12,
+			["additional_triggers"] = {
+			},
+			["numTriggers"] = 1,
+			["timer"] = true,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["inverse"] = false,
+			["borderOffset"] = 5,
+		},
+		["Mage A Power 1 4"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 130,
+			["stacksFlags"] = "None",
+			["yOffset"] = 2,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 180,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["sparkDesaturate"] = false,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["sparkTexture"] = "Interface\\Addons\\BirgMedia\\softsquare",
+			["spark"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["borderInset"] = 1,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkOffsetX"] = -4,
+			["color"] = {
+			},
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["event"] = "Power",
+				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
+				["spellIds"] = {
+				},
+				["names"] = {
+				},
+				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+			},
+			["text"] = true,
+			["sparkMirror"] = false,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group",
+			["height"] = 3,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "BLEND",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["additional_triggers"] = {
+			},
+			["sparkColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["timer"] = true,
+			["inverse"] = false,
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["border"] = false,
+			["borderEdge"] = "None",
+			["timerSize"] = 12,
+			["borderSize"] = 8,
+			["sparkHidden"] = "NEVER",
+			["icon_side"] = "RIGHT",
+			["textSize"] = 12,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["sparkHeight"] = 7,
+			["sparkWidth"] = 20,
+			["borderBackdrop"] = "Solid",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["id"] = "Mage A Power 1 4",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["width"] = 150,
+			["sparkRotationMode"] = "MANUAL",
+			["stacksFont"] = "Friz Quadrata TT",
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["zoom"] = 0,
+			["borderOffset"] = 2,
+		},
+		["pethealth"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["xOffset"] = -2.5,
+			["yOffset"] = -2,
+			["foregroundColor"] = {
+				1, -- [1]
+				0.631372549019608, -- [2]
+				0.309803921568627, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["desaturateForeground"] = false,
+			["endAngle"] = 360,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["event"] = "Power",
+				["use_unit"] = true,
+				["spellIds"] = {
+				},
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+				},
+				["unit"] = "player",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+			},
+			["stickyDuration"] = false,
+			["rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["height"] = 185,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["fontSize"] = 12,
+			["foregroundTexture"] = "Interface\\AddOns\\BirgMedia\\Mage\\4 4th circle",
+			["mirror"] = false,
+			["regionType"] = "progresstexture",
+			["additional_triggers"] = {
+			},
+			["blendMode"] = "BLEND",
+			["parent"] = "Hunter Frames Group",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["alpha"] = 1,
+			["selfPoint"] = "CENTER",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["untrigger"] = {
+			},
+			["compress"] = false,
+			["id"] = "pethealth",
+			["startAngle"] = 0,
+			["frameStrata"] = 2,
+			["width"] = 185,
+			["numTriggers"] = 1,
+			["crop_y"] = 0.41,
+			["inverse"] = true,
+			["crop"] = 0.41,
+			["orientation"] = "ANTICLOCKWISE",
+			["crop_x"] = 0.41,
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["backgroundOffset"] = 0,
+		},
+		["New 44 8 3"] = {
+			["color"] = {
+				1, -- [1]
+				0.490196078431373, -- [2]
+				0.0392156862745098, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "Hunter Frames Group",
+			["mirror"] = false,
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["regionType"] = "texture",
+			["blendMode"] = "ADD",
+			["discrete_rotation"] = 0,
+			["init_completed"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["texture"] = "Interface\\AddOns\\BirgMedia\\silver\\mpring03",
+			["desaturate"] = false,
+			["yOffset"] = -9.15527343750e-005,
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "rotateCounterClockwise",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["additional_triggers"] = {
+			},
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 4,
+			["width"] = 305,
+			["rotation"] = 270,
+			["xOffset"] = -0.2,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["ownOnly"] = true,
+				["use_unit"] = true,
+				["useCount"] = true,
+				["debuffType"] = "HARMFUL",
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Power",
+				["use_percentpower"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["spellIds"] = {
+				},
+				["countOperator"] = ">=",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["custom_hide"] = "timed",
+				["percentpower"] = "50",
+				["percentpower_operator"] = "<",
+			},
+			["height"] = 305,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["id"] = "New 44 8 3",
+		},
+		["Mage missiles/pyro/icelance duration 2 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 130,
+			["stacksFlags"] = "None",
+			["yOffset"] = -170,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.546440690755844, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_realm"] = false,
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 1,
+			["spark"] = false,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				0.956862745098039, -- [1]
+				0.364705882352941, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+			},
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["ownOnly"] = true,
+				["event"] = "Power",
+				["names"] = {
+					"Arcane Missiles!", -- [1]
+					"Pyroblast!", -- [2]
+					"Fingers of Frost", -- [3]
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["spellIds"] = {
+				},
+				["custom_hide"] = "timed",
+				["use_unit"] = true,
+				["use_percentpower"] = true,
+				["percentpower"] = "93",
+				["percentpower_operator"] = "<",
+			},
+			["text"] = true,
+			["sparkMirror"] = false,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group 2",
+			["height"] = 8,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["zoom"] = 0,
+			["numTriggers"] = 1,
+			["timerSize"] = 12,
+			["sparkHidden"] = "NEVER",
+			["sparkTexture"] = "Interface\\Addons\\WeakAuras\\PowerAurasMedia\\Auras\\Aura45",
+			["border"] = false,
+			["borderEdge"] = "Pixel",
+			["sparkRotation"] = 0,
+			["borderSize"] = 1,
+			["sparkRotationMode"] = "AUTO",
+			["icon_side"] = "LEFT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["textSize"] = 12,
+			["sparkHeight"] = 20,
+			["sparkWidth"] = 20,
+			["sparkOffsetX"] = 6,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["id"] = "Mage missiles/pyro/icelance duration 2 2",
+			["stacksFont"] = "Friz Quadrata TT",
+			["frameStrata"] = 4,
+			["width"] = 150,
+			["borderInset"] = 11,
+			["timer"] = true,
+			["inverse"] = true,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["additional_triggers"] = {
+			},
+			["icon"] = false,
+		},
+		["Hunter Castbar 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 130,
+			["stacksFlags"] = "None",
+			["yOffset"] = -1,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 1.5,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["sparkTexture"] = "Interface\\AddOns\\BirgMedia\\Hunter\\arrow1",
+			["spark"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+			},
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "slideleft",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "slideleft",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["event"] = "Cast",
+				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
+				["spellIds"] = {
+				},
+				["names"] = {
+				},
+				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+			},
+			["text"] = true,
+			["sparkMirror"] = false,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group",
+			["height"] = 3,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["additional_triggers"] = {
+			},
+			["borderInset"] = 11,
+			["timer"] = true,
+			["inverse"] = false,
+			["timerSize"] = 12,
+			["border"] = false,
+			["borderEdge"] = "Pixel",
+			["sparkHidden"] = "NEVER",
+			["borderSize"] = 1,
+			["zoom"] = 0,
+			["icon_side"] = "RIGHT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["sparkWidth"] = 40,
+			["sparkHeight"] = 25,
+			["sparkOffsetX"] = 0,
+			["textSize"] = 12,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["id"] = "Hunter Castbar 2",
+			["sparkRotation"] = 90,
+			["frameStrata"] = 2,
+			["width"] = 150,
+			["sparkRotationMode"] = "MANUAL",
+			["stacksFont"] = "Friz Quadrata TT",
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["borderOffset"] = 1,
+		},
+		["Hunter Castbar 1 "] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = -131,
+			["stacksFlags"] = "None",
+			["yOffset"] = -1,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 1.5,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 1,
+			["spark"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+			},
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "slideright",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "slideright",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["percenthealth"] = "100",
+				["event"] = "Cast",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["debuffType"] = "HELPFUL",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = "<",
+				["custom_hide"] = "timed",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group",
+			["height"] = 3,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["borderInset"] = 11,
+			["icon"] = false,
+			["inverse"] = false,
+			["timerSize"] = 12,
+			["sparkHidden"] = "NEVER",
+			["border"] = false,
+			["borderEdge"] = "Pixel",
+			["zoom"] = 0,
+			["borderSize"] = 1,
+			["sparkRotation"] = 0,
+			["icon_side"] = "LEFT",
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["sparkWidth"] = 40,
+			["sparkHeight"] = 25,
+			["sparkOffsetX"] = 0,
+			["textSize"] = 12,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["id"] = "Hunter Castbar 1 ",
+			["sparkRotationMode"] = "MANUAL",
+			["frameStrata"] = 2,
+			["width"] = 150,
+			["stacksFont"] = "Friz Quadrata TT",
+			["timer"] = true,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["sparkTexture"] = "Interface\\AddOns\\BirgMedia\\Hunter\\arrow1",
+			["additional_triggers"] = {
+			},
+		},
+		["Mage A Power 2 4"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 130,
+			["stacksFlags"] = "None",
+			["yOffset"] = 2,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 180,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["icon_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_combat"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 1,
+			["spark"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["sparkColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+			},
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+				},
+				["event"] = "Power",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["use_percentpower"] = true,
+				["percentpower_operator"] = "<",
+				["percentpower"] = "93",
+				["custom_hide"] = "timed",
+			},
+			["text"] = true,
+			["sparkMirror"] = false,
+			["stickyDuration"] = false,
+			["parent"] = "Hunter Frames Group",
+			["height"] = 3,
+			["timerFlags"] = "None",
+			["auto"] = true,
+			["sparkBlendMode"] = "BLEND",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["id"] = "Mage A Power 2 4",
+			["borderInset"] = 11,
+			["timer"] = true,
+			["inverse"] = false,
+			["sparkRotationMode"] = "MANUAL",
+			["border"] = false,
+			["borderEdge"] = "Pixel",
+			["timerSize"] = 12,
+			["borderSize"] = 1,
+			["sparkHidden"] = "NEVER",
+			["icon_side"] = "RIGHT",
+			["textSize"] = 12,
+			["sparkWidth"] = 20,
+			["sparkHeight"] = 7,
+			["sparkOffsetX"] = -4,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["additional_triggers"] = {
+			},
+			["borderColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["width"] = 150,
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["stacksFont"] = "Friz Quadrata TT",
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["zoom"] = 0,
+			["sparkTexture"] = "Interface\\Addons\\BirgMedia\\softsquare",
+		},
+		["target name 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = -232,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.313725490196078, -- [1]
+				0.650980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 1,
+			["font"] = "Imagine",
+			["load"] = {
+				["talent"] = {
+					["single"] = 13,
+					["multi"] = {
+						[13] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["use_realm"] = false,
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["ROGUE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "text",
+			["stacks"] = true,
+			["init_completed"] = 1,
+			["texture"] = "Ish00",
+			["textFont"] = "Friz Quadrata TT",
+			["borderOffset"] = 5,
+			["auto"] = true,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["borderInset"] = 4,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["outline"] = true,
+			["borderBackdrop"] = "Solid",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["customText"] = "function()\n    if UnitExists(\"target\") then\n        local name = UnitName(\"target\")\n        name = name:gsub('(%S+) ',function(t) return t:sub(1,1)..'.' end)\n        name = name:sub(1,4)\n        return format(name)\n    else\n        return \"\"\n    end\nend",
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["rem"] = "12",
+				["ownOnly"] = true,
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Living Bomb", -- [1]
+				},
+				["use_unit"] = true,
+				["powertype"] = 2,
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "target",
+				["percentpower_operator"] = "<=",
+				["percentpower"] = "100",
+				["use_powertype"] = true,
+				["spellName"] = 157980,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["remOperator"] = ">",
+				["unevent"] = "auto",
+				["use_showOn"] = true,
+				["percenthealth"] = "100",
+				["event"] = "Health",
+				["use_percentpower"] = true,
+				["use_name"] = false,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["debuffType"] = "HARMFUL",
+				["showOn"] = "showOnCooldown",
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = "==",
+				["useRem"] = true,
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["timer"] = true,
+			["timerFlags"] = "None",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontSize"] = 17,
+			["border"] = true,
+			["borderEdge"] = "None",
+			["borderSize"] = 16,
+			["parent"] = "Hunter Frames Group 2",
+			["icon_side"] = "LEFT",
+			["justify"] = "CENTER",
+			["disjunctive"] = "any",
+			["displayText"] = "%c",
+			["untrigger"] = {
+				["spellName"] = 157980,
+				["unit"] = "player",
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["textSize"] = 12,
+			["additional_triggers"] = {
+			},
+			["backgroundColor"] = {
+				1, -- [1]
+				0.294117647058823, -- [2]
+				0.329411764705882, -- [3]
+				0, -- [4]
+			},
+			["frameStrata"] = 3,
+			["width"] = 1.00000751018524,
+			["height"] = 1.00000751018524,
+			["stacksFont"] = "Friz Quadrata TT",
+			["numTriggers"] = 1,
+			["inverse"] = false,
+			["orientation"] = "HORIZONTAL_INVERSE",
+			["id"] = "target name 2",
+			["timerSize"] = 12,
+		},
+		["New 44 7 5"] = {
+			["xOffset"] = -0.2,
+			["mirror"] = false,
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["regionType"] = "texture",
+			["parent"] = "Hunter Frames Group",
+			["blendMode"] = "ADD",
+			["discrete_rotation"] = 0,
+			["init_completed"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["texture"] = "Interface\\AddOns\\BirgMedia\\silver\\mpring03",
+			["desaturate"] = false,
+			["additional_triggers"] = {
+			},
+			["selfPoint"] = "CENTER",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "rotateClockwise",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["ownOnly"] = true,
+				["use_unit"] = true,
+				["useCount"] = true,
+				["debuffType"] = "HARMFUL",
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Unit Characteristics",
+				["use_percentpower"] = false,
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["spellIds"] = {
+				},
+				["countOperator"] = ">=",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["custom_hide"] = "timed",
+				["percentpower"] = "50",
+				["percentpower_operator"] = ">=",
+			},
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 4,
+			["width"] = 305,
+			["rotation"] = 270,
+			["color"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["numTriggers"] = 1,
+			["yOffset"] = -9.15527343750e-005,
+			["height"] = 305,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["id"] = "New 44 7 5",
+		},
+		["target health mage 2"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["disjunctive"] = "any",
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				0.490196078431373, -- [2]
+				0.0392156862745098, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				0, -- [4]
+			},
+			["endAngle"] = 360,
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
+				["ownOnly"] = true,
+				["event"] = "Power",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["spellIds"] = {
+				},
+				["useCount"] = true,
+				["count"] = "4",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["use_unit"] = true,
+				["countOperator"] = "<",
+				["debuffType"] = "HARMFUL",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["height"] = 73,
+			["rotate"] = false,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["use_realm"] = false,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[2] = true,
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["realm"] = "Outland",
+			},
+			["startAngle"] = 0,
+			["parent"] = "Hunter Frames Group 2",
+			["fontSize"] = 12,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["foregroundTexture"] = "Interface\\AddOns\\BirgMedia\\magiccircle",
+			["alpha"] = 1,
+			["mirror"] = false,
+			["selfPoint"] = "CENTER",
+			["regionType"] = "progresstexture",
+			["anchorPoint"] = "CENTER",
+			["blendMode"] = "ADD",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["stickyDuration"] = false,
+			["color"] = {
+				1, -- [1]
+				0.36078431372549, -- [2]
+				0.0509803921568627, -- [3]
+				1, -- [4]
+			},
+			["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_Smooth_Border2",
+			["crop_y"] = 0.41,
+			["crop"] = 0.41,
+			["rotation"] = 0,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["numTriggers"] = 1,
+			["frameStrata"] = 5,
+			["width"] = 72,
+			["desaturateForeground"] = false,
+			["xOffset"] = -0.5,
+			["inverse"] = true,
+			["yOffset"] = -176.5,
+			["orientation"] = "CLOCKWISE",
+			["crop_x"] = 0.41,
+			["id"] = "target health mage 2",
+			["backgroundOffset"] = 0,
+		},
+		["New 51 3"] = {
+			["modelIsUnit"] = false,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				0.898039215686275, -- [1]
+				0.450980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["yOffset"] = -15.1472778320313,
+			["anchorPoint"] = "CENTER",
+			["model_x"] = 0.0500000000000007,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["advance"] = true,
+			["model_path"] = "SPELLS/ArcaneForceShield_Red.m2",
+			["trigger"] = {
+				["ownOnly"] = true,
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["useCount"] = true,
+				["use_powertype"] = false,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["event"] = "Power",
+				["use_percentpower"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["count"] = "4",
+				["debuffType"] = "HARMFUL",
+				["use_unit"] = true,
+				["countOperator"] = "==",
+				["percentpower"] = "50",
+				["percentpower_operator"] = "<",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 270,
+			["height"] = 176.581298828125,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sequence"] = 1,
+			["scale"] = 1,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["regionType"] = "model",
+			["borderSize"] = 16,
+			["blendMode"] = "ADD",
+			["init_completed"] = 1,
+			["parent"] = "Hunter Frames Group",
+			["texture"] = "Spells\\AURARUNE_B",
+			["untrigger"] = {
+			},
+			["model_z"] = 0.200000000000003,
+			["mirror"] = false,
+			["borderOffset"] = 5,
+			["additional_triggers"] = {
+			},
+			["model_y"] = 14,
+			["frameStrata"] = 4,
+			["width"] = 212.683502197266,
+			["rotation"] = 0,
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["selfPoint"] = "CENTER",
+			["xOffset"] = 49.2301025390625,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "wobble",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["id"] = "New 51 3",
+		},
+		["bomb <3 2 2"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = -98,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["rotateText"] = "LEFT",
+			["backgroundColor"] = {
+				1, -- [1]
+				0.294117647058823, -- [2]
+				0.329411764705882, -- [3]
+				0, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.858823529411765, -- [1]
+				0.407843137254902, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+						[15] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_realm"] = false,
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["ROGUE"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["stacks"] = true,
+			["blendMode"] = "BLEND",
+			["init_completed"] = 1,
+			["texture"] = "Interface\\AddOns\\BirgMedia\\Mage\\supernova.tga",
+			["textFont"] = "Friz Quadrata TT",
+			["stacksFont"] = "Friz Quadrata TT",
+			["spark"] = false,
+			["timerFont"] = "Friz Quadrata TT",
+			["alpha"] = 1,
+			["borderInset"] = 4,
+			["stacksPoint"] = "CENTER",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["outline"] = true,
+			["borderBackdrop"] = "Solid",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["barInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["parent"] = "Hunter Frames Group 2",
+			["textSize"] = 12,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["inverse"] = false,
+			["displayTextLeft"] = " ",
+			["auto"] = true,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "grow",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "grow",
+				},
+			},
+			["trigger"] = {
+				["rem"] = "3",
+				["remaining_operator"] = "<",
+				["names"] = {
+					"Nether Tempest", -- [1]
+					"Frost Bomb", -- [2]
+					"Living Bomb", -- [3]
+				},
+				["powertype"] = 2,
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 157980,
+				["use_powertype"] = true,
+				["debuffType"] = "HARMFUL",
+				["type"] = "aura",
+				["use_remaining"] = true,
+				["percentpower_operator"] = "<=",
+				["unevent"] = "auto",
+				["remaining"] = "5",
+				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_percentpower"] = true,
+				["ownOnly"] = true,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["custom_hide"] = "timed",
+				["remOperator"] = "<",
+				["unit"] = "target",
+				["percentpower"] = "100",
+				["useRem"] = true,
+			},
+			["text"] = true,
+			["zoom"] = 0,
+			["stickyDuration"] = false,
+			["discrete_rotation"] = 0,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["customTextUpdate"] = "update",
+			["border"] = true,
+			["height"] = 30,
+			["rotate"] = false,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["fontSize"] = 12,
+			["displayStacks"] = " ",
+			["borderOffset"] = 5,
+			["progressPrecision"] = 0,
+			["timer"] = true,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["sparkOffsetX"] = 0,
+			["borderSize"] = 16,
+			["sparkWidth"] = 10,
+			["icon_side"] = "LEFT",
+			["displayText"] = "%p",
+			["timerFlags"] = "None",
+			["sparkHeight"] = 30,
+			["untrigger"] = {
+				["unit"] = "player",
+				["spellName"] = 157980,
+			},
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["id"] = "bomb <3 2 2",
+			["additional_triggers"] = {
+			},
+			["sparkRotation"] = 0,
+			["frameStrata"] = 2,
+			["width"] = 30,
+			["justify"] = "CENTER",
+			["timerSize"] = 12,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL",
+			["cooldown"] = false,
+			["icon"] = false,
+		},
+		["Hunter Frames Group 2"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"supernovatrack 2 2", -- [1]
+				"supernova timer 3 2", -- [2]
+				"supernova timer 2 2 2", -- [3]
+				"bomb <3 2 2", -- [4]
+				"NO INT BUFF 2", -- [5]
+				"target name 2", -- [6]
+				"Player Focus", -- [7]
+				"target health mage 2", -- [8]
+				"target health mage 3", -- [9]
+				"target health mage 4", -- [10]
+				"Mage missiles/pyro/icelance duration 3", -- [11]
+				"Mage missiles/pyro/icelance duration 2 2", -- [12]
+				"New 40 3 2", -- [13]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 0,
+			["border"] = false,
+			["yOffset"] = 0,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = true,
+			["borderOffset"] = 5,
+			["untrigger"] = {
+			},
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Hunter Frames Group 2",
+			["additional_triggers"] = {
+			},
+			["frameStrata"] = 1,
+			["borderEdge"] = "None",
+			["trigger"] = {
+				["subeventPrefix"] = "SPELL",
+				["type"] = "aura",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+				},
+				["use_class"] = "true",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["anchorPoint"] = "CENTER",
+		},
+		["New 51 2"] = {
+			["modelIsUnit"] = false,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				0.898039215686275, -- [1]
+				0.450980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["yOffset"] = -15.1472778320313,
+			["anchorPoint"] = "CENTER",
+			["model_x"] = 0.0500000000000007,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["advance"] = true,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "wobble",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["ownOnly"] = true,
+				["use_unit"] = true,
+				["useCount"] = true,
+				["use_powertype"] = false,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["countOperator"] = "==",
+				["use_percentpower"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["count"] = "4",
+				["debuffType"] = "HARMFUL",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["event"] = "Unit Characteristics",
+				["percentpower"] = "50",
+				["percentpower_operator"] = ">=",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 270,
+			["height"] = 176.581298828125,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sequence"] = 1,
+			["scale"] = 1,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["regionType"] = "model",
+			["borderSize"] = 16,
+			["blendMode"] = "ADD",
+			["init_completed"] = 1,
+			["parent"] = "Hunter Frames Group",
+			["texture"] = "Spells\\AURARUNE_B",
+			["untrigger"] = {
+			},
+			["model_z"] = 0.200000000000003,
+			["mirror"] = false,
+			["borderOffset"] = 5,
+			["additional_triggers"] = {
+			},
+			["model_y"] = 14,
+			["frameStrata"] = 4,
+			["width"] = 212.683502197266,
+			["rotation"] = 0,
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["selfPoint"] = "CENTER",
+			["xOffset"] = 49.2301025390625,
+			["id"] = "New 51 2",
+			["model_path"] = "SPELLS/ArcaneForceShield_Green.m2",
+		},
+		["New 44 4"] = {
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.685330182313919, -- [4]
+			},
+			["parent"] = "Hunter Frames Group",
+			["mirror"] = false,
+			["yOffset"] = -2.6881103515625,
+			["regionType"] = "texture",
+			["blendMode"] = "BLEND",
+			["untrigger"] = {
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["texture"] = "Interface\\AddOns\\BirgMedia\\Mage\\4 4th circle",
+			["discrete_rotation"] = 0,
+			["anchorPoint"] = "CENTER",
+			["desaturate"] = false,
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["id"] = "New 44 4",
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 2,
+			["width"] = 185,
+			["rotation"] = 0,
+			["xOffset"] = -2.5,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["ownOnly"] = true,
+				["countOperator"] = ">=",
+				["use_unit"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["useCount"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["event"] = "Unit Characteristics",
+				["debuffType"] = "HARMFUL",
+			},
+			["height"] = 185,
+			["rotate"] = false,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["additional_triggers"] = {
+			},
+		},
+		["New 56 5"] = {
+			["modelIsUnit"] = false,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["disjunctive"] = "any",
+			["yOffset"] = 7,
+			["anchorPoint"] = "CENTER",
+			["model_x"] = -1.4,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["advance"] = false,
+			["model_path"] = "SPELLS/cast_arcane_01.m2",
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["ownOnly"] = true,
+				["countOperator"] = "==",
+				["names"] = {
+					"Arcane Missiles!", -- [1]
+				},
+				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["count"] = "4",
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["use_unit"] = true,
+				["event"] = "Unit Characteristics",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 270,
+			["height"] = 7.00881576538086,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sequence"] = 1,
+			["scale"] = 1,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["regionType"] = "model",
+			["borderSize"] = 16,
+			["blendMode"] = "ADD",
+			["parent"] = "Hunter Frames Group",
+			["untrigger"] = {
+			},
+			["texture"] = "Spells\\AURARUNE_B",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "rotateClockwise",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["model_z"] = 3.35,
+			["xOffset"] = 600,
+			["rotation"] = 0,
+			["id"] = "New 56 5",
+			["model_y"] = 1.45,
+			["frameStrata"] = 2,
+			["width"] = 1090.08483886719,
+			["borderOffset"] = 5,
+			["borderInset"] = 11,
+			["numTriggers"] = 2,
+			["selfPoint"] = "CENTER",
+			["mirror"] = false,
+			["color"] = {
+				0.898039215686275, -- [1]
+				0.450980392156863, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["subeventPrefix"] = "SPELL",
+						["type"] = "aura",
+						["spellIds"] = {
+						},
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["names"] = {
+						},
+						["event"] = "Health",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+		},
+		["target health mage 4"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				0.36078431372549, -- [2]
+				0.0509803921568627, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["unit"] = "player",
+			},
+			["foregroundColor"] = {
+				0.670588235294118, -- [1]
+				0.831372549019608, -- [2]
+				0.450980392156863, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["endAngle"] = 360,
+			["animation"] = {
+				["start"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
+				["ownOnly"] = true,
+				["event"] = "Power",
+				["names"] = {
+					"Arcane Charge", -- [1]
+				},
+				["spellIds"] = {
+				},
+				["useCount"] = true,
+				["count"] = "4",
+				["unit"] = "player",
+				["debuffType"] = "HARMFUL",
+				["countOperator"] = "<",
+				["use_unit"] = true,
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = false,
+			["discrete_rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["height"] = 73,
+			["rotate"] = false,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "HUNTER",
+					["multi"] = {
+						["PALADIN"] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["use_realm"] = false,
+				["race"] = {
+					["single"] = "Draenei",
+					["multi"] = {
+						["Draenei"] = true,
+					},
+				},
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[2] = true,
+					},
+				},
+				["realm"] = "Outland",
+			},
+			["rotation"] = 0,
+			["parent"] = "Hunter Frames Group 2",
+			["fontSize"] = 12,
+			["actions"] = {
+				["start"] = {
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["foregroundTexture"] = "Interface\\AddOns\\BirgMedia\\magiccircle",
+			["alpha"] = 1,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "progresstexture",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "ADD",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["startAngle"] = 0,
+			["texture"] = "Interface\\AddOns\\WeakAuras\\Media\\Textures\\Circle_Smooth_Border2",
+			["additional_triggers"] = {
+			},
+			["crop_y"] = 0.41,
+			["crop"] = 0.41,
+			["compress"] = false,
+			["id"] = "target health mage 4",
+			["stickyDuration"] = false,
+			["frameStrata"] = 5,
+			["width"] = 72,
+			["xOffset"] = -0.5,
+			["desaturateForeground"] = false,
+			["numTriggers"] = 1,
+			["yOffset"] = -176.5,
+			["orientation"] = "CLOCKWISE",
+			["crop_x"] = 0.41,
+			["disjunctive"] = "any",
+			["backgroundOffset"] = 0,
+		},
 	},
-	["login_squelch_time"] = 10,
 	["registered"] = {
 	},
+	["frame"] = {
+		["xOffset"] = -164.999755859375,
+		["height"] = 492,
+		["width"] = 629.999938964844,
+		["yOffset"] = -100.999938964844,
+	},
+	["tempIconCache"] = {
+	},
+	["login_squelch_time"] = 10,
 }

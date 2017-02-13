@@ -1,0 +1,10 @@
+
+ClassHallDB = {
+	["profileKeys"] = {
+		["Birge - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

@@ -240,7 +240,7 @@ do
 		
 		-- Protection Paladin:
 		[53600] = 66, -- Shield of the Righteous
-		--[26573] = 66, -- Consecration
+		[26573] = 66, -- Consecration
 		[119072] = 66, -- Holy Wrath
 		[31935] = 66, -- Avenger's Shield
 
@@ -1694,7 +1694,7 @@ do
 			[116849]	=	true, --Life Cocoon (mistweaver)
 			[115295]	=	true, --Guard (brewmaster)
 			--[118604]	=	true, --Guard (brewmaster)
-			[145051]	=	true, --Proteï¿½ï¿½o de Niuzao 
+			[145051]	=	true, --Proteção de Niuzao 
 			[145056]	=	true, --
 			[145441]	=	true, --2P T16
 			[145439]	=	true, --2P T16
@@ -1732,7 +1732,7 @@ do
 		[48743] = {120, 0, 1}, --Death Pact
 		[51052] = {120, 3, 0}, --Anti-Magic Zone
 		[152279] = {120, 6}, -- "Breath of Sindragosa"
-		[48982] = {30, 0, 1}, -- "Blood Tï¿½p"
+		[48982] = {30, 0, 1}, -- "Blood Täp"
 		
 		--["DRUID"] = {},
 		[740] = {480, 8, 0}, --Tranquility

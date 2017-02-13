@@ -12,11 +12,39 @@ _detalhes_database = {
 		["channel"] = "SELF",
 		["reverse"] = false,
 	},
-	["active_profile"] = "Adimoto-Thrall",
-	["last_realversion"] = 116,
+	["active_profile"] = "Birgdruid-Beta Leveling Realm 01",
+	["last_day"] = "01",
 	["ignore_nicktag"] = false,
-	["combat_counter"] = 4,
+	["combat_counter"] = 15,
 	["plugin_database"] = {
+		["DETAILS_PLUGIN_DAMAGE_RANK"] = {
+			["lasttry"] = {
+			},
+			["annouce"] = true,
+			["dpshistory"] = {
+			},
+			["dps"] = 0,
+			["author"] = "Details! Team",
+			["level"] = 1,
+			["enabled"] = true,
+		},
+		["DETAILS_PLUGIN_ENCOUNTER_DETAILS"] = {
+			["enabled"] = true,
+			["encounter_timers_bw"] = {
+			},
+			["max_emote_segments"] = 3,
+			["author"] = "Details! Team",
+			["window_scale"] = 1,
+			["hide_on_combat"] = false,
+			["show_icon"] = 5,
+			["opened"] = 0,
+			["encounter_timers_dbm"] = {
+			},
+		},
+		["DETAILS_PLUGIN_LEECH_TRINKET"] = {
+			["enabled"] = true,
+			["author"] = "Details! Team",
+		},
 		["DETAILS_PLUGIN_TINY_THREAT"] = {
 			["updatespeed"] = 1,
 			["useclasscolors"] = false,
@@ -30,6 +58,25 @@ _detalhes_database = {
 				1, -- [3]
 			},
 			["enabled"] = true,
+		},
+		["DETAILS_PLUGIN_DPS_TUNING"] = {
+			["enabled"] = true,
+			["author"] = "Details! Team",
+			["SpellBarsShowType"] = 1,
+		},
+		["DETAILS_PLUGIN_VANGUARD"] = {
+			["enabled"] = true,
+			["tank_block_texture"] = "Details Serenity",
+			["tank_block_color"] = {
+				0.24705882, -- [1]
+				0.0039215, -- [2]
+				0, -- [3]
+				0.8, -- [4]
+			},
+			["show_inc_bars"] = false,
+			["author"] = "Details! Team",
+			["first_run"] = false,
+			["tank_block_size"] = 150,
 		},
 		["DETAILS_PLUGIN_TIME_ATTACK"] = {
 			["enabled"] = true,
@@ -46,60 +93,6 @@ _detalhes_database = {
 			["realm_history"] = {
 			},
 			["author"] = "Details! Team",
-		},
-		["DETAILS_PLUGIN_DAMAGE_RANK"] = {
-			["lasttry"] = {
-			},
-			["annouce"] = true,
-			["dpshistory"] = {
-			},
-			["dps"] = 0,
-			["author"] = "Details! Team",
-			["level"] = 1,
-			["enabled"] = true,
-		},
-		["DETAILS_PLUGIN_VANGUARD"] = {
-			["enabled"] = true,
-			["tank_block_texture"] = "Details Serenity",
-			["tank_block_color"] = {
-				0.24705882, -- [1]
-				0.0039215, -- [2]
-				0, -- [3]
-				0.8, -- [4]
-			},
-			["show_inc_bars"] = false,
-			["author"] = "Details! Team",
-			["first_run"] = false,
-			["tank_block_size"] = 150,
-		},
-		["DETAILS_PLUGIN_ENCOUNTER_DETAILS"] = {
-			["enabled"] = true,
-			["encounter_timers_bw"] = {
-			},
-			["max_emote_segments"] = 3,
-			["author"] = "Details! Team",
-			["window_scale"] = 1,
-			["hide_on_combat"] = false,
-			["show_icon"] = 5,
-			["opened"] = 0,
-			["encounter_timers_dbm"] = {
-			},
-		},
-		["DETAILS_PLUGIN_DPS_TUNING"] = {
-			["enabled"] = true,
-			["author"] = "Details! Team",
-			["SpellBarsShowType"] = 1,
-		},
-		["DETAILS_PLUGIN_RAIDCHECK"] = {
-			["enabled"] = true,
-			["food_tier1"] = true,
-			["mythic_1_4"] = true,
-			["food_tier2"] = true,
-			["author"] = "Details! Team",
-			["use_report_panel"] = true,
-			["pre_pot_healers"] = false,
-			["pre_pot_tanks"] = false,
-			["food_tier3"] = true,
 		},
 		["DETAILS_PLUGIN_STREAM_OVERLAY"] = {
 			["font_color"] = {
@@ -120,7 +113,7 @@ _detalhes_database = {
 				500.000030517578, -- [2]
 			},
 			["minimap"] = {
-				["minimapPos"] = 142.883105190847,
+				["minimapPos"] = 160,
 				["radius"] = 160,
 				["hide"] = false,
 			},
@@ -128,10 +121,9 @@ _detalhes_database = {
 			["row_texture"] = "Details Serenity",
 			["scale"] = 1,
 			["point"] = "CENTER",
-			["y"] = -5.3405761718750e-005,
 			["enabled"] = false,
 			["arrow_size"] = 10,
-			["author"] = "Details! Team",
+			["y"] = 1.525878906250e-005,
 			["row_spacement"] = 21,
 			["main_frame_color"] = {
 				0, -- [1]
@@ -142,6 +134,9 @@ _detalhes_database = {
 			["main_frame_strata"] = "LOW",
 			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
 			["row_height"] = 20,
+			["font_size"] = 10,
+			["x"] = 3.05175781250e-005,
+			["font_face"] = "Friz Quadrata TT",
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -153,8 +148,6 @@ _detalhes_database = {
 				["size"] = 32,
 				["attribute_type"] = 1,
 			},
-			["x"] = 0,
-			["font_face"] = "Friz Quadrata TT",
 			["row_color"] = {
 				0.1, -- [1]
 				0.1, -- [2]
@@ -162,9 +155,16 @@ _detalhes_database = {
 				0.4, -- [4]
 			},
 			["arrow_anchor_y"] = 0,
-			["use_spark"] = true,
 			["main_frame_locked"] = false,
-			["font_size"] = 10,
+			["author"] = "Details! Team",
+		},
+		["DETAILS_PLUGIN_RAIDCHECK"] = {
+			["enabled"] = true,
+			["pre_pot_tanks"] = false,
+			["mythic_1_4"] = true,
+			["author"] = "Details! Team",
+			["use_report_panel"] = true,
+			["pre_pot_healers"] = false,
 		},
 	},
 	["savedbuffs"] = {
@@ -172,26 +172,1073 @@ _detalhes_database = {
 	["character_data"] = {
 		["logons"] = 1,
 	},
-	["force_font_outline"] = "",
+	["last_instance_time"] = 0,
 	["tabela_historico"] = {
 		["tabelas"] = {
+			{
+				{
+					["combatId"] = 2,
+					["tipo"] = 2,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["damage_from"] = {
+								["Deaygo"] = true,
+							},
+							["targets"] = {
+							},
+							["pets"] = {
+							},
+							["friendlyfire"] = {
+							},
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["total_without_pet"] = 0.008143,
+							["on_hold"] = false,
+							["dps_started"] = false,
+							["total"] = 0.008143,
+							["classe"] = "DRUID",
+							["serial"] = "Player-970-003C0A0A",
+							["nome"] = "Birgdruid",
+							["spells"] = {
+								["tipo"] = 2,
+								["_ActorTable"] = {
+								},
+							},
+							["grupo"] = true,
+							["end_time"] = 1470072927,
+							["last_dps"] = 0,
+							["custom"] = 0,
+							["tipo"] = 1,
+							["damage_taken"] = 592581.008143,
+							["start_time"] = 1470072927,
+							["delay"] = 0,
+							["last_event"] = 0,
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["combatId"] = 2,
+					["tipo"] = 3,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["totalabsorb"] = 0.004329,
+							["last_hps"] = 0,
+							["healing_from"] = {
+								["Birgdruid"] = true,
+							},
+							["targets"] = {
+								["Birgdruid"] = 222558,
+							},
+							["pets"] = {
+							},
+							["totalover_without_pet"] = 0.004329,
+							["last_event"] = 1470072926,
+							["healing_taken"] = 222558.004329,
+							["totalover"] = 0.004329,
+							["total_without_pet"] = 222558.004329,
+							["targets_overheal"] = {
+							},
+							["serial"] = "Player-970-003C0A0A",
+							["fight_component"] = true,
+							["total"] = 222558.004329,
+							["iniciar_hps"] = false,
+							["classe"] = "DRUID",
+							["nome"] = "Birgdruid",
+							["targets_absorbs"] = {
+							},
+							["grupo"] = true,
+							["end_time"] = 1470072927,
+							["heal_enemy"] = {
+							},
+							["heal_enemy_amt"] = 0,
+							["custom"] = 0,
+							["tipo"] = 2,
+							["on_hold"] = false,
+							["start_time"] = 1470072919,
+							["delay"] = 0,
+							["spells"] = {
+								["tipo"] = 3,
+								["_ActorTable"] = {
+									[774] = {
+										["c_amt"] = 0,
+										["totalabsorb"] = 0,
+										["targets_overheal"] = {
+										},
+										["n_max"] = 12752,
+										["targets"] = {
+											["Birgdruid"] = 25722,
+										},
+										["n_min"] = 6485,
+										["counter"] = 3,
+										["overheal"] = 0,
+										["total"] = 25722,
+										["c_max"] = 0,
+										["id"] = 774,
+										["targets_absorbs"] = {
+										},
+										["m_crit"] = 0,
+										["c_curado"] = 0,
+										["m_amt"] = 0,
+										["c_min"] = 0,
+										["n_curado"] = 25722,
+										["m_healed"] = 0,
+										["n_amt"] = 3,
+										["absorbed"] = 0,
+									},
+									[145109] = {
+										["c_amt"] = 0,
+										["totalabsorb"] = 0,
+										["targets_overheal"] = {
+										},
+										["n_max"] = 14690,
+										["targets"] = {
+											["Birgdruid"] = 29380,
+										},
+										["n_min"] = 14690,
+										["counter"] = 2,
+										["overheal"] = 0,
+										["total"] = 29380,
+										["c_max"] = 0,
+										["id"] = 145109,
+										["targets_absorbs"] = {
+										},
+										["m_crit"] = 0,
+										["c_curado"] = 0,
+										["m_amt"] = 0,
+										["c_min"] = 0,
+										["n_curado"] = 29380,
+										["m_healed"] = 0,
+										["n_amt"] = 2,
+										["absorbed"] = 0,
+									},
+									[18562] = {
+										["c_amt"] = 0,
+										["totalabsorb"] = 0,
+										["targets_overheal"] = {
+										},
+										["n_max"] = 75653,
+										["targets"] = {
+											["Birgdruid"] = 75653,
+										},
+										["n_min"] = 75653,
+										["counter"] = 1,
+										["overheal"] = 0,
+										["total"] = 75653,
+										["c_max"] = 0,
+										["id"] = 18562,
+										["targets_absorbs"] = {
+										},
+										["m_crit"] = 0,
+										["c_curado"] = 0,
+										["m_amt"] = 0,
+										["c_min"] = 0,
+										["n_curado"] = 75653,
+										["m_healed"] = 0,
+										["n_amt"] = 1,
+										["absorbed"] = 0,
+									},
+									[48503] = {
+										["c_amt"] = 0,
+										["totalabsorb"] = 0,
+										["targets_overheal"] = {
+										},
+										["n_max"] = 20025,
+										["targets"] = {
+											["Birgdruid"] = 20025,
+										},
+										["n_min"] = 20025,
+										["counter"] = 1,
+										["overheal"] = 0,
+										["total"] = 20025,
+										["c_max"] = 0,
+										["id"] = 48503,
+										["targets_absorbs"] = {
+										},
+										["m_crit"] = 0,
+										["c_curado"] = 0,
+										["m_amt"] = 0,
+										["c_min"] = 0,
+										["n_curado"] = 20025,
+										["m_healed"] = 0,
+										["n_amt"] = 1,
+										["absorbed"] = 0,
+									},
+									[8936] = {
+										["c_amt"] = 1,
+										["totalabsorb"] = 0,
+										["targets_overheal"] = {
+										},
+										["n_max"] = 30438,
+										["targets"] = {
+											["Birgdruid"] = 71778,
+										},
+										["n_min"] = 1291,
+										["counter"] = 3,
+										["overheal"] = 0,
+										["total"] = 71778,
+										["c_max"] = 40049,
+										["id"] = 8936,
+										["targets_absorbs"] = {
+										},
+										["m_crit"] = 0,
+										["c_curado"] = 40049,
+										["m_amt"] = 0,
+										["c_min"] = 40049,
+										["n_curado"] = 31729,
+										["m_healed"] = 0,
+										["n_amt"] = 2,
+										["absorbed"] = 0,
+									},
+								},
+							},
+						}, -- [1]
+					},
+				}, -- [2]
+				{
+					["combatId"] = 2,
+					["tipo"] = 7,
+					["_ActorTable"] = {
+					},
+				}, -- [3]
+				{
+					["combatId"] = 2,
+					["tipo"] = 9,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["debuff_uptime_spells"] = {
+								["tipo"] = 9,
+								["_ActorTable"] = {
+									[223176] = {
+										["uptime"] = 4,
+										["activedamt"] = 0,
+										["id"] = 223176,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+									[192221] = {
+										["actived_at"] = 1470072923,
+										["uptime"] = 0,
+										["activedamt"] = -1,
+										["id"] = 192221,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+									[223202] = {
+										["uptime"] = 4,
+										["activedamt"] = 0,
+										["id"] = 223202,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+								},
+							},
+							["buff_uptime"] = 19,
+							["classe"] = "DRUID",
+							["buff_uptime_spells"] = {
+								["tipo"] = 9,
+								["_ActorTable"] = {
+									[48504] = {
+										["uptime"] = 1,
+										["activedamt"] = 1,
+										["id"] = 48504,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+									[774] = {
+										["uptime"] = 7,
+										["activedamt"] = 1,
+										["id"] = 774,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+									[8936] = {
+										["uptime"] = 3,
+										["activedamt"] = 1,
+										["id"] = 8936,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+									[117679] = {
+										["uptime"] = 4,
+										["activedamt"] = 1,
+										["id"] = 117679,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+									[33891] = {
+										["uptime"] = 4,
+										["activedamt"] = 1,
+										["id"] = 33891,
+										["actived"] = false,
+										["targets"] = {
+										},
+										["counter"] = 0,
+									},
+								},
+							},
+							["fight_component"] = true,
+							["debuff_uptime"] = 8,
+							["buff_uptime_targets"] = {
+							},
+							["grupo"] = true,
+							["spell_cast"] = {
+								[33891] = 1,
+								[8936] = 2,
+								[18562] = 1,
+								[774] = 1,
+							},
+							["debuff_uptime_targets"] = {
+							},
+							["last_event"] = 1470072927,
+							["nome"] = "Birgdruid",
+							["pets"] = {
+							},
+							["serial"] = "Player-970-003C0A0A",
+							["tipo"] = 4,
+						}, -- [1]
+					},
+				}, -- [4]
+				{
+					["combatId"] = 2,
+					["tipo"] = 2,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["Birgdruid"] = true,
+				},
+				["last_events_tables"] = {
+					{
+						{
+							{
+								true, -- [1]
+								1, -- [2]
+								18197, -- [3]
+								1470072919.403, -- [4]
+								316005, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [1]
+							{
+								true, -- [1]
+								1, -- [2]
+								9866, -- [3]
+								1470072919.849, -- [4]
+								316005, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [2]
+							{
+								true, -- [1]
+								5374, -- [2]
+								72905, -- [3]
+								1470072919.897, -- [4]
+								215037, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [3]
+							{
+								true, -- [1]
+								27576, -- [2]
+								40719, -- [3]
+								1470072919.897, -- [4]
+								174318, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [4]
+							{
+								true, -- [1]
+								113780, -- [2]
+								9597, -- [3]
+								1470072919.897, -- [4]
+								164721, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								8, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [5]
+							{
+								false, -- [1]
+								145109, -- [2]
+								14690, -- [3]
+								1470072920.619, -- [4]
+								179411, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [6]
+							{
+								true, -- [1]
+								1, -- [2]
+								21344, -- [3]
+								1470072921.12, -- [4]
+								179411, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [7]
+							{
+								true, -- [1]
+								113780, -- [2]
+								9597, -- [3]
+								1470072921.12, -- [4]
+								169814, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								8, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [8]
+							{
+								true, -- [1]
+								1, -- [2]
+								9926, -- [3]
+								1470072921.386, -- [4]
+								148470, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [9]
+							{
+								false, -- [1]
+								774, -- [2]
+								6485, -- [3]
+								1470072922.019, -- [4]
+								145029, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [10]
+							{
+								true, -- [1]
+								2818, -- [2]
+								18585, -- [3]
+								1470072922.386, -- [4]
+								126444, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								8, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [11]
+							{
+								true, -- [1]
+								1943, -- [2]
+								69106, -- [3]
+								1470072922.903, -- [4]
+								57338, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [12]
+							{
+								false, -- [1]
+								18562, -- [2]
+								75653, -- [3]
+								1470072923.303, -- [4]
+								132991, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [13]
+							{
+								true, -- [1]
+								1, -- [2]
+								9683, -- [3]
+								1470072923.703, -- [4]
+								132991, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [14]
+							{
+								false, -- [1]
+								774, -- [2]
+								6485, -- [3]
+								1470072924.653, -- [4]
+								129793, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [15]
+							{
+								true, -- [1]
+								1943, -- [2]
+								69105, -- [3]
+								1470072924.893, -- [4]
+								60688, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [16]
+							{
+								true, -- [1]
+								2818, -- [2]
+								18585, -- [3]
+								1470072925.37, -- [4]
+								42103, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								8, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [17]
+							{
+								false, -- [1]
+								145109, -- [2]
+								14690, -- [3]
+								1470072925.62, -- [4]
+								56793, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [18]
+							{
+								false, -- [1]
+								8936, -- [2]
+								40049, -- [3]
+								1470072926.137, -- [4]
+								96842, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [19]
+							{
+								true, -- [1]
+								703, -- [2]
+								29285, -- [3]
+								1470072926.72, -- [4]
+								67557, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [20]
+							{
+								false, -- [1]
+								48503, -- [2]
+								20025, -- [3]
+								1470072926.72, -- [4]
+								87582, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [21]
+							{
+								true, -- [1]
+								1943, -- [2]
+								69105, -- [3]
+								1470072926.837, -- [4]
+								18477, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [22]
+							{
+								false, -- [1]
+								774, -- [2]
+								12752, -- [3]
+								1470072927.337, -- [4]
+								31229, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [23]
+							{
+								false, -- [1]
+								8936, -- [2]
+								30438, -- [3]
+								1470072927.487, -- [4]
+								61667, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [24]
+							{
+								false, -- [1]
+								8936, -- [2]
+								1291, -- [3]
+								1470072927.937, -- [4]
+								62958, -- [5]
+								"Birgdruid", -- [6]
+								nil, -- [7]
+								0, -- [8]
+							}, -- [25]
+							{
+								true, -- [1]
+								2818, -- [2]
+								18585, -- [3]
+								1470072928.42, -- [4]
+								44373, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								8, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [26]
+							{
+								true, -- [1]
+								703, -- [2]
+								29286, -- [3]
+								1470072928.704, -- [4]
+								15087, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								-1, -- [10]
+							}, -- [27]
+							{
+								true, -- [1]
+								1943, -- [2]
+								69105, -- [3]
+								1470072928.904, -- [4]
+								1, -- [5]
+								"Deaygo", -- [6]
+								nil, -- [7]
+								1, -- [8]
+								false, -- [9]
+								54018, -- [10]
+							}, -- [28]
+							{
+								3, -- [1]
+								0, -- [2]
+								0, -- [3]
+								0, -- [4]
+								0, -- [5]
+								"Birgdruid", -- [6]
+							}, -- [29]
+						}, -- [1]
+						1470072928.904, -- [2]
+						"Birgdruid", -- [3]
+						"DRUID", -- [4]
+						489660, -- [5]
+						"0m 9s", -- [6]
+						["dead_at"] = 9.50099999993108,
+						["dead"] = true,
+					}, -- [1]
+				},
+				["enemy"] = "Deaygo",
+				["combat_counter"] = 15,
+				["playing_solo"] = true,
+				["totals"] = {
+					-0.0522979999722382, -- [1]
+					222557.997448, -- [2]
+					{
+						-0.00698200000000071, -- [1]
+						[0] = 0,
+						[6] = 0,
+						[3] = -0.00923000000001611,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["debuff_uptime"] = 0,
+						["cooldowns_defensive"] = -0.00382600000000011,
+						["interrupt"] = 0,
+						["dispell"] = 0,
+						["cc_break"] = 0,
+						["dead"] = 1,
+					}, -- [4]
+					["frags_total"] = 0,
+					["voidzone_damage"] = 0,
+				},
+				["player_last_events"] = {
+				},
+				["instance_type"] = "none",
+				["frags_need_refresh"] = false,
+				["__call"] = {
+				},
+				["data_inicio"] = "19:35:18",
+				["end_time"] = 597703.409,
+				["combat_id"] = 2,
+				["TimeData"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+							["Birgdruid"] = 222558.004329,
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+					["damage"] = {
+						{
+							["Birgdruid"] = 0.008143,
+						}, -- [1]
+					},
+				},
+				["frags"] = {
+				},
+				["data_fim"] = "19:35:28",
+				["totals_grupo"] = {
+					0, -- [1]
+					222558, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["debuff_uptime"] = 0,
+						["cooldowns_defensive"] = 0,
+						["interrupt"] = 0,
+						["dispell"] = 0,
+						["cc_break"] = 0,
+						["dead"] = 1,
+					}, -- [4]
+				},
+				["CombatSkillCache"] = {
+				},
+				["PlayerLeechTrinket"] = {
+				},
+				["start_time"] = 597693.908,
+				["contra"] = "Deaygo",
+				["pvp"] = true,
+			}, -- [1]
+			{
+				{
+					["combatId"] = 1,
+					["tipo"] = 2,
+					["_ActorTable"] = {
+						{
+							["flag_original"] = 1297,
+							["friendlyfire"] = {
+							},
+							["damage_from"] = {
+								["Deaygo"] = true,
+							},
+							["targets"] = {
+								["Dirty Rat"] = 19717,
+							},
+							["colocacao"] = 1,
+							["pets"] = {
+							},
+							["friendlyfire_total"] = 0,
+							["raid_targets"] = {
+							},
+							["total_without_pet"] = 19717.006941,
+							["on_hold"] = false,
+							["dps_started"] = false,
+							["total"] = 19717.006941,
+							["classe"] = "DRUID",
+							["serial"] = "Player-970-003C0A0A",
+							["nome"] = "Birgdruid",
+							["spells"] = {
+								["tipo"] = 2,
+								["_ActorTable"] = {
+									[5176] = {
+										["c_amt"] = 0,
+										["b_amt"] = 0,
+										["c_dmg"] = 0,
+										["g_amt"] = 0,
+										["n_max"] = 19717,
+										["targets"] = {
+											["Dirty Rat"] = 19717,
+										},
+										["m_dmg"] = 0,
+										["n_dmg"] = 19717,
+										["n_min"] = 19717,
+										["g_dmg"] = 0,
+										["counter"] = 1,
+										["total"] = 19717,
+										["c_max"] = 0,
+										["id"] = 5176,
+										["r_dmg"] = 0,
+										["spellschool"] = 8,
+										["a_dmg"] = 0,
+										["m_crit"] = 0,
+										["a_amt"] = 0,
+										["m_amt"] = 0,
+										["successful_casted"] = 0,
+										["b_dmg"] = 0,
+										["n_amt"] = 1,
+										["r_amt"] = 0,
+										["c_min"] = 0,
+									},
+								},
+							},
+							["grupo"] = true,
+							["end_time"] = 1470072890,
+							["last_dps"] = 197170.06941,
+							["custom"] = 0,
+							["tipo"] = 1,
+							["damage_taken"] = 173655.006941,
+							["start_time"] = 1470072890,
+							["delay"] = 0,
+							["last_event"] = 1470072890,
+						}, -- [1]
+					},
+				}, -- [1]
+				{
+					["combatId"] = 1,
+					["tipo"] = 3,
+					["_ActorTable"] = {
+					},
+				}, -- [2]
+				{
+					["combatId"] = 1,
+					["tipo"] = 7,
+					["_ActorTable"] = {
+					},
+				}, -- [3]
+				{
+					["combatId"] = 1,
+					["tipo"] = 9,
+					["_ActorTable"] = {
+					},
+				}, -- [4]
+				{
+					["combatId"] = 1,
+					["tipo"] = 2,
+					["_ActorTable"] = {
+					},
+				}, -- [5]
+				["raid_roster"] = {
+					["Birgdruid"] = true,
+				},
+				["last_events_tables"] = {
+				},
+				["enemy"] = "Dirty Rat",
+				["combat_counter"] = 14,
+				["playing_solo"] = true,
+				["totals"] = {
+					19716.972711, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = -0.001369,
+						[6] = 0,
+						[3] = -0.00589099999999121,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["debuff_uptime"] = 0,
+						["cooldowns_defensive"] = -0.00630299999999995,
+						["interrupt"] = 0,
+						["dispell"] = 0,
+						["cc_break"] = 0,
+						["dead"] = 0,
+					}, -- [4]
+					["frags_total"] = 0,
+					["voidzone_damage"] = 0,
+				},
+				["player_last_events"] = {
+					["Birgdruid"] = {
+						{
+							true, -- [1]
+							5374, -- [2]
+							115888, -- [3]
+							1470072918.803, -- [4]
+							373772, -- [5]
+							"Deaygo", -- [6]
+							nil, -- [7]
+							1, -- [8]
+							false, -- [9]
+							-1, -- [10]
+						}, -- [1]
+						{
+							true, -- [1]
+							27576, -- [2]
+							57767, -- [3]
+							1470072918.803, -- [4]
+							316005, -- [5]
+							"Deaygo", -- [6]
+							nil, -- [7]
+							1, -- [8]
+							false, -- [9]
+							-1, -- [10]
+						}, -- [2]
+						{
+						}, -- [3]
+						{
+						}, -- [4]
+						{
+						}, -- [5]
+						{
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						{
+						}, -- [9]
+						{
+						}, -- [10]
+						{
+						}, -- [11]
+						{
+						}, -- [12]
+						{
+						}, -- [13]
+						{
+						}, -- [14]
+						{
+						}, -- [15]
+						{
+						}, -- [16]
+						{
+						}, -- [17]
+						{
+						}, -- [18]
+						{
+						}, -- [19]
+						{
+						}, -- [20]
+						{
+						}, -- [21]
+						{
+						}, -- [22]
+						{
+						}, -- [23]
+						{
+						}, -- [24]
+						{
+						}, -- [25]
+						{
+						}, -- [26]
+						{
+						}, -- [27]
+						{
+						}, -- [28]
+						{
+						}, -- [29]
+						{
+						}, -- [30]
+						{
+						}, -- [31]
+						{
+						}, -- [32]
+						["n"] = 3,
+					},
+				},
+				["frags_need_refresh"] = true,
+				["__call"] = {
+				},
+				["PhaseData"] = {
+					{
+						1, -- [1]
+						1, -- [2]
+					}, -- [1]
+					["heal_section"] = {
+					},
+					["heal"] = {
+						{
+						}, -- [1]
+					},
+					["damage_section"] = {
+					},
+					["damage"] = {
+						{
+							["Birgdruid"] = 19717.006941,
+						}, -- [1]
+					},
+				},
+				["end_time"] = 597666.687,
+				["combat_id"] = 1,
+				["instance_type"] = "none",
+				["totals_grupo"] = {
+					19717, -- [1]
+					0, -- [2]
+					{
+						0, -- [1]
+						[0] = 0,
+						[6] = 0,
+						[3] = 0,
+					}, -- [3]
+					{
+						["buff_uptime"] = 0,
+						["ress"] = 0,
+						["debuff_uptime"] = 0,
+						["cooldowns_defensive"] = 0,
+						["interrupt"] = 0,
+						["dispell"] = 0,
+						["cc_break"] = 0,
+						["dead"] = 0,
+					}, -- [4]
+				},
+				["frags"] = {
+					["Dirty Rat"] = 1,
+				},
+				["data_fim"] = "19:34:51",
+				["data_inicio"] = "19:34:51",
+				["CombatSkillCache"] = {
+				},
+				["PlayerLeechTrinket"] = {
+				},
+				["start_time"] = 597666.687,
+				["TimeData"] = {
+				},
+				["pvp"] = true,
+			}, -- [2]
 		},
 	},
-	["last_day"] = "12",
 	["nick_tag_cache"] = {
-		["nextreset"] = 1488235916,
+		["nextreset"] = 1471368329,
 		["last_version"] = 8,
 	},
 	["tabela_instancias"] = {
 	},
-	["combat_id"] = 0,
+	["combat_id"] = 2,
 	["savedStyles"] = {
 	},
+	["last_version"] = "v5.10c",
 	["cached_talents"] = {
-		["Player-3678-09E3A47C"] = {
-		},
 	},
-	["last_instance_time"] = 0,
 	["announce_deaths"] = {
 		["enabled"] = false,
 		["last_hits"] = 1,
@@ -240,7 +1287,7 @@ _detalhes_database = {
 		},
 		["start_time"] = 0,
 		["data_inicio"] = 0,
-		["combat_counter"] = 3,
+		["combat_counter"] = 13,
 		["last_events_tables"] = {
 		},
 		["raid_roster"] = {
@@ -302,15 +1349,11 @@ _detalhes_database = {
 		["__call"] = {
 		},
 	},
-	["last_version"] = "v7.1.5.3370",
+	["last_realversion"] = 109,
 	["local_instances_config"] = {
 		{
-			["segment"] = 0,
+			["segment"] = 2,
 			["sub_attribute"] = 1,
-			["horizontalSnap"] = false,
-			["verticalSnap"] = false,
-			["is_open"] = false,
-			["isLocked"] = false,
 			["sub_atributo_last"] = {
 				1, -- [1]
 				1, -- [2]
@@ -318,16 +1361,18 @@ _detalhes_database = {
 				1, -- [4]
 				1, -- [5]
 			},
+			["is_open"] = true,
+			["isLocked"] = false,
 			["snap"] = {
 			},
 			["mode"] = 2,
 			["attribute"] = 1,
 			["pos"] = {
 				["normal"] = {
-					["y"] = -210.000030517578,
-					["x"] = 372.999755859375,
-					["w"] = 320.000061035156,
-					["h"] = 129.999984741211,
+					["y"] = 54.15380859375,
+					["x"] = 674.870971679688,
+					["w"] = 230.563980102539,
+					["h"] = 181.418884277344,
 				},
 				["solo"] = {
 					["y"] = 2,
@@ -355,6 +1400,5 @@ _detalhes_database = {
 	},
 	["last_instance_id"] = 0,
 	["cached_specs"] = {
-		["Player-3678-09E3A47C"] = 102,
 	},
 }

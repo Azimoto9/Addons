@@ -1,0 +1,14 @@
+
+DungeonHelperDB = {
+	["profileKeys"] = {
+		["Atreb - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["startTime"] = 0,
+			["showText"] = true,
+			["porposalSoundFile"] = "Interface\\AddOns\\DungeonHelper\\media\\alert.mp3",
+			["bonusSoundFile"] = "Sound\\Interface\\AlarmClockWarning3.ogg",
+		},
+	},
+}

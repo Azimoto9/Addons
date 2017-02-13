@@ -1,0 +1,24 @@
+
+MogItDB = {
+	["profileKeys"] = {
+		["Huntbert - Outland"] = "Default",
+	},
+	["global"] = {
+		["version"] = "2.3.0",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["width"] = 353,
+			["height"] = 535,
+		},
+	},
+}
+MogItWishlist = {
+	["profileKeys"] = {
+		["Huntbert - Outland"] = "Huntbert - Outland",
+	},
+	["profiles"] = {
+		["Huntbert - Outland"] = {
+		},
+	},
+}

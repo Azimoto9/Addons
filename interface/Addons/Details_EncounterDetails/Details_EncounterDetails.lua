@@ -298,7 +298,8 @@ local function CreatePluginFrames (data)
 			DBM:RegisterCallback ("DBM_TimerStart", dbm_timer_callback)
 		end
 		function EncounterDetails:RegisterBigWigsCallBack()
-			if (BigWigsLoader) then
+			if (BigWigs) then
+				BigWigs:Enable()
 				function EncounterDetails:BigWigs_StartBar (event, module, spellid, bar_text, time, icon, ...)
 					--print (event, module, spellid, bar_text, time, icon, ...)
 					spellid = tostring (spellid)
@@ -306,9 +307,7 @@ local function CreatePluginFrames (data)
 						current_table_bigwigs [spellid] = {(type (module) == "string" and module) or (module and module.moduleName) or "", spellid or "", bar_text or "", time or 0, icon or ""}
 					end
 				end
-				if (BigWigsLoader.RegisterMessage) then
-					BigWigsLoader.RegisterMessage (EncounterDetails, "BigWigs_StartBar")
-				end
+				BigWigs.RegisterMessage (EncounterDetails, "BigWigs_StartBar")
 			end
 		end
 		EncounterDetails:ScheduleTimer ("RegisterBigWigsCallBack", 5)
@@ -371,7 +370,6 @@ local function CreatePluginFrames (data)
 		alert:SetFrameLevel (302)
 		alert.label = "Click here (on the skull icon) to bring the Encounter Details panel"
 		alert.Text:SetSpacing (4)
-		alert:SetClampedToScreen (true)
 		MicroButtonAlert_SetText (alert, alert.label)
 		alert:SetPoint ("bottom", EncounterDetails.ToolbarButton, "top", 0, 22)
 		alert.CloseButton:HookScript ("OnClick", hook_AlertButtonCloseButton)
@@ -385,7 +383,6 @@ local function CreatePluginFrames (data)
 		--> [1] button to show [2] button animation: "star", "blink" or true (blink)
 		EncounterDetails:ShowToolbarIcon (EncounterDetails.ToolbarButton, "star")
 
-		--EncounterDetails:SetTutorialCVar ("ENCOUNTER_DETAILS_BALLON_TUTORIAL1", false) --debug
 		if (not EncounterDetails:GetTutorialCVar ("ENCOUNTER_DETAILS_BALLON_TUTORIAL1")) then
 			--print ("nao viu o tutorial ainda")
 			C_Timer.After (2, EncounterDetails.ShowIconBallonTutorial)
@@ -525,7 +522,7 @@ local function CreatePluginFrames (data)
 	_detalhes.EncounterDetailsTempWindow (EncounterDetails)
 	_detalhes.EncounterDetailsTempWindow = nil
 	
-	--> ~remover ~autoabrir ï¿½brir ~abrir ~auto
+	--> ~remover ~autoabrir ãbrir ~abrir ~auto
 	--C_Timer.After (.5, EncounterDetails.OpenWindow)
 	
 	
@@ -791,7 +788,7 @@ local function DamageTakenDetails (jogador, barra)
 	
 	for nome, _ in _pairs (agressores) do --> agressores seria a lista de nomes
 		local este_agressor = showing._ActorTable[showing._NameIndexTable[nome]]
-		if (este_agressor) then --> checagem por causa do total e do garbage collector que nï¿½o limpa os nomes que deram dano
+		if (este_agressor) then --> checagem por causa do total e do garbage collector que não limpa os nomes que deram dano
 			local habilidades = este_agressor.spells._ActorTable
 			for id, habilidade in _pairs (habilidades) do 
 			--print ("oi - " .. este_agressor.nome)
@@ -853,7 +850,7 @@ function _detalhes:BossInfoRowClick (barra, param1)
 
 	local reportar
 	
-	if (barra.TTT == "morte" or true) then --> deaths -- todos os boxes estï¿½o usando cooltip, por isso o 'true'.
+	if (barra.TTT == "morte" or true) then --> deaths -- todos os boxes estão usando cooltip, por isso o 'true'.
 		
 		reportar = {barra.report_text .. " " .. (barra.texto_esquerdo and barra.texto_esquerdo:GetText() or barra:GetParent() and barra:GetParent().texto_esquerdo and barra:GetParent().texto_esquerdo:GetText() or "")}
 		local beginAt = 1
@@ -1153,7 +1150,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 		for index, jogador in _ipairs (DamageContainer._ActorTable) do
 			--> ta em ordem de quem tomou mais dano.
 			
-			if (not jogador.grupo) then --> sï¿½ aparecer nego da raid
+			if (not jogador.grupo) then --> só aparecer nego da raid
 				break
 			end
 			
@@ -1215,7 +1212,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 	--> Container Overall Habilidades Inimigas ~damage taken by spell
 		local habilidades_poll = {}
 		
-		--> pega as magias contï¿½nuas presentes em todas as fases
+		--> pega as magias contínuas presentes em todas as fases
 		if (boss_info and boss_info.continuo) then
 			for index, spellid in _ipairs (boss_info.continuo) do 
 				habilidades_poll [spellid] = true
@@ -1255,7 +1252,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 				for id, habilidade in _pairs (habilidades) do
 					--if (habilidades_poll [id]) then
 						--> esse jogador usou uma habilidade do boss
-						local esta_habilidade = habilidades_usadas [id] --> tabela nï¿½o numerica, pq diferentes monstros podem castar a mesma magia
+						local esta_habilidade = habilidades_usadas [id] --> tabela não numerica, pq diferentes monstros podem castar a mesma magia
 						if (not esta_habilidade) then 
 							esta_habilidade = {0, {}, {}, id} --> [1] total dano causado [2] jogadores que foram alvos [3] jogadores que castaram essa magia [4] ID da magia
 							habilidades_usadas [id] = esta_habilidade
@@ -1275,7 +1272,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 						local alvos = habilidade.targets
 						for target_name, amount in _pairs (alvos) do 
 						
-							--> ele tem o nome do jogador, vamos ver se este alvo ï¿½ realmente um jogador verificando na tabela do combate
+							--> ele tem o nome do jogador, vamos ver se este alvo é realmente um jogador verificando na tabela do combate
 							local tabela_dano_do_jogador = DamageContainer._ActorTable [DamageContainer._NameIndexTable [target_name]]
 							if (tabela_dano_do_jogador and tabela_dano_do_jogador.grupo) then
 								if (not esta_habilidade[2] [target_name]) then 
@@ -1294,7 +1291,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 				for id, habilidade in _pairs (habilidades) do
 					if (habilidades_poll [id]) then
 						--> esse jogador usou uma habilidade do boss
-						local esta_habilidade = habilidades_usadas [id] --> tabela nï¿½o numerica, pq diferentes monstros podem castar a mesma magia
+						local esta_habilidade = habilidades_usadas [id] --> tabela não numerica, pq diferentes monstros podem castar a mesma magia
 						if (not esta_habilidade) then 
 							esta_habilidade = {0, {}, {}, id} --> [1] total dano causado [2] jogadores que foram alvos [3] jogadores que castaram essa magia [4] ID da magia
 							habilidades_usadas [id] = esta_habilidade
@@ -1314,7 +1311,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 						local alvos = habilidade.targets
 						for target_name, amount in _pairs (alvos) do 
 						
-							--> ele tem o nome do jogador, vamos ver se este alvo ï¿½ realmente um jogador verificando na tabela do combate
+							--> ele tem o nome do jogador, vamos ver se este alvo é realmente um jogador verificando na tabela do combate
 							local tabela_dano_do_jogador = DamageContainer._ActorTable [DamageContainer._NameIndexTable [target_name]]
 							if (tabela_dano_do_jogador and tabela_dano_do_jogador.grupo) then
 								if (not esta_habilidade[2] [target_name]) then 
@@ -1421,7 +1418,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 	
 	--> Identificar os ADDs da luta:
 	
-		--> declara a pool onde serï¿½o armazenados os adds existentas na luta
+		--> declara a pool onde serão armazenados os adds existentas na luta
 		local adds_pool = {}
 	
 		--> pega as habilidades que pertence especificamente a cada fase
@@ -1444,14 +1441,14 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 		
 		for index, jogador in _ipairs (DamageContainer._ActorTable) do
 		
-			--> sï¿½ estou interessado nos adds, conferir pelo nome
+			--> só estou interessado nos adds, conferir pelo nome
 			if (adds_pool [_detalhes:GetNpcIdFromGuid (jogador.serial)] or (
 				jogador.flag_original and
 				bit.band (jogador.flag_original, 0x00000060) ~= 0 and
 				(not jogador.owner or (_bit_band (jogador.owner.flag_original, 0x00000060) ~= 0 and not jogador.owner.grupo and _bit_band (jogador.owner.flag_original, 0x00000400) == 0)) and --isn't a pet or the owner isn't a player
 				not jogador.grupo and
 				_bit_band (jogador.flag_original, 0x00000400) == 0
-			)) then --> ï¿½ um inimigo ou neutro
+			)) then --> é um inimigo ou neutro
 				
 				local nome = jogador.nome
 				local tabela = {nome = nome, total = 0, dano_em = {}, dano_em_total = 0, damage_from = {}, damage_from_total = 0}
@@ -1621,7 +1618,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 					barra._no_report = true
 					barra.TTT = "adds_container"
 					
-					--> criar 2 botï¿½o: um para o dano que add deu e outro para o dano que o add tomou
+					--> criar 2 botão: um para o dano que add deu e outro para o dano que o add tomou
 					local add_damage_taken = _CreateFrame ("Button", nil, barra)
 					add_damage_taken.report_text = "Details! Damage Taken of "
 					add_damage_taken.barra = barra
@@ -1718,7 +1715,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 		local habilidades_interrompidas = {}
 		
 		for index, jogador in _ipairs (misc._ActorTable) do
-			if (not jogador.grupo) then --> sï¿½ aparecer nego da raid
+			if (not jogador.grupo) then --> só aparecer nego da raid
 				break
 			end
 			
@@ -1729,11 +1726,11 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 					--> vai ter [spellid] = quantidade
 					
 					for spellid, amt in _pairs (oque_interrompi) do 
-						if (not habilidades_interrompidas [spellid]) then --> se a spell nï¿½o tiver na pool, cria a tabela dela
+						if (not habilidades_interrompidas [spellid]) then --> se a spell não tiver na pool, cria a tabela dela
 							habilidades_interrompidas [spellid] = {{}, 0, spellid} --> tabela com quem interrompeu e o total de vezes que a habilidade foi interrompida
 						end
 						
-						if (not habilidades_interrompidas [spellid] [1] [jogador.nome]) then --> se o jogador nï¿½o tiver na pool dessa habilidade interrompida, cria um indice pra ele.
+						if (not habilidades_interrompidas [spellid] [1] [jogador.nome]) then --> se o jogador não tiver na pool dessa habilidade interrompida, cria um indice pra ele.
 							habilidades_interrompidas [spellid] [1] [jogador.nome] = {0, jogador.classe}
 						end
 						
@@ -1825,7 +1822,7 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 		local habilidades_dispeladas = {}
 		
 		for index, jogador in _ipairs (misc._ActorTable) do
-			if (not jogador.grupo) then --> sï¿½ aparecer nego da raid
+			if (not jogador.grupo) then --> só aparecer nego da raid
 				break
 			end
 
@@ -1839,11 +1836,11 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 					--print ("dispell: " .. jogador.classe .. " nome: " .. jogador.nome)
 					
 					for spellid, amt in _pairs (oque_dispelei) do 
-						if (not habilidades_dispeladas [spellid]) then --> se a spell nï¿½o tiver na pool, cria a tabela dela
+						if (not habilidades_dispeladas [spellid]) then --> se a spell não tiver na pool, cria a tabela dela
 							habilidades_dispeladas [spellid] = {{}, 0, spellid} --> tabela com quem dispolou e o total de vezes que a habilidade foi dispelada
 						end
 						
-						if (not habilidades_dispeladas [spellid] [1] [jogador.nome]) then --> se o jogador nï¿½o tiver na pool dessa habilidade interrompida, cria um indice pra ele.
+						if (not habilidades_dispeladas [spellid] [1] [jogador.nome]) then --> se o jogador não tiver na pool dessa habilidade interrompida, cria um indice pra ele.
 							habilidades_dispeladas [spellid] [1] [jogador.nome] = {0, jogador.classe}
 							--print (jogador.nome)
 							--print (jogador.classe)
@@ -1918,10 +1915,10 @@ function EncounterDetails:OpenAndRefresh (_, segment)
 		
 		quantidade = 0
 	
-		-- boss_info.spells_info o erro de lua do boss ï¿½ a habilidade dele que nï¿½o foi declarada ainda
+		-- boss_info.spells_info o erro de lua do boss é a habilidade dele que não foi declarada ainda
 	
 		local mortes = _combat_object.last_events_tables
-		local habilidades_info = boss_info and boss_info.spell_mechanics or {} --barra.extra pega esse cara aqui --> entï¿½o esse erro ï¿½ das habilidades que nï¿½o tao
+		local habilidades_info = boss_info and boss_info.spell_mechanics or {} --barra.extra pega esse cara aqui --> então esse erro é das habilidades que não tao
 	
 		for index, tabela in _ipairs (mortes) do
 			--> {esta_morte, time, este_jogador.nome, este_jogador.classe, _UnitHealthMax (alvo_name), minutos.."m "..segundos.."s",  ["dead"] = true}

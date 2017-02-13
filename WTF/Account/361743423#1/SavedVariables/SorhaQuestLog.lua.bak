@@ -3,21 +3,90 @@ SorhaQuestLogDB = {
 	["namespaces"] = {
 		["QuestTracker"] = {
 			["char"] = {
-				["Adimoto - Thrall"] = {
+				["Birge - Outland"] = {
 					["ZoneIsCollapsed"] = {
-						["Echo Isles"] = false,
-						["Bonus Objectives"] = false,
+						["Artifact"] = false,
+						["Druid Campaign"] = false,
+						["Archaeology"] = false,
+						["Black Rook Hold"] = false,
 						["World Quests"] = false,
+						["Bonus Objectives"] = false,
+						["The Emerald Nightmare"] = false,
+						["Suramar"] = false,
 					},
 				},
 			},
 			["profiles"] = {
 				["Default"] = {
-					["MinionLocation"] = {
-						["Y"] = 123.000007629395,
-						["Point"] = "RIGHT",
-						["RelativePoint"] = "RIGHT",
+					["Colours"] = {
+						["Objective50PlusColour"] = {
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["Objective75PlusColour"] = {
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["Objective00PlusColour"] = {
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["HeaderColour"] = {
+							["g"] = 0.898039215686275,
+						},
+						["QuestTitleColour"] = {
+							["r"] = 0.243137254901961,
+							["b"] = 0.490196078431373,
+						},
+						["Objective25PlusColour"] = {
+							["g"] = 1,
+							["b"] = 1,
+						},
+						["ObjectiveDoneColour"] = {
+							["r"] = 1,
+							["b"] = 1,
+						},
 					},
+					["MinionLocation"] = {
+						["Y"] = -20.6324195861816,
+						["X"] = 13.6237468719482,
+						["Point"] = "TOPLEFT",
+						["RelativePoint"] = "TOPLEFT",
+					},
+					["sink20OutputSink"] = "MikSBT",
+					["MoveTooltipsRight"] = true,
+					["MinionCollapseToLeft"] = true,
+					["Fonts"] = {
+						["HeaderFontLineSpacing"] = 2,
+						["QuestFont"] = "imagine_font",
+						["HeaderFontSize"] = 9,
+						["HeaderFont"] = "imagine_font",
+						["ObjectiveFont"] = "imagine_font",
+						["ObjectiveFontLineSpacing"] = 5,
+						["QuestFontLineSpacing"] = 5,
+						["MinionTitleFont"] = "imagine_font",
+						["MinionTitleFontSize"] = 9,
+						["MinionTitleFontLineSpacing"] = 5,
+						["QuestFontSize"] = 9,
+						["ObjectiveFontSize"] = 9,
+					},
+					["AutoHideTitle"] = true,
+					["ShowNumberOfQuests"] = false,
+					["Notifications"] = {
+						["DisableToasts"] = true,
+					},
+					["MinionWidth"] = 226,
+					["ZonesAndQuests"] = {
+						["HideCompletedObjectives"] = false,
+						["QuestSortOrder"] = "Proximity",
+						["QuestTitleColouringSetting"] = "Custom",
+						["QuestLevelColouringSetting"] = "Custom",
+						["QuestTagsLength"] = "None",
+						["ObjectiveTextLast"] = true,
+						["ShowQuestLevels"] = false,
+						["HideZoneHeaders"] = true,
+					},
+					["sink20ScrollArea"] = "Notification",
 				},
 			},
 		},
@@ -25,9 +94,8 @@ SorhaQuestLogDB = {
 			["profiles"] = {
 				["Default"] = {
 					["MinionLocation"] = {
-						["Y"] = -143.999923706055,
-						["Point"] = "RIGHT",
-						["RelativePoint"] = "RIGHT",
+						["Y"] = 196.923156738281,
+						["X"] = 329.299224853516,
 					},
 				},
 			},
@@ -35,10 +103,10 @@ SorhaQuestLogDB = {
 		["RemoteQuestsTracker"] = {
 			["profiles"] = {
 				["Default"] = {
+					["ShowTitle"] = false,
 					["MinionLocation"] = {
-						["Y"] = -19.0000286102295,
-						["Point"] = "RIGHT",
-						["RelativePoint"] = "RIGHT",
+						["Y"] = 143.316192626953,
+						["X"] = 137.846252441406,
 					},
 				},
 			},
@@ -47,19 +115,31 @@ SorhaQuestLogDB = {
 			["profiles"] = {
 				["Default"] = {
 					["MinionLocation"] = {
-						["Y"] = 195.999908447266,
-						["Point"] = "BOTTOMRIGHT",
-						["RelativePoint"] = "BOTTOMRIGHT",
+						["Y"] = 258.188140869141,
+						["X"] = 1.09416890144348,
 					},
+					["ShowTitle"] = false,
 				},
 			},
 		},
 	},
 	["profileKeys"] = {
-		["Adimoto - Thrall"] = "Default",
+		["Birge - Outland"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
+			["BackgroundTexture"] = "None",
+			["AutoHide"] = {
+				["OnBattleground"] = "Hide",
+				["OnRaid"] = "Hide",
+				["OnArena"] = "Hide",
+			},
+			["Modules"] = {
+				["RemoteQuestsTracker"] = false,
+				["AchievementTracker"] = false,
+			},
+			["BorderTexture"] = "None",
+			["StatusBarTexture"] = "Ish00",
 		},
 	},
 }

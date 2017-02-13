@@ -1,0 +1,35 @@
+
+MapsterDB = {
+	["namespaces"] = {
+		["GroupIcons"] = {
+		},
+		["Coords"] = {
+		},
+		["FogClear"] = {
+			["profiles"] = {
+				["Default"] = {
+					["version"] = 1,
+				},
+			},
+		},
+		["BattleMap"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Gote - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["arrowScale"] = 1.19,
+			["point"] = "CENTER",
+			["ejScale"] = 0.76,
+			["scale"] = 0.9907565116882324,
+			["mini"] = {
+				["disableMouse"] = false,
+			},
+			["x"] = 2.925442483276129,
+			["y"] = 66.18216286669485,
+			["poiScale"] = 0.9300000000000001,
+		},
+	},
+}

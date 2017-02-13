@@ -1,5 +1,5 @@
 local f = CreateFrame("Frame");
-f:RegisterEvent("PLAYER_LOGIN");
+f:RegisterEvent("PLAYER_ENTERING_WORLD");
 f:SetScript("OnEvent", function()
 		
 LootFramePortraitOverlay:SetTexCoord(0.13, 0.83, 0.13, 0.83)

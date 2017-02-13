@@ -1,0 +1,17 @@
+## Interface: 50200
+## Title: LovelyLoot
+## Author: Seerah
+## Version: 2.0b.1
+## Notes: Making the loot frames more lovely to look at and work with.
+## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, rActionButtonStyler, ButtonFacade
+## SavedVariables: LovelyLootDB
+## SavedVariablesPerCharacter: LovelyLootPCDB
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+libs\AceGUI-3.0\AceGUI-3.0.xml
+libs\AceConfig-3.0\AceConfig-3.0.xml
+libs\LibSharedMedia-3.0\lib.xml
+libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+
+lloot.lua

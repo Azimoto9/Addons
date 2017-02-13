@@ -1,0 +1,17 @@
+
+Postal3DB = {
+	["global"] = {
+		["BlackBook"] = {
+			["alts"] = {
+				"Pytte|Outland|Alliance|85|SHAMAN", -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Pytte - Outland"] = "Pytte - Outland",
+	},
+	["profiles"] = {
+		["Pytte - Outland"] = {
+		},
+	},
+}

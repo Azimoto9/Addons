@@ -845,7 +845,6 @@ function SQLScenario:new()
 	self.BonusList = {};
 	
 	self.Spells = {};
-	self.Progress = nil;
 
 	self.Timer = SQLScenarioTimer:new();
 
@@ -871,11 +870,10 @@ function SQLScenario:Update()
 		return
 	end
 
-	local stageName, stageDescription, numCriteria, _, _, _, _, spells, weightedProgress = C_Scenario.GetStepInfo();
+	local stageName, stageDescription, numCriteria, _, _, _, _, spells = C_Scenario.GetStepInfo();
 	
 	
 	self.Spells = spells;
-	self.Progress = weightedProgress;
 	
 	self.Name = scenarioName;
 	self.StageName = stageName;
@@ -1757,16 +1755,20 @@ function ScenarioTracker:UpdateMinion()
 			end
 				
 			--Objectives
-			
-			if (objScenario.Progress) then
+			for k, CriteriaInstance in pairs(objScenario.CriteriaList) do
 				local objCriteriaButton = self:GetMinionButton();
 				objCriteriaButton:SetWidth(minionWidth)				
 				objCriteriaButton:SetParent(objButton);
 				objCriteriaButton:SetPoint("TOPLEFT", fraMinionAnchor.fraScenariosAnchor, "TOPLEFT", 0, -intYPosition);
 				local buttonHeight = 0			
-
-				local criteriaString = string.format("%s", objScenario.StageDescription);
-		
+				
+					
+						--Objective
+				local criteriaString = string.format("%s: %d/%d", CriteriaInstance.Name, CriteriaInstance.Quantity, CriteriaInstance.TotalQuantity);
+				if (CriteriaInstance.IsProgressBar) then
+					criteriaString = string.format("%s:", CriteriaInstance.Name);
+				end
+			
 				objCriteriaButton.objFontString1:SetPoint("TOPLEFT", objCriteriaButton, "TOPLEFT", 0, 0);
 				objCriteriaButton.objFontString1:SetFont(LSM:Fetch("font", db.Fonts.ScenarioObjectiveFont), db.Fonts.ScenarioObjectiveFontSize, db.Fonts.ScenarioObjectiveFontOutline)
 				if (db.Fonts.ScenarioObjectiveFontShadowed == true) then
@@ -1782,29 +1784,29 @@ function ScenarioTracker:UpdateMinion()
 					intLargestWidth = objCriteriaButton.objFontString1:GetWidth()
 				end
 					
-		
-				local intStatusBarOffset = 2
-				intOffset = intOffset + intStatusBarOffset
-				if (objCriteriaButton.ProgressBar == nil) then
-					objCriteriaButton.ProgressBar = ScenarioTracker:GetProgressBar(objScenario.Progress)
-				end
+				if (CriteriaInstance.IsProgressBar) then
+					local intStatusBarOffset = 2
+					intOffset = intOffset + intStatusBarOffset
+					if (objCriteriaButton.ProgressBar == nil) then
+						objCriteriaButton.ProgressBar = ScenarioTracker:GetProgressBar(CriteriaInstance.Quantity)
+					end
 
-				objCriteriaButton.ProgressBar:SetParent(objCriteriaButton)
-				objCriteriaButton.ProgressBar:SetPoint("TOPLEFT", objCriteriaButton, "TOPLEFT", 0, -intOffset);				
-				
-				-- Find out if string is larger then the current largest string
-				if (objCriteriaButton.ProgressBar.objFontString:GetWidth() > intLargestWidth) then
-					intLargestWidth = objCriteriaButton.ProgressBar.objFontString:GetWidth()
+					objCriteriaButton.ProgressBar:SetParent(objCriteriaButton)
+					objCriteriaButton.ProgressBar:SetPoint("TOPLEFT", objCriteriaButton, "TOPLEFT", 0, -intOffset);				
+					
+					-- Find out if string is larger then the current largest string
+					if (objCriteriaButton.ProgressBar.objFontString:GetWidth() > intLargestWidth) then
+						intLargestWidth = objCriteriaButton.ProgressBar.objFontString:GetWidth()
+					end
+					objCriteriaButton.ProgressBar.objFontString:SetWidth(minionWidth)
+					objCriteriaButton.ProgressBar:SetWidth(minionWidth)
+					objCriteriaButton.ProgressBar:SetHeight(objCriteriaButton.ProgressBar.objFontString:GetHeight() + 1)	
+					
+					intOffset = intOffset + objCriteriaButton.ProgressBar:GetHeight() + intStatusBarOffset			
+					if (objCriteriaButton.ProgressBar:GetWidth() > intLargestWidth) then
+						intLargestWidth = objCriteriaButton.ProgressBar:GetWidth()
+					end
 				end
-				objCriteriaButton.ProgressBar.objFontString:SetWidth(minionWidth)
-				objCriteriaButton.ProgressBar:SetWidth(minionWidth)
-				objCriteriaButton.ProgressBar:SetHeight(objCriteriaButton.ProgressBar.objFontString:GetHeight() + 1)	
-				
-				intOffset = intOffset + objCriteriaButton.ProgressBar:GetHeight() + intStatusBarOffset			
-				if (objCriteriaButton.ProgressBar:GetWidth() > intLargestWidth) then
-					intLargestWidth = objCriteriaButton.ProgressBar:GetWidth()
-				end
-			
 
 
 				intYPosition = intYPosition + intOffset	
@@ -1812,68 +1814,7 @@ function ScenarioTracker:UpdateMinion()
 				
 				objCriteriaButton:SetHeight(buttonHeight)					
 				tinsert(tblUsingButtons,objCriteriaButton)	
-			else
-				for k, CriteriaInstance in pairs(objScenario.CriteriaList) do
-					local objCriteriaButton = self:GetMinionButton();
-					objCriteriaButton:SetWidth(minionWidth)				
-					objCriteriaButton:SetParent(objButton);
-					objCriteriaButton:SetPoint("TOPLEFT", fraMinionAnchor.fraScenariosAnchor, "TOPLEFT", 0, -intYPosition);
-					local buttonHeight = 0			
-					
-						
-							--Objective
-					local criteriaString = string.format("%s: %d/%d", CriteriaInstance.Name, CriteriaInstance.Quantity, CriteriaInstance.TotalQuantity);
-					if (CriteriaInstance.IsProgressBar) then
-						criteriaString = string.format("%s:", CriteriaInstance.Name);
-					end
 				
-					objCriteriaButton.objFontString1:SetPoint("TOPLEFT", objCriteriaButton, "TOPLEFT", 0, 0);
-					objCriteriaButton.objFontString1:SetFont(LSM:Fetch("font", db.Fonts.ScenarioObjectiveFont), db.Fonts.ScenarioObjectiveFontSize, db.Fonts.ScenarioObjectiveFontOutline)
-					if (db.Fonts.ScenarioObjectiveFontShadowed == true) then
-						objCriteriaButton.objFontString1:SetShadowColor(0.0, 0.0, 0.0, 1.0)
-					else
-						objCriteriaButton.objFontString1:SetShadowColor(0.0, 0.0, 0.0, 0.0)
-					end
-					objCriteriaButton.objFontString1:SetText(strScenarioObjectiveColour .. " - " .. criteriaString .. "|r");
-					objCriteriaButton.objFontString1:SetWidth(minionWidth)
-					
-					intOffset = objCriteriaButton.objFontString1:GetHeight() + intTitleOutlineOffset + intHeaderOutlineOffset + intTaskOutlineOffset + intObjectiveOutlineOffset
-					if (objCriteriaButton.objFontString1:GetWidth() > intLargestWidth) then
-						intLargestWidth = objCriteriaButton.objFontString1:GetWidth()
-					end
-						
-					if (CriteriaInstance.IsProgressBar) then
-						local intStatusBarOffset = 2
-						intOffset = intOffset + intStatusBarOffset
-						if (objCriteriaButton.ProgressBar == nil) then
-							objCriteriaButton.ProgressBar = ScenarioTracker:GetProgressBar(CriteriaInstance.Quantity)
-						end
-
-						objCriteriaButton.ProgressBar:SetParent(objCriteriaButton)
-						objCriteriaButton.ProgressBar:SetPoint("TOPLEFT", objCriteriaButton, "TOPLEFT", 0, -intOffset);				
-						
-						-- Find out if string is larger then the current largest string
-						if (objCriteriaButton.ProgressBar.objFontString:GetWidth() > intLargestWidth) then
-							intLargestWidth = objCriteriaButton.ProgressBar.objFontString:GetWidth()
-						end
-						objCriteriaButton.ProgressBar.objFontString:SetWidth(minionWidth)
-						objCriteriaButton.ProgressBar:SetWidth(minionWidth)
-						objCriteriaButton.ProgressBar:SetHeight(objCriteriaButton.ProgressBar.objFontString:GetHeight() + 1)	
-						
-						intOffset = intOffset + objCriteriaButton.ProgressBar:GetHeight() + intStatusBarOffset			
-						if (objCriteriaButton.ProgressBar:GetWidth() > intLargestWidth) then
-							intLargestWidth = objCriteriaButton.ProgressBar:GetWidth()
-						end
-					end
-
-
-					intYPosition = intYPosition + intOffset	
-					buttonHeight = buttonHeight + intOffset
-					
-					objCriteriaButton:SetHeight(buttonHeight)					
-					tinsert(tblUsingButtons,objCriteriaButton)	
-					
-				end
 			end
 			
 			--Affixes

@@ -1,10 +1,58 @@
 
 MasqueDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
 	["profileKeys"] = {
-		["Adimoto - Thrall"] = "Default",
+		["Pytte - Outland"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
+			["Groups"] = {
+				["Dominos_Action Bar"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4_Player's pet"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4_Focus"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4_Focus's target"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4_Target's target"] = {
+					["SkinID"] = "Dream",
+				},
+				["Dominos_Bag Bar"] = {
+					["SkinID"] = "Dream",
+				},
+				["Dominos_Totem Bar"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4_Player"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4_Target's target's target"] = {
+					["SkinID"] = "Dream",
+				},
+				["Dominos"] = {
+					["SkinID"] = "Dream",
+				},
+				["PitBull4_Target"] = {
+					["SkinID"] = "Dream",
+				},
+				["Dominos_Pet Bar"] = {
+					["SkinID"] = "Dream",
+				},
+				["Masque"] = {
+					["SkinID"] = "Dream",
+				},
+			},
 		},
 	},
 }

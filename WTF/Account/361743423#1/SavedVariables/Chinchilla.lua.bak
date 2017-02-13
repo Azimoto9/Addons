@@ -1,76 +1,34 @@
 
 Chinchilla2DB = {
+	["profileKeys"] = {
+		["Birge - Outland"] = "Default",
+	},
 	["namespaces"] = {
 		["Ping"] = {
 		},
 		["Coordinates"] = {
-			["profiles"] = {
-				["Default"] = {
-					["positionY"] = 109.999771118164,
-					["positionX"] = 16.0001220703125,
-				},
-				["defaultia"] = {
-					["positionY"] = 109.999771118164,
-					["positionX"] = 16.0001220703125,
-				},
-			},
 		},
 		["Appearance"] = {
-			["profiles"] = {
-				["Default"] = {
-					["scale"] = 1.05,
-					["combatAlpha"] = 0.5,
-					["shape"] = "CORNER-TOPLEFT",
-				},
-				["defaultia"] = {
-					["scale"] = 1.05,
-					["combatAlpha"] = 0.5,
-					["shape"] = "CORNER-TOPLEFT",
-				},
-			},
+		},
+		["Zoom"] = {
 		},
 		["TrackingDots"] = {
 		},
 		["QuestTracker"] = {
 		},
-		["Zoom"] = {
+		["RangeCircle"] = {
 		},
 		["ShowHide"] = {
 		},
 		["Position"] = {
-			["profiles"] = {
-				["Default"] = {
-					["minimap"] = {
-						"BOTTOMRIGHT", -- [1]
-						-11.9997787475586, -- [2]
-						28.9997406005859, -- [3]
-					},
-				},
-				["defaultia"] = {
-					["minimap"] = {
-						"BOTTOMRIGHT", -- [1]
-						-11.9997787475586, -- [2]
-						28.9997406005859, -- [3]
-					},
-				},
-			},
 		},
 		["Location"] = {
 		},
-		["RangeCircle"] = {
+		["Compass"] = {
 		},
 		["MoveButtons"] = {
 		},
 		["Expander"] = {
-		},
-	},
-	["profileKeys"] = {
-		["Adimoto - Thrall"] = "defaultia",
-	},
-	["profiles"] = {
-		["Default"] = {
-		},
-		["defaultia"] = {
 		},
 	},
 }

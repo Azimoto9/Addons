@@ -1,0 +1,140 @@
+
+ConsLegionSavedVar = {
+	["Birge-Outland"] = {
+		["Settings"] = {
+			["Textleft"] = 340.551879882813,
+			["Scale"] = 1.24,
+			["TextScale"] = 1.22,
+			["SkipCutScene"] = 1,
+			["Newsleft"] = 369.693450927734,
+			["Newsalpha"] = 1,
+			["Hide"] = 0,
+			["AutoChoice"] = 0,
+			["XPLock"] = 0,
+			["AutoHandin"] = 0,
+			["Textalpha"] = 1,
+			["Arrowy"] = -449.640991210938,
+			["XPScale"] = 0.8,
+			["NewsHide"] = 0,
+			["AutoPickup"] = 0,
+			["Newstop"] = -322.734985351563,
+			["XPalpha"] = 1,
+			["NewsScale"] = 0.649999976158142,
+			["XPHide"] = 0,
+			["Arrowx"] = 591.863220214844,
+			["XPleft"] = 217.709381103516,
+			["Lock"] = 0,
+			["AutoShare"] = 1,
+			["TextHide"] = 0,
+			["Texttop"] = -379.371826171875,
+			["TextLock"] = 0,
+			["alpha"] = 1,
+			["top"] = -745.025390625,
+			["XPInvert"] = 0,
+			["NewsLock"] = 0,
+			["left"] = 319.452880859375,
+			["TextInvert"] = 0,
+			["XPtop"] = -416.820434570313,
+		},
+	},
+}
+ConsLegionSteps = {
+	["Birge-Outland"] = {
+		[1080] = 143,
+		[1018] = 2,
+		[1017] = 1,
+		[1038] = 14,
+	},
+}
+CL_NewsEpics = {
+	{
+		["Name"] = "Juicebox",
+		["Loot"] = "Whitewater Safety Blanket",
+		["Link"] = "|cffa335ee|Hitem:121724::::::::100:258:512:11:2:1794:1735:100:::|h[Whitewater Safety Blanket]|h|r",
+	}, -- [1]
+	{
+		["Ding"] = 101,
+		["Name"] = "Mutriix",
+		["Date"] = "08/30/16 01:26:14",
+	}, -- [2]
+	{
+		["Ding"] = 101,
+		["Name"] = "Birge",
+		["Date"] = "08/30/16 01:26:39",
+	}, -- [3]
+	{
+		["Ding"] = 101,
+		["Name"] = "Juicebox",
+		["Date"] = "08/30/16 01:34:27",
+	}, -- [4]
+	{
+		["Ding"] = 101,
+		["Name"] = "Themfkiller",
+		["Date"] = "08/30/16 01:34:46",
+	}, -- [5]
+	{
+		["Ding"] = 101,
+		["Name"] = "Shady",
+		["Date"] = "08/30/16 01:36:42",
+	}, -- [6]
+	{
+		["Name"] = "Mutriix",
+		["Loot"] = "Whitewater Helmet",
+		["Link"] = "|cffa335ee|Hitem:121666::::::::101:263:512:11:2:1792:1738:101:::|h[Whitewater Helmet]|h|r",
+	}, -- [7]
+	{
+		["Name"] = "Birge",
+		["Loot"] = "Brief History of the Ages",
+		["Link"] = "|cffa335ee|Hitem:138782::::::::101:102:8388608:::1:::|h[Brief History of the Ages]|h|r",
+	}, -- [8]
+	{
+		["Ding"] = 102,
+		["Name"] = "Mutriix",
+		["Date"] = "08/30/16 02:08:25",
+	}, -- [9]
+	{
+		["Ding"] = 102,
+		["Name"] = "Birge",
+		["Date"] = "08/30/16 02:08:25",
+	}, -- [10]
+	{
+		["Ding"] = 102,
+		["Name"] = "Juicebox",
+		["Date"] = "08/30/16 02:15:22",
+	}, -- [11]
+	{
+		["Ding"] = 102,
+		["Name"] = "Themfkiller",
+		["Date"] = "08/30/16 02:16:29",
+	}, -- [12]
+	{
+		["Ding"] = 102,
+		["Name"] = "Shady",
+		["Date"] = "08/30/16 02:17:07",
+	}, -- [13]
+	{
+		["Name"] = "Themfkiller",
+		["Loot"] = "Ironbull's Last Words",
+		["Link"] = "|cffa335ee|Hitem:133124::::::::102:253:512:11:2:1792:1738:102:::|h[Ironbull's Last Words]|h|r",
+	}, -- [14]
+	{
+		["Name"] = "Themfkiller",
+		["Loot"] = "Whitewater Amice",
+		["Link"] = "|cffa335ee|Hitem:121676::::::::102:253:512:11:2:1793:1741:102:::|h[Whitewater Amice]|h|r",
+	}, -- [15]
+	{
+		["Name"] = "Birge",
+		["Loot"] = "Drogstitch Spaulders",
+		["Link"] = "|cffa335ee|Hitem:121673::::::::102:102:512:11:2:1793:1741:102:::|h[Drogstitch Spaulders]|h|r",
+	}, -- [16]
+	["Nr"] = 16,
+}
+CL_Temp_Import = nil
+CL_AddonUpdate = {
+	["Birge-Outland"] = {
+		[1080] = 1,
+		[1018] = 1,
+		[1017] = 1,
+		[1038] = 1,
+	},
+}

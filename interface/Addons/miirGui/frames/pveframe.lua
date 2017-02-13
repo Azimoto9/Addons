@@ -1,0 +1,56 @@
+	local f = CreateFrame("Frame");
+	f:RegisterEvent("PLAYER_ENTERING_WORLD");
+	f:SetScript("OnEvent", function()
+
+		hooksecurefunc("DungeonCompletionAlertFrame_ShowAlert",function()
+			DungeonCompletionAlertFrame1InstanceName:SetTextColor(1,1,1,1)
+			DungeonCompletionAlertFrame1InstanceName:SetShadowColor(0,0,0,0)
+			DungeonCompletionAlertFrame1InstanceName:SetFont(unpack(miirgui.medium))
+			completed= select(7,DungeonCompletionAlertFrame1:GetRegions() )
+			completed:SetTextColor(unpack(miirgui.Color))
+			completed:SetShadowColor(0,0,0,0)
+			completed:SetFont(unpack(miirgui.small))
+		end)
+
+		LFGListApplicationViewerScrollFrameScrollBarBG:Hide()
+		LFGListSearchPanelScrollFrameScrollBarBG:Hide()
+		RaidFinderFrameRoleBackground:Hide()
+		RaidBrowserFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		LFDQueueFrameRoleButtonTankIncentiveIconBorder:Hide()
+		LFDQueueFrameRoleButtonTankIncentiveIconTexture:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		LFDQueueFrameRoleButtonHealerIncentiveIconBorder:Hide()
+		LFDQueueFrameRoleButtonHealerIncentiveIconTexture:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		LFDQueueFrameRoleButtonDPSIncentiveIconBorder:Hide()
+		LFDQueueFrameRoleButtonDPSIncentiveIconTexture:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		PVEFramePortrait:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		for i=1,4 do
+			_G["GroupFinderFrameGroupButton"..i.."Ring"]:Hide()
+			_G["GroupFinderFrameGroupButton"..i.."Icon"]:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+			_G["GroupFinderFrameGroupButton"..i.."Icon"]:SetWidth(46)
+			_G["GroupFinderFrameGroupButton"..i.."Icon"]:SetHeight(46)
+		end
+		m_border(GroupFinderFrameGroupButton1,50,50,"Left",10,0,14,"MEDIUM")
+		m_border(GroupFinderFrameGroupButton2,50,50,"Left",10,0,14,"MEDIUM")
+		m_border(GroupFinderFrameGroupButton3,50,50,"Left",10,0,14,"MEDIUM")
+		m_border(GroupFinderFrameGroupButton4,50,50,"Left",10,0,14,"MEDIUM")
+		m_border(LFDQueueFrameRoleButtonTankIncentiveIcon,19,19,"Left",0,3,4,"MEDIUM")
+		m_border(LFDQueueFrameRoleButtonHealerIncentiveIcon,19,19,"Left",0,3,4,"MEDIUM")
+		m_border(LFDQueueFrameRoleButtonDPSIncentiveIcon,19,19,"Left",0,3,4,"MEDIUM")
+		m_border(LFGListFrame.CategorySelection,336,344,"Center",-4,-16,14,"MEDIUM")
+		m_border(LFGListFrame.EntryCreation,336,344,"Center",-4,-16,14,"MEDIUM")
+		m_border(LFGListFrame.ApplicationViewer,316,254,"Center",-13,-62,14,"MEDIUM")
+		m_border(LFGListFrame.SearchPanel,316,318,"Center",-12,-30,14,"MEDIUM")
+
+		local c= CreateFrame("Frame","RaidFinderBg",RaidFinderQueueFrame)
+		c:SetFrameStrata("Medium")
+		c:SetWidth(512) 
+		c:SetHeight(128)
+		local ct = c:CreateTexture(nil,"BACKGROUND")
+		ct:SetTexture("Interface\\LFGFrame\\UI-LFG-BlueBG.blp")
+		ct:SetAllPoints(c)
+		c.texture = ct
+		c:SetPoint("Topleft",2,-23)
+		c:Show()
+
+		
+	end)

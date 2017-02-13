@@ -1,0 +1,38 @@
+	local f = CreateFrame("Frame");
+	f:RegisterEvent("PLAYER_ENTERING_WORLD");
+	f:SetScript("OnEvent", function()
+
+		PVPReadyDialogFiligree:Hide()
+		PVPReadyDialogBottomArt:Hide()
+		PVPReadyDialogBackground:Hide()
+		hideit= select(1,LFGDungeonReadyDialogInstanceInfoFrame:GetRegions() )
+		hideit:Hide() 
+		LFGDungeonReadyDialogFiligree:Hide()
+		LFGDungeonReadyDialogBottomArt:Hide()
+		LFGDungeonReadyDialogRewardsFrameReward1Border:Hide()
+		LFGDungeonReadyDialogRewardsFrameReward1Texture:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		LFGDungeonReadyDialogRewardsFrameReward2Border:Hide()
+		LFGDungeonReadyDialogRewardsFrameReward2Texture:SetTexCoord(0.85, 0.15, 0.15, 0.85)
+		LFGDungeonReadyDialogBackground:Hide()
+		LFDQueueFrameRandomScrollFrameScrollBackground:Hide()
+		LFDQueueFrameBackground:Hide()
+		RaidFinderQueueFrameBackground:Hide()
+		ScenarioBG= select(1,ScenarioQueueFrame:GetRegions())
+		ScenarioBG:Hide()
+
+		completed = select(4,ScenarioAlertFrame1:GetRegions())
+		completed:SetTextColor(unpack(miirgui.Color))
+		completed:SetFont(unpack(miirgui.medium))
+		completed:SetShadowColor(0,0,0,0)
+		completed2 = select(5,ScenarioAlertFrame1:GetRegions())
+		completed2:SetTextColor(1,1,1,1)
+		completed2:SetFont(unpack(miirgui.medium))
+		completed2:SetShadowColor(0,0,0,0)
+		
+		m_border(LFDQueueFrame,334,260,"Center",0,-60,14,"MEDIUM")		
+		m_border(RaidFinderQueueFrame,334,260,"Center",0,-57,14,"MEDIUM")
+		m_border(LFGDungeonReadyDialogRewardsFrameReward1,36,36,"Center",-3,2,12,"MEDIUM")
+		m_border(LFGDungeonReadyDialogRewardsFrameReward2,36,36,"Center",-3,2,12,"MEDIUM")
+		m_border(ScenarioQueueFrame,334,336,"Center",-2,-22,14,"MEDIUM")
+		
+	end)

@@ -1,0 +1,64 @@
+
+BigWigs3DB = {
+	["namespaces"] = {
+		["BigWigs_Plugins_Colors"] = {
+		},
+		["BigWigs_Plugins_Raid Icons"] = {
+		},
+		["BigWigs_Plugins_Bars"] = {
+			["profiles"] = {
+				["Default"] = {
+					["BigWigsAnchor_y"] = 224.3223536811425,
+					["growup"] = false,
+					["BigWigsEmphasizeAnchor_width"] = 300.0001003924675,
+					["BigWigsAnchor_x"] = 775.5332244863454,
+					["font"] = "Friz Quadrata TT",
+					["align"] = "CENTER",
+					["BigWigsAnchor_width"] = 273.2992711082857,
+				},
+			},
+		},
+		["BigWigs_Plugins_Super Emphasize"] = {
+		},
+		["BigWigs_Plugins_Sounds"] = {
+		},
+		["BigWigs_Bosses_Blade Lord Ta'yak"] = {
+		},
+		["BigWigs_Bosses_Garalon"] = {
+		},
+		["BigWigs_Plugins_Proximity"] = {
+			["profiles"] = {
+				["Default"] = {
+					["fontSize"] = 20.00000027354896,
+					["font"] = "Friz Quadrata TT",
+					["posy"] = 463.5332316630735,
+					["posx"] = 449.1665319611967,
+				},
+			},
+		},
+		["BigWigs_Bosses_Imperial Vizier Zor'lok"] = {
+		},
+		["BigWigs_Plugins_Messages"] = {
+			["profiles"] = {
+				["Default"] = {
+					["outline"] = "OUTLINE",
+					["fontSize"] = 20.00000027354896,
+					["BWMessageAnchor_x"] = 621.222216443073,
+					["BWMessageAnchor_y"] = 517.7888336824243,
+					["font"] = "Friz Quadrata TT",
+				},
+			},
+		},
+		["BigWigs_Plugins_Tip of the Raid"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Berta - Outland"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}
+BigWigs3IconDB = {
+}

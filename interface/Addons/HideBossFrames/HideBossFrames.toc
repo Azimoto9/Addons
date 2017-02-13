@@ -1,0 +1,6 @@
+## Interface: 70000
+## Title : HideBossFrames
+## Notes: Removes the default Blizzard boss frames 
+## Version: 3.70000
+## Author: Arnialys
+HideBossFrames.lua

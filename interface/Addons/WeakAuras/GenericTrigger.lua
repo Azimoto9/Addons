@@ -37,22 +37,22 @@ CanGroupShowWithZero(data)
   If that is the case no automatic icon can be determined. Only used by the Options dialog.
   (If I understood the code correctly)
 
-CanHaveDuration(data, triggernum)
+CanHaveDuration(data)
   Returns whether the trigger can have a duration
 
-CanHaveAuto(data, triggernum)
+CanHaveAuto(data)
   Returns whether the icon can be automatically selected
 
 CanHaveClones(data)
   Returns whether the trigger can have clones
 
-CanHaveTooltip(data, triggernum)
+CanHaveTooltip(data)
   Returns the type of tooltip to show for the trigger
 
-GetNameAndIcon(data, triggernum)
+GetNameAndIcon(data)
     Returns the name and icon to show in the options
 
-GetAdditionalProperties(data, triggernum)
+GetAdditionalProperties(data)
   Returns the a tooltip for the additional properties
 ]]--
 
@@ -324,14 +324,13 @@ function WeakAuras.ActivateEvent(id, triggernum, data, state)
       state.progressType = "timed";
       changed = true;
     end
-    local autoHide = data.automaticAutoHide;
-    if (state.value or state.total or state.inverse or state.autoHide ~= autoHide) then
+    if (state.value or state.total or state.inverse or not state.autoHide) then
       changed = true;
     end
     state.value = nil;
     state.total = nil;
     state.inverse = nil;
-    state.autoHide = autoHide;
+    state.autoHide = true;
   elseif (data.durationFunc) then
     local arg1, arg2, arg3, inverse = data.durationFunc(data.trigger);
     arg1 = type(arg1) == "number" and arg1 or 0;
@@ -395,10 +394,8 @@ function WeakAuras.ActivateEvent(id, triggernum, data, state)
         state.expirationTime = arg2;
         changed = true;
       end
-      local autoHide = data.automaticAutoHide and (arg1 > 0.01);
-      if (state.autoHide ~= autoHide) then
-        state.autoHide = autoHide;
-        changed = true;
+      if (state.autoHide ~= (arg1 > 0.01)) then
+        state.autoHide = arg1 > 0.01;
       end
       if (state.value or state.total) then
         changed = true;
@@ -447,7 +444,6 @@ function WeakAuras.ActivateEvent(id, triggernum, data, state)
   end
 
   state.changed = changed;
-
   return changed;
 end
 
@@ -793,11 +789,6 @@ function GenericTrigger.Add(data, region)
           duration = tonumber(trigger.duration);
         end
 
-        local automaticAutoHide = true;
-        if ((triggerType == "status" or triggerType == "event")
-             and event_prototypes[trigger.event] and event_prototypes[trigger.event].automaticAutoHide ~= nil) then
-          automaticAutoHide = event_prototypes[trigger.event].automaticAutoHide;
-        end
         events[id] = events[id] or {};
         events[id][triggernum] = {
           trigger = trigger,
@@ -815,7 +806,6 @@ function GenericTrigger.Add(data, region)
           textureFunc = textureFunc,
           stacksFunc = stacksFunc,
           duration = duration,
-          automaticAutoHide = automaticAutoHide
         };
 
         if(
@@ -1178,18 +1168,11 @@ do
   local spellCdExpsRune = {};
   local spellCharges = {};
   local spellCdHandles = {};
-  local spellCdRuneHandles = {};
 
   local items = {};
   local itemCdDurs = {};
   local itemCdExps = {};
   local itemCdHandles = {};
-
-  local itemSlots = {};
-  local itemSlotsCdDurs = {};
-  local itemSlotsCdExps = {};
-  local itemSlotsCdHandles = {};
-  local itemSlotsEnable = {};
 
   local runes = {};
   local runeCdDurs = {};
@@ -1213,9 +1196,8 @@ do
   cdReadyFrame:RegisterEvent("UNIT_SPELLCAST_SENT");
   cdReadyFrame:RegisterEvent("PLAYER_TALENT_UPDATE");
   cdReadyFrame:RegisterEvent("PLAYER_PVP_TALENT_UPDATE");
-  cdReadyFrame:RegisterEvent("BAG_UPDATE_COOLDOWN");
-  cdReadyFrame:RegisterEvent("UNIT_INVENTORY_CHANGED")
   cdReadyFrame:SetScript("OnEvent", function(self, event, ...)
+
     if(event == "SPELL_UPDATE_COOLDOWN" or event == "SPELL_UPDATE_CHARGES"
        or event == "RUNE_POWER_UPDATE" or event == "RUNE_TYPE_UPDATE"
        or event == "PLAYER_TALENT_UPDATE" or event == "PLAYER_PVP_TALENT_UPDATE") then
@@ -1229,8 +1211,6 @@ do
           gcdSpellIcon = icon;
         end
       end
-    elseif(event == "UNIT_INVENTORY_CHANGED" or event == "BAG_UPDATE_COOLDOWN") then
-      WeakAuras.CheckItemSlotCooldowns();
     end
   end);
   end
@@ -1283,14 +1263,6 @@ do
     return gcdDuration or 0;
   end
 
-  function WeakAuras.GetItemSlotCooldown(id)
-    if(itemSlots[id] and itemSlotsCdExps[id] and itemSlotsCdDurs[id]) then
-      return itemSlotsCdExps[id] - itemSlotsCdDurs[id], itemSlotsCdDurs[id], itemSlotsEnable[id];
-    else
-      return 0, 0, itemSlotsEnable[id];
-    end
-  end
-
   local function RuneCooldownFinished(id)
     runeCdHandles[id] = nil;
     runeCdDurs[id] = nil;
@@ -1298,29 +1270,13 @@ do
     WeakAuras.ScanEvents("RUNE_COOLDOWN_READY", id);
   end
 
-  local function SpellCooldownRuneFinished(id)
-    spellCdRuneHandles[id] = nil;
-    spellCdDursRune[id] = nil;
-    spellCdExpsRune[id] = nil;
-    local charges = GetSpellCharges(id);
-    local chargesDifference = (charges or 0) - (spellCharges[id] or 0)
-    if (chargesDifference ~= 0 ) then
-      WeakAuras.ScanEvents("SPELL_CHARGES_CHANGED", id, chargesDifference, charges or 0);
-    end
-    spellCharges[id] = charges
-    WeakAuras.ScanEvents("SPELL_COOLDOWN_READY", id, nil);
-  end
-
   local function SpellCooldownFinished(id)
     spellCdHandles[id] = nil;
     spellCdDurs[id] = nil;
     spellCdExps[id] = nil;
-    local charges = GetSpellCharges(id);
-    local chargesDifference =  (charges or 0) - (spellCharges[id] or 0)
-    if (chargesDifference ~= 0 ) then
-      WeakAuras.ScanEvents("SPELL_CHARGES_CHANGED", id, chargesDifference, charges or 0);
-    end
-    spellCharges[id] = charges
+    spellCdDursRune[id] = nil;
+    spellCdExpsRune[id] = nil;
+    spellCharges[id] = select(2, GetSpellCharges(id));
     WeakAuras.ScanEvents("SPELL_COOLDOWN_READY", id, nil);
   end
 
@@ -1329,13 +1285,6 @@ do
     itemCdDurs[id] = nil;
     itemCdExps[id] = nil;
     WeakAuras.ScanEvents("ITEM_COOLDOWN_READY", id);
-  end
-
-  local function ItemSlotCooldownFinished(id)
-    itemSlotsCdHandles[id] = nil;
-    itemSlotsCdDurs[id] = nil;
-    itemSlotsCdExps[id] = nil;
-    WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_READY", id);
   end
 
   local function CheckGCD()
@@ -1365,7 +1314,9 @@ do
     end
   end
 
-  function WeakAuras.CheckRuneCooldown()
+  function WeakAuras.CheckCooldownReady()
+    CheckGCD();
+
     local runeDuration = -100;
     for id, _ in pairs(runes) do
       local startTime, duration = GetRuneCooldown(id);
@@ -1412,31 +1363,21 @@ do
         end
       end
     end
-    return runeDuration;
-  end
 
-  function WeakAuras.CheckSpellCooldows(runeDuration)
     for id, _ in pairs(spells) do
       local charges, maxCharges, startTime, duration = GetSpellCharges(id);
-      local cooldownBecauseRune = false;
       if (charges == nil) then -- charges is nil if the spell has no charges
         startTime, duration = GetSpellCooldown(id);
         charges = GetSpellCount(id);
-        cooldownBecauseRune = duration and abs(duration - runeDuration) < 0.001;
       elseif (charges == maxCharges) then
         startTime, duration = 0, 0;
       end
-
       startTime = startTime or 0;
       duration = duration or 0;
       local time = GetTime();
       local remaining = startTime + duration - time;
 
       local chargesChanged = spellCharges[id] ~= charges;
-      local chargesDifference =  (charges or 0) - (spellCharges[id] or 0)
-      if (chargesDifference ~= 0 ) then
-        WeakAuras.ScanEvents("SPELL_CHARGES_CHANGED", id, chargesDifference, charges or 0);
-      end
       spellCharges[id] = charges;
 
       if(duration > 0 and duration ~= WeakAuras.gcdDuration()) then
@@ -1448,10 +1389,9 @@ do
           spellCdDurs[id] = duration;
           spellCdExps[id] = endTime;
           spellCdHandles[id] = timer:ScheduleTimer(SpellCooldownFinished, endTime - time, id);
-          if (spellsRune[id] and not cooldownBecauseRune ) then
+          if (spellsRune[id] and abs(duration - runeDuration) > 0.001 ) then
             spellCdDursRune[id] = duration;
             spellCdExpsRune[id] = endTime;
-            spellCdRuneHandles[id] = timer:ScheduleTimer(SpellCooldownRuneFinished, endTime - time, id);
           end
           WeakAuras.ScanEvents("SPELL_COOLDOWN_STARTED", id);
         elseif(spellCdExps[id] ~= endTime or chargesChanged) then
@@ -1465,14 +1405,9 @@ do
           if (maxCharges == nil or charges + 1 == maxCharges) then
             spellCdHandles[id] = timer:ScheduleTimer(SpellCooldownFinished, endTime - time, id);
           end
-          if (spellsRune[id] and not cooldownBecauseRune ) then
+          if (spellsRune[id] and abs(duration - runeDuration) > 0.001 ) then
             spellCdDursRune[id] = duration;
             spellCdExpsRune[id] = endTime;
-
-            if(spellCdRuneHandles[id]) then
-              timer:CancelTimer(spellCdRuneHandles[id]);
-            end
-            spellCdRuneHandles[id] = timer:ScheduleTimer(SpellCooldownRuneFinished, endTime - time, id);
           end
           WeakAuras.ScanEvents("SPELL_COOLDOWN_CHANGED", id);
         end
@@ -1486,11 +1421,6 @@ do
               timer:CancelTimer(spellCdHandles[id]);
             end
             SpellCooldownFinished(id);
-
-            if(spellCdRuneHandles[id]) then
-              timer:CancelTimer(spellCdRuneHandles[id]);
-            end
-            SpellCooldownRuneFinished(id);
           end
         end
         if (chargesChanged) then
@@ -1498,9 +1428,7 @@ do
         end
       end
     end
-  end
 
-  function WeakAuras.CheckItemCooldowns()
     for id, _ in pairs(items) do
       local startTime, duration = GetItemCooldown(id);
       startTime = startTime or 0;
@@ -1540,57 +1468,6 @@ do
         end
       end
     end
-  end
-
-  function WeakAuras.CheckItemSlotCooldowns()
-    for id, _ in pairs(itemSlots) do
-      local startTime, duration, enable = GetInventoryItemCooldown("player", id);
-      itemSlotsEnable[id] = enable;
-      startTime = startTime or 0;
-      duration = duration or 0;
-      local time = GetTime();
-
-      if(duration > 0 and duration ~= WeakAuras.gcdDuration()) then
-        -- On non-GCD cooldown
-        local endTime = startTime + duration;
-
-        if not(itemSlotsCdExps[id]) then
-          -- New cooldown
-          itemSlotsCdDurs[id] = duration;
-          itemSlotsCdExps[id] = endTime;
-          itemSlotsCdHandles[id] = timer:ScheduleTimer(ItemSlotCooldownFinished, endTime - time, id);
-          WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_STARTED", id);
-        elseif(itemSlotsCdExps[id] ~= endTime) then
-          -- Cooldown is now different
-          if(itemSlotsCdHandles[id]) then
-            timer:CancelTimer(itemSlotsCdHandles[id]);
-          end
-          itemSlotsCdDurs[id] = duration;
-          itemSlotsCdExps[id] = endTime;
-          itemSlotsCdHandles[id] = timer:ScheduleTimer(ItemSlotCooldownFinished, endTime - time, id);
-          WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_CHANGED", id);
-        end
-      elseif(duration > 0) then
-        -- GCD, do nothing
-      else
-        if(itemSlotsCdExps[id]) then
-          -- Somehow CheckCooldownReady caught the item cooldown before the timer callback
-          -- This shouldn't happen, but if it does, no problem
-          if(itemSlotsCdHandles[id]) then
-            timer:CancelTimer(itemSlotsCdHandles[id]);
-          end
-          ItemSlotCooldownFinished(id);
-        end
-      end
-    end
-  end
-
-  function WeakAuras.CheckCooldownReady()
-    CheckGCD();
-    local runeDuration = WeakAuras.CheckRuneCooldown();
-    WeakAuras.CheckSpellCooldows(runeDuration);
-    WeakAuras.CheckItemCooldowns();
-    WeakAuras.CheckItemSlotCooldowns();
   end
 
   function WeakAuras.WatchGCD()
@@ -1660,19 +1537,9 @@ do
         local endTime = startTime + duration;
         spellCdDurs[id] = duration;
         spellCdExps[id] = endTime;
-        local runeDuration = -100;
-        for id, _ in pairs(runes) do
-          local startTime, duration = GetRuneCooldown(id);
-          startTime = startTime or 0;
-          duration = duration or 0;
-          runeDuration = duration > 0 and duration or runeDuration
-        end
-        if (duration ~= runeDuration and ignoreRunes) then
+        if (duration ~= 10 and ignoreRunes) then
           spellCdDursRune[id] = duration;
           spellCdExpsRune[id] = endTime;
-          if not(spellCdRuneHandles[id]) then
-            spellCdRuneHandles[id] = timer:ScheduleTimer(SpellCooldownRuneFinished, endTime - time, id);
-          end
         end
         if not(spellCdHandles[id]) then
           spellCdHandles[id] = timer:ScheduleTimer(SpellCooldownFinished, endTime - time, id);
@@ -1698,29 +1565,6 @@ do
         itemCdExps[id] = endTime;
         if not(itemCdHandles[id]) then
           itemCdHandles[id] = timer:ScheduleTimer(ItemCooldownFinished, endTime - time, id);
-        end
-      end
-    end
-  end
-
-  function WeakAuras.WatchItemSlotCooldown(id)
-    if not(cdReadyFrame) then
-      WeakAuras.InitCooldownReady();
-    end
-
-    if not id or id == 0 then return end
-
-    if not(itemSlots[id]) then
-      itemSlots[id] = true;
-      local startTime, duration, enable = GetInventoryItemCooldown("player", id);
-      itemSlotsEnable[id] = enable;
-      if(duration > 0 and duration ~= WeakAuras.gcdDuration()) then
-        local time = GetTime();
-        local endTime = startTime + duration;
-        itemSlotsCdDurs[id] = duration;
-        itemSlotsCdExps[id] = endTime;
-        if not(itemSlotsCdHandles[id]) then
-          itemSlotsCdHandles[id] = timer:ScheduleTimer(ItemSlotCooldownFinished, endTime - time, id);
         end
       end
     end
@@ -1846,11 +1690,11 @@ do
           return false;
         end
       elseif (operator == "find('%s')") then
-        if (v.message == nil or not v.message:find(message, 1, true)) then
+        if (v.message == nil or not v.message:find(message)) then
           return false;
        end
       elseif (operator == "match('%s')") then
-        if (v.message == nil or not v.message:match(message, 1, true)) then
+        if (v.message == nil or not v.message:match(message)) then
           return false;
         end
       end
@@ -1999,7 +1843,7 @@ do
       return
     end
     if (BigWigsLoader) then
-      BigWigsLoader.RegisterMessage(WeakAuras, event, bigWigsEventCallback);
+      BigWigsLoader:RegisterMessage(event, bigWigsEventCallback);
       registeredBigWigsEvents [event] = true;
     end
   end
@@ -2046,11 +1890,11 @@ do
           return false;
         end
       elseif (textOperator == "find('%s')") then
-        if (v.text == nil or not v.text:find(text, 1, true)) then
+        if (v.text == nil or not v.text:find(text)) then
           return false;
         end
       elseif (textOperator == "match('%s')") then
-        if (v.text == nil or v.text:match(text, 1, true)) then
+        if (v.text == nil or v.text:match(text)) then
           return false;
         end
       end
@@ -2530,7 +2374,7 @@ function GenericTrigger.CreateFallbackState(data, triggernum, state)
       state.duration = arg1;
       state.resort = state.expirationTime ~= arg2;
       state.expirationTime = arg2;
-      state.autoHide = arg1 > 0.01 and data.automaticAutoHide;
+      state.autoHide = arg1 > 0.01;
       state.value = nil;
       state.total = nil;
       state.inverse = inverse;

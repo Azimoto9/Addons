@@ -1,12 +1,9 @@
-## Interface: 70100
+## Interface: 70000
 ## Title: miir|cff44CCFFGui|r - Core
-## Version: 4.0.54
+## Version: 4.0.0
 ## Notes: Blizzard Interface Fixes for usage with miirGui graphics
 ## Author: Miiru-Lordaeron
-## SavedVariables: miirguiDB
 core.lua
-functions.lua
-options.lua
 
 FrameXML/AlertFrames.lua
 FrameXML/CharacterFrame.lua
@@ -17,7 +14,6 @@ FrameXML/GameMenuFrame.lua
 FrameXML/GuildRegistrarFrame.lua
 FrameXML/LFDQueueFrame.lua
 FrameXML/LootFrame.lua
-FrameXML/LootRolls.lua
 FrameXML/MailFrame.lua
 FrameXML/MerchantFrame.lua
 FrameXML/Minimap.lua
@@ -38,7 +34,6 @@ onDemand/AuctionUI.lua
 onDemand/BlackMarketUI.lua
 onDemand/ChallengesUI.lua
 onDemand/Collections.lua
-onDemand/DebugTools.lua
 onDemand/EncounterJournalUI.lua
 onDemand/FlightMap.lua
 onDemand/Garrison_Buildings.lua

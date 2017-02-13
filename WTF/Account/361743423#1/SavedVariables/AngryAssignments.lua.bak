@@ -1,0 +1,28 @@
+
+AngryAssign_Pages = {
+	[1472949468] = {
+		["Updated"] = 1424024226,
+		["Name"] = "Imperator",
+		["Id"] = 1472949468,
+		["UpdateId"] = 1376211865,
+		["Contents"] = "Första soak: Nuzse - Mökk\nAndra soak: Horrend - Birgs\nTredje: Dawgh - Snusen\nInterrupt\nBlå:: Felsnurr - Nami - Nimodie\nGrön: Syz - Boblaxx - Dimnir",
+	},
+}
+AngryAssign_State = {
+	["displayed"] = 1472949468,
+	["directionUp"] = false,
+	["locked"] = true,
+	["display"] = {
+		["y"] = 107.213894426926,
+		["x"] = 444.051279214088,
+		["point"] = "LEFT",
+		["scale"] = 1,
+		["hidden"] = false,
+	},
+	["tree"] = {
+	},
+	["window"] = {
+	},
+}
+AngryAssign_Config = {
+}

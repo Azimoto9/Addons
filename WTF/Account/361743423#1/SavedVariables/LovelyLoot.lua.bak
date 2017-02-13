@@ -1,0 +1,34 @@
+
+LovelyLootDB = {
+	["glfUnlocked"] = true,
+	["sbar"] = "Ish03",
+	["lfUnlocked"] = false,
+	["border"] = "Square Outline",
+	["rollAnchor"] = {
+		["ypos"] = 60,
+		["anch1"] = "BOTTOM",
+		["xpos"] = 0,
+		["anch2"] = "BOTTOM",
+	},
+	["bgColor"] = {
+		["a"] = 1,
+		["b"] = 1,
+		["g"] = 1,
+		["r"] = 1,
+	},
+	["borderWidth"] = 10,
+	["borderColor"] = {
+		["a"] = 1,
+		["b"] = 0,
+		["g"] = 0,
+		["r"] = 0,
+	},
+	["bg"] = "Blizzard Dialog Background",
+	["inset"] = 2,
+	["sbarColor"] = {
+		["b"] = 1,
+		["g"] = 0.996078431372549,
+		["r"] = 0.9764705882352941,
+	},
+	["hideDragon"] = true,
+}

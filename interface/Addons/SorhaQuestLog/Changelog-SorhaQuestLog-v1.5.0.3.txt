@@ -1,0 +1,49 @@
+------------------------------------------------------------------------
+r195 | sorha2 | 2016-10-27 08:55:41 +0000 (Thu, 27 Oct 2016) | 1 line
+Changed paths:
+   A /tags/v1.5.0.3 (from /trunk:194)
+
+Tagging as v1.5.0.3
+------------------------------------------------------------------------
+r193 | sorha2 | 2016-10-25 23:06:52 +0000 (Tue, 25 Oct 2016) | 2 lines
+Changed paths:
+   M /trunk/Modules/Quests.lua
+   M /trunk/SorhaQuestLog.toc
+
+-Quick fix for WorldQuest API changes (<3 Veyska)
+-TOC update
+------------------------------------------------------------------------
+r191 | sorha2 | 2016-10-05 01:59:39 +0000 (Wed, 05 Oct 2016) | 4 lines
+Changed paths:
+   M /trunk/Modules/Achievements.lua
+   M /trunk/Modules/Quests.lua
+   M /trunk/Modules/Scenarios.lua
+
+-Fix for achievements that change colour while not eligible
+-Potential fix for quests constantly playing quest complete sound
+-Fix for affixes not disappearing on instance change
+-Fix for scenario time bars resetting 
+------------------------------------------------------------------------
+r190 | sorha2 | 2016-09-27 12:17:08 +0000 (Tue, 27 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/Modules/Quests.lua
+
+Wake up Jeff before the day is through
+------------------------------------------------------------------------
+r189 | sorha2 | 2016-09-27 12:02:04 +0000 (Tue, 27 Sep 2016) | 2 lines
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/Modules/Quests.lua
+   M /trunk/Modules/Scenarios.lua
+   M /trunk/Templates.xml
+
+-Added Masque support for quest item buttons
+-First pass at adding support for mythic+ to scenario minion - UNTESTED 
+------------------------------------------------------------------------
+r188 | sorha2 | 2016-09-19 19:23:23 +0000 (Mon, 19 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/Libs
+
+Fix for nil error in options if a minion is disabled
+------------------------------------------------------------------------

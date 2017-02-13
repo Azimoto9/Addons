@@ -1,0 +1,289 @@
+
+VExRT = {
+	["Timers"] = {
+	},
+	["Arrow"] = {
+		["Point1"] = "CENTER",
+		["PointX"] = -2.18805054719708,
+		["Point2"] = "CENTER",
+		["PointY"] = 40.6496289889678,
+	},
+	["Encounter"] = {
+		["names"] = {
+			[1713] = "Kromog, Legend of the Mountain",
+		},
+		["list"] = {
+			["Birgs"] = {
+				"6B1F142679693307D020Lölar", -- [1]
+				"6B1F1426797583085020Bullmamma", -- [2]
+				"6B1F1426798066099020Namiswaan", -- [3]
+				"6B1F142679867900F020Elkbrewx", -- [4]
+				"6B1F1426798875098020Themfkiller", -- [5]
+				"6B1F142679927608D020Nuzsé", -- [6]
+				"6B1F14267995670F8020Themfkiller", -- [7]
+				"6B1F1426799993147020Thúnx", -- [8]
+				"6B1F142680046507F020Birgs", -- [9]
+				"6B1F142680075813F020Lölar", -- [10]
+				"6B1F14268012470FF020Namiswaan", -- [11]
+				"6B1F14268016610EE020Namiswaan", -- [12]
+				"6B1F142680209920E020Boblaxx", -- [13]
+				"6B1F142680285809B020Plinius", -- [14]
+				"6B1F14268031201DC020Thúnx", -- [15]
+				"6B1F1426803790128020Elkbrewx", -- [16]
+			},
+		},
+	},
+	["Marks"] = {
+		["list"] = {
+		},
+	},
+	["Coins"] = {
+		["list"] = {
+		},
+	},
+	["ExCD2"] = {
+		["default_userDuration"] = {
+		},
+		["gnGUIDs"] = {
+		},
+		["NoRaid"] = true,
+		["CDECol"] = {
+		},
+		["default_userCD"] = {
+		},
+		["Save"] = {
+		},
+		["colSet"] = {
+			{
+				["enabled"] = true,
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [1]
+			{
+				["enabled"] = true,
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [2]
+			{
+				["enabled"] = true,
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [3]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [4]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [5]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [6]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [7]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [8]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [9]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [10]
+			{
+				["frameGeneral"] = true,
+				["iconGray"] = true,
+				["textGeneral"] = true,
+				["methodsGeneral"] = true,
+				["iconGeneral"] = true,
+				["fontOutline"] = true,
+				["textureGeneral"] = true,
+				["fontGeneral"] = true,
+				["textureAnimation"] = true,
+				["fontShadow"] = false,
+			}, -- [11]
+		},
+		["Priority"] = {
+		},
+		["CDE"] = {
+		},
+		["userDB"] = {
+		},
+	},
+	["Bossmods"] = {
+		["Kromog"] = {
+			nil, -- [1]
+			nil, -- [2]
+			nil, -- [3]
+			nil, -- [4]
+			nil, -- [5]
+			nil, -- [6]
+			nil, -- [7]
+			"Themfkiller", -- [8]
+			"Arlaprästost", -- [9]
+			"Nimzan", -- [10]
+			"Forrasis", -- [11]
+			"Snusmumrikk", -- [12]
+			"Birgs", -- [13]
+			"Hyjaahl", -- [14]
+			"Dawgh", -- [15]
+			"Møkkmedvifte", -- [16]
+			"Namiswaan", -- [17]
+			"Swestenqt", -- [18]
+			"Almdk", -- [19]
+			"Plinius", -- [20]
+			"Bullmamma", -- [21]
+			"Phenomal", -- [22]
+			"Elkbrewx", -- [23]
+			"Boblaxx", -- [24]
+			"Nuzsé", -- [25]
+			"Thúnx", -- [26]
+			"Lölar", -- [27]
+			["time"] = 1426801137,
+			["name"] = "Almdk-Outland",
+			["sync"] = true,
+		},
+	},
+	["RaidCheck"] = {
+		["ReadyCheckFrameTimerFade"] = 4,
+	},
+	["Addon"] = {
+		["Version"] = 3240,
+		["PreVersion"] = 0,
+		["IconMiniMapTop"] = 23.0142685464086,
+		["Timer"] = 0.1,
+		["IconMiniMapLeft"] = -80,
+	},
+	["BossWatcher"] = {
+		["fightsNum"] = 2,
+		["autoSegments"] = {
+		},
+	},
+	["LootLink"] = {
+	},
+	["BattleRes"] = {
+	},
+	["Note"] = {
+		["Height"] = 100.000001367745,
+		["BlackNames"] = {
+		},
+		["Black"] = {
+			"", -- [1]
+			"", -- [2]
+			"", -- [3]
+		},
+		["Width"] = 200.00000273549,
+	},
+	["Logging"] = {
+	},
+	["MarksBar"] = {
+		["Show"] = {
+			true, -- [1]
+			true, -- [2]
+			true, -- [3]
+			true, -- [4]
+		},
+		["pulltimer"] = 10,
+	},
+	["InviteTool"] = {
+		["Words"] = "инв inv byd штм 123",
+		["InvByChat"] = true,
+		["RaidDiff"] = 16,
+		["PromoteRank"] = 3,
+		["LootThreshold"] = 2,
+		["MasterLooters"] = "",
+		["LootMethod"] = "group",
+		["PromoteNames"] = "",
+		["OnlyGuild"] = true,
+		["Rank"] = 1,
+	},
+	["InspectViewer"] = {
+	},
+}

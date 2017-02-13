@@ -2,11 +2,15 @@
 ## Title: SorhaQuestLog
 ## Notes: QuestLog
 ## Author: Sorha
-## Version: v1.5.0.6
+## Version: v1.5.0.3
 ## SavedVariables: SorhaQuestLogDB
 ## OptionalDeps: Ace3, LibSink-2.0, LibDataBroker-1.1, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibToast-1.0, Masque
 ## X-Embeds: Ace3
 ## X-Category: Interface Enhancements
+## X-Curse-Packaged-Version: v1.5.0.3
+## X-Curse-Project-Name: SorhaQuestLog
+## X-Curse-Project-ID: sorhaquestlog
+## X-Curse-Repository-ID: wow/sorhaquestlog/mainline
 
 #@no-lib-strip@
 Libs\LibStub\LibStub.lua
@@ -47,6 +51,7 @@ Locales\Locale-ptBR.lua
 Templates.xml
 
 Core.lua
+Modules\Notifications.lua
 Modules\Achievements.lua
 Modules\Quests.lua
 Modules\RemoteQuests.lua

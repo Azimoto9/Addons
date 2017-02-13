@@ -1,9 +1,9 @@
 local f = CreateFrame("Frame")
-f:RegisterEvent("PLAYER_LOGIN")
+f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:SetScript("OnEvent", function()
 
 InboxFrameBg:Hide()
-local _,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,ItemTextFrameIcon = ItemTextFrame:GetRegions()
+local ItemTextFrameIcon = select(18,ItemTextFrame:GetRegions())
 ItemTextFrameIcon:SetPoint("TOPLEFT",-8,9)
 ItemTextFrameIcon:SetTexCoord(0.85, 0.15, 0.15, 0.85)
 ItemTextFrameIcon:SetSize(64,64)
@@ -13,7 +13,7 @@ OpenStationeryBackgroundRight:Hide()
 SendStationeryBackgroundLeft:Hide()
 SendStationeryBackgroundRight:Hide()
 SendMailMoneyInset:Hide()	
-local _,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,MailFrameIcon = MailFrame:GetRegions()
+local MailFrameIcon = select(18,MailFrame:GetRegions())
 MailFrameIcon:SetPoint("TOPLEFT",-8,9)
 MailFrameIcon:SetTexCoord(0.85, 0.15, 0.15, 0.85)
 MailFrameIcon:SetWidth(64)
@@ -54,7 +54,7 @@ local function miirgui_OpenMailFrame_UpdateButtonPositions()
 		local itemLink = GetInboxItemLink(InboxFrame.openMailID, i);
 		if itemLink then
 			attachmentButton.IconBorder:Show()
-			m_SetTexture(attachmentButton.IconBorder,"Interface\\Containerframe\\quality.blp")
+			attachmentButton.IconBorder:SetTexture("Interface\\Containerframe\\quality.blp")
 		end
 	end
 end
@@ -65,7 +65,7 @@ hooksecurefunc("OpenMailFrame_UpdateButtonPositions",miirgui_OpenMailFrame_Updat
 hooksecurefunc("SendMailFrame_Update",function()
 	for i=1,12 do 
 		local button=_G["SendMailAttachment"..i]
-		m_SetTexture(button.IconBorder,"Interface\\Containerframe\\quality.blp")
+		button.IconBorder:SetTexture("Interface\\Containerframe\\quality.blp")
 	end		
 end)
 
@@ -75,11 +75,11 @@ local frame = CreateFrame("FRAME")
 frame:RegisterEvent("ITEM_TEXT_READY")
 frame:RegisterEvent("ITEM_TEXT_READY")
 function frame:OnEvent(event)
-	if not m_border_ItemTextFrame then
+	if m_border_ItemTextFrame then
+	else
 		m_border(ItemTextFrame,330,364,"Center",0,-27,14,"MEDIUM")
 	end
-
-	if event == "ITEM_TEXT_READY" then
+	if  event == "ITEM_TEXT_READY"  then
 		ItemTextFramePageBg:Hide()
 		ItemTextMaterialTopLeft:Hide()
 		ItemTextMaterialTopRight:Hide()
@@ -87,6 +87,9 @@ function frame:OnEvent(event)
 		ItemTextMaterialBotRight:Hide()
 		ItemTextScrollFrameScrollBar.Background:Hide()
 		m_fontify(ItemTextPageText,"white")
+		
+	end
+	if event == "ITEM_TEXT_READY" then
 		local material = ItemTextGetMaterial(); 
 		if(material == "ParchmentLarge") then	
 			ItemTextPageText:SetTextColor("P", 1,1,1,1)
@@ -95,27 +98,15 @@ function frame:OnEvent(event)
 			ItemTextPageText:SetTextColor("H3",unpack(miirgui.Color))
 			m_border_ItemTextFrame:SetPoint("TOPLEFT","ItemTextFrame",2,-58)
 			m_border_ItemTextFrame:SetPoint("BOTTOMRIGHT","ItemTextFrame",-4,2)
-			
-			local _,spacer = ItemTextPageText:GetRegions()
-			if spacer:GetTexture() == 1368285 then
-				spacer:SetVertexColor(unpack(miirgui.Color))
-			end
-			
 		else 
 			ItemTextPageText:SetTextColor("P", 1,1,1,1)
 			ItemTextPageText:SetTextColor("H1",unpack(miirgui.Color))
 			ItemTextPageText:SetTextColor("H2",unpack(miirgui.Color))
 			ItemTextPageText:SetTextColor("H3",unpack(miirgui.Color))
 		end
+
 	end
 end
 frame:SetScript("OnEvent", frame.OnEvent);
-
-m_cursorfix(SendMailNameEditBox)
-m_cursorfix(SendMailSubjectEditBox)
-m_cursorfix(SendMailMoneyGold)
-m_cursorfix(SendMailMoneySilver)
-m_cursorfix(SendMailMoneyCopper)
-m_cursorfix(SendMailBodyEditBox)
 
 end)

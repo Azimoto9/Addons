@@ -1,0 +1,22 @@
+
+KuiNameplatesGDB = {
+	["namespaces"] = {
+		["CastBar"] = {
+		},
+		["CastWarnings"] = {
+		},
+		["TankMode"] = {
+		},
+		["ComboPoints"] = {
+		},
+		["Auras"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Birgo - Ravencrest"] = "Birgo - Ravencrest",
+	},
+	["profiles"] = {
+		["Birgo - Ravencrest"] = {
+		},
+	},
+}

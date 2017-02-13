@@ -1,0 +1,9 @@
+## Interface: 40300
+## Title: Aurora
+## Notes: Minimalistic window theme.
+## Author: Haleth/Freethinker
+## Version: 3.9.1
+## SavedVariables: AuroraConfig
+
+aurora.lua
+gui.lua
