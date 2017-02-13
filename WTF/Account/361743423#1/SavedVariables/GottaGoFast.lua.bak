@@ -1,0 +1,11 @@
+
+GottaGoFastDB = {
+	["profileKeys"] = {
+		["Adimoto - Thrall"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Version"] = 26200,
+		},
+	},
+}

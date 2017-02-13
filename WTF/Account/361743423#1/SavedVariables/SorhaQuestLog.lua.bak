@@ -1,0 +1,65 @@
+
+SorhaQuestLogDB = {
+	["namespaces"] = {
+		["QuestTracker"] = {
+			["char"] = {
+				["Adimoto - Thrall"] = {
+					["ZoneIsCollapsed"] = {
+						["Echo Isles"] = false,
+						["Bonus Objectives"] = false,
+						["World Quests"] = false,
+					},
+				},
+			},
+			["profiles"] = {
+				["Default"] = {
+					["MinionLocation"] = {
+						["Y"] = 123.000007629395,
+						["Point"] = "RIGHT",
+						["RelativePoint"] = "RIGHT",
+					},
+				},
+			},
+		},
+		["ScenarioTracker"] = {
+			["profiles"] = {
+				["Default"] = {
+					["MinionLocation"] = {
+						["Y"] = -143.999923706055,
+						["Point"] = "RIGHT",
+						["RelativePoint"] = "RIGHT",
+					},
+				},
+			},
+		},
+		["RemoteQuestsTracker"] = {
+			["profiles"] = {
+				["Default"] = {
+					["MinionLocation"] = {
+						["Y"] = -19.0000286102295,
+						["Point"] = "RIGHT",
+						["RelativePoint"] = "RIGHT",
+					},
+				},
+			},
+		},
+		["AchievementTracker"] = {
+			["profiles"] = {
+				["Default"] = {
+					["MinionLocation"] = {
+						["Y"] = 195.999908447266,
+						["Point"] = "BOTTOMRIGHT",
+						["RelativePoint"] = "BOTTOMRIGHT",
+					},
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Adimoto - Thrall"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

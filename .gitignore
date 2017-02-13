@@ -1,0 +1,15 @@
+# WoW default folders
+[Cc]ache/
+[Dd]ata/
+[Ee]rrors/
+[Ll]ogs/
+[Ss]creenshots/
+[Uu]pdates/
+[Uu]tils/
+*.exe
+*.dll
+*.*fil
+*.db
+*cache*.*
+*.manifest
+*.mpq

@@ -1,0 +1,12 @@
+
+VWQL = {
+	["Sort"] = 5,
+	["Adimoto-Thrall"] = {
+		["FilterType"] = {
+		},
+		["Quests"] = {
+		},
+		["Filter"] = 63,
+	},
+	["VERSION"] = 28,
+}

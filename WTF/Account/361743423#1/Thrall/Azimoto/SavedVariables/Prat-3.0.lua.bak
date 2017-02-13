@@ -1,0 +1,44 @@
+
+Prat3CharDB = {
+	["history"] = {
+		["cmdhistory"] = {
+			["ChatFrame10EditBox"] = {
+			},
+			["ChatFrame7EditBox"] = {
+			},
+			["ChatFrame5EditBox"] = {
+			},
+			["ChatFrame8EditBox"] = {
+			},
+			["ChatFrame4EditBox"] = {
+			},
+			["ChatFrame6EditBox"] = {
+			},
+			["ChatFrame9EditBox"] = {
+			},
+			["ChatFrame1EditBox"] = {
+			},
+			["ChatFrame2EditBox"] = {
+			},
+			["ChatFrame3EditBox"] = {
+			},
+		},
+	},
+}
+Prat3HighCPUPerCharDB = {
+	["time"] = 1486950482,
+	["scrollback"] = {
+		["ChatFrame1"] = {
+			{
+				"|cff979797[17:48:02]|r|c00000000|r [W From] |cffd8d8d8[|r|Hplayer:Apocshunter:13:WHISPER:APOCSHUNTER|h|cffaad372Apocshunter|r|h|cffd8d8d8]|r: Hey, I noticed you were guildless. I was wondering if you would be interested in joining our guild `The PWN Shop~? We are a friendly group of people that does a little of everything(PVP, Raiding, Dungeons, etc...). Pst me for an invite or questions!", -- [1]
+				1, -- [2]
+				0.501960813999176, -- [3]
+				1, -- [4]
+				0, -- [5]
+				false, -- [6]
+				1, -- [7]
+				2, -- [8]
+			}, -- [1]
+		},
+	},
+}
